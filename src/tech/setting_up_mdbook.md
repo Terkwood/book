@@ -1,4 +1,4 @@
-# Resources for Setting Up mdBook
+# Resources for Setting up mdBook
 
 - [mdBook docs](https://rust-lang.github.io/mdBook/index.html)
 - [mdBook: continuous integration](https://rust-lang.github.io/mdBook/continuous-integration.html)
