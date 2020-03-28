@@ -6,3 +6,4 @@ src = "src"
 title = "Terkwood Farms"
 [output.html]
 theme = "src/theme"
+default-theme = "coal"
