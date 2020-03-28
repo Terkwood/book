@@ -5,3 +5,4 @@
 - [Trent Yang: Github Pages and Google Domains](https://dev.to/trentyang/how-to-setup-google-domain-for-github-pages-1p58)
 - [Github Pages: CNAME errors](https://help.github.com/en/github/working-with-github-pages/troubleshooting-custom-domains-and-github-pages#cname-errors)
 - [Controlling CNAME in github pages](https://hackernoon.com/use-custom-domain-with-github-pages-2-straightforward-steps-cf561eee244f)
+- [Solved: Github forgets about custom domain](https://github.community/t5/GitHub-Pages/Github-forgets-about-my-custom-domain-every-time-I-update-the/m-p/478#M47)
