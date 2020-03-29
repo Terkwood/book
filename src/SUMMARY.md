@@ -3,7 +3,7 @@
 [Preface](./preface.md)
 
 - [Computer Technology](./tech/README.md)
-    - [BUGOUT: Play Go against String AI and Friends](./tech/BUGOUT/README.md)
+    - [BUGOUT: Play Go against Strong AI and Human Friends](./tech/BUGOUT/README.md)
         - [Emotional Backdrop](./tech/BUGOUT/emo.md)
         - [Building the Project](./tech/BUGOUT/building_the_project.md)
         - [Too Cheap for Pro Tier](./tech/BUGOUT/too_cheap.md)
