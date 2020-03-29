@@ -1,4 +1,4 @@
-# BUGOUT: Play Go against Strong AI and Human Friends
+# BUGOUT: Play Go against AI 💪 and Human Friends 👪
 
 [BUGOUT](https://github.com/Terkwood/BUGOUT) provides a web interface to [KataGo](https://github.com/lightvector/KataGo), a leading, community-driven AI implementation to the [classic board game, Go](https://en.wikipedia.org/wiki/Go_(game)).  
 
