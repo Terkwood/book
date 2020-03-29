@@ -6,7 +6,9 @@ Some additional reading turned up that [6GB of RAM is a reasonable minimum](http
 
 > In most cases, Kafka can run optimally with 6 GB of RAM for heap space. For especially heavy production loads, use machines with 32 GB or more. Extra RAM will be used to bolster OS page cache and improve client throughput. While Kafka can run with less RAM, its ability to handle load is hampered when less memory is available.
 
-So, dutifully stingy, I settled on running a `t3.medium` compute host for my degenerate Kafka cluster with its single, lonely node.  Anyway, who cares?  I was liberated from corporate hierarchy, profit motive, etc, and was ready to experience the raw freedom that I'd always dreamed about as a junior developer.  I was ready to play with toys!
+Ever the miser, I settled on running a `t3.medium` compute host for my degenerate Kafka cluster with its single, lonely node.  4GB of RAM certainly worked well enough for my theoretically scalable backend -- at least as long as it didn't become popular.
+
+Anyway, who cares about vendor reccomended minima or a realistic-looking deployment?  I was liberated from corporate hierarchy, profit motive, etc, and was ready to experience the raw freedom that I'd always dreamed about as a junior developer.  I was ready to _play with toys_.
 
 The only problem was that running even a `t3.medium` around the clock [cost about $1/day](https://www.ec2instances.info/?filter=t3&cost_duration=daily).
 
