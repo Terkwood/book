@@ -6,9 +6,11 @@ We would sometimes meet at a Chinese dive on West 10th Street in Indianapolis, a
 
 GO felt different than chess.  There was a sense of immense possibility.  There was time to think about the future.  Winning was hard.  Getting your skill up with a same-stage newbie was exhilarating, because you grew together.
 
-Eventually I got my board signed by [VICTOR WOOTEN](https://www.victorwooten.com/) while attending a concert performance given by [Béla Fleck and the Flecktones](TODO) at the [Indiana Roof Ballroom](https://www.indianaroof.com/):  we had been playing some small rounds prior to the start of the concert.  It must have been 1999?
+Eventually I got my board signed by [VICTOR WOOTEN](https://www.victorwooten.com/) while attending a concert performance given by [Béla Fleck and the Flecktones](https://www.flecktones.com/) at the [Indiana Roof Ballroom](https://www.indianaroof.com/):  we had been playing some small rounds prior to the start of the concert.
 
-The music was great, and the signature fueled my fire.
+It must have been... 1999?  Victor Wooten was super gracious, and inspired everyone to a wholesome life of technical mastery.  I was young.  I wore an undersized fedora.
+
+The music was phenomenal, and Wooten's signature fueled my fire.
 
 ![TODO: image](of/the/board)
 
