@@ -42,21 +42,21 @@ Fresh into successful semi-retirement, I didn't want to bother with finding a us
 
 It turns out that mapping the tiny domain model of a GO game to kafka streams is... easy.  Initially BUGOUT was envisioned as a multiplayer GO board which could easily run in any modern browser and provide an enjoyable, boutique alternative to more popular servers and venues.  I wanted to play again with my old friends, just like when we were kids.  So the project [quickly incorporated a game lobby system](https://github.com/Terkwood/BUGOUT/issues/42) which allowed players to choose between joining a quick 19x19 game with the next person to visit the web page, or creating a nicely-formatted URL (`https://example.com/?join=nXblGBE7erWyocXYYpRN1YOzdD`) for their private game and sharing it with a friend.
 
-![Choosing a Venue](https://user-images.githubusercontent.com/38859656/77849069-66276380-71b8-11ea-98d9-7e4846161f74.png)
+![Choosing a Venue](https://user-images.githubusercontent.com/38859656/77851229-e42e3f00-71a5-11ea-8a91-93da91abf87a.png)
 
-![Board Size Options](TODO)
+![Board Size Options](https://user-images.githubusercontent.com/38859656/77851228-e2647b80-71a5-11ea-9467-cf086d76fb8e.png)
 
-![Turn order](TODO)
+![Turn Order Preference](https://user-images.githubusercontent.com/38859656/77851227-e1cbe500-71a5-11ea-8faa-264996a2257a.png)
 
-![Copy Link](TODO)
+![Sharing a Link to a Game](https://user-images.githubusercontent.com/38859656/77851226-e1334e80-71a5-11ea-834f-0c76a0e35080.png)
 
-![Joining a Link](TODO)
+![Joining a Link to a Game](https://user-images.githubusercontent.com/38859656/77851225-ded0f480-71a5-11ea-92a6-bb23755df74c.png)
 
 Finally, both players can be fairly assigned a side, and the game can begin.
 
-![Your Color](TODO)
+![Your Color](https://user-images.githubusercontent.com/38859656/77851236-e7c1c600-71a5-11ea-94a3-750bbeab74df.png)
 
-![Finally, A Game](TODO/finally_a_game.png)
+![Finally, A Game](https://user-images.githubusercontent.com/38859656/77851232-e55f6c00-71a5-11ea-827e-f0201c6d9f51.png)
 
 It basically worked.  I spent time [making sure the websocket connection between the browser and the BUGOUT gateway server was solid](TODO).  I had to [guarantee that Kafka and all its dependent apps started up in an orderly fashion](TODO).  And I enjoyed writing [functional-ish Kafka Streams code in Kotlin](TODO/representative.bugout.source.link):  from a cognitive perspective, it felt clean and tidy, even if [the topology graphs quickly got out of hand](TODO pic from BUGOUT repo).
 
