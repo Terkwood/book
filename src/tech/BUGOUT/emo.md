@@ -2,6 +2,8 @@
 
 I started playing GO sometime during high school.  Several of my friends also learned to play.  We would often play chess, for which I had a neat little carrying case with a simple game clock, a rollout board, and sturdy pieces.  I came into a possession of a GO board of standard dimensions, and used plastic pieces that were just heavy enough to feel like they mattered.
 
+![That Good, Old Board](path/to/box)
+
 We would sometimes meet at a Chinese dive on West 10th Street in Indianapolis, and consume inexpensive but delicious food, and play.
 
 GO felt different than chess.  There was a sense of immense possibility.  There was time to think about the future.  Winning was hard.  Getting your skill up with a same-stage newbie was exhilarating, because you grew together.
@@ -12,7 +14,7 @@ It must have been... 1999?  Victor Wooten was super gracious, and inspired every
 
 The music was phenomenal, and Wooten's signature fueled my fire.
 
-![TODO: image](of/the/board)
+![That Good Wooten](of/the/board)
 
 In college I dreamt that one day I would wake to the sound of an obstreperous trumpet, having been mired in games and strenuous efforts to build some sort of ultimate strategy.  I dreamt that I woke to a horn and a vision of clear dawn.
 
