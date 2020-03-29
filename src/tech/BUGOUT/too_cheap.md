@@ -28,7 +28,7 @@ And that's great.  I can still afford to eat.  Working with rusoto was painless.
 
 Enough was enough.  I had no boss.  I had no users.  I had no chains.  My self-respect was questionable.
 
-I would re-implement the backend [with redis streams](https://dev.to/pdambrauskas/event-sourcing-with-redis-45ha), so that my board could be only 24/7, using leftover CPU and RAM on the `t3.micro` instance that I was already paying for.
+I would re-implement the backend [with redis streams](https://dev.to/pdambrauskas/event-sourcing-with-redis-45ha), so that my game could be online 24/7, using leftover CPU and RAM on the `t3.micro` instance that I was already paying for.
 
 Why not?  Redis is awesome!  And by choosing `rust` for this portion of the impl, I knew I could keep my memory and CPU footprint low.
 
