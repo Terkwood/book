@@ -56,6 +56,8 @@ Finally, both players can be fairly assigned a side, and the game can begin.
 
 ![Your Color](TODO)
 
+![Finally, A Game](TODO/finally_a_game.png)
+
 It basically worked.  I spent time [making sure the websocket connection between the browser and the BUGOUT gateway server was solid](TODO).  I had to [guarantee that Kafka and all its dependent apps started up in an orderly fashion](TODO).  And I enjoyed writing [functional-ish Kafka Streams code in Kotlin](TODO representative bugout source link):  from a cognitive perspective, it felt clean and tidy, even if [the topology graphs quickly got out of hand](TODO pic from BUGOUT repo).
 
 ## Integrate Your Own Friend
