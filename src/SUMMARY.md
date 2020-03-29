@@ -8,6 +8,7 @@
         - [Building the Project](./tech/BUGOUT/building_the_project.md)
         - [Too Cheap for Pro Tier](./tech/BUGOUT/too_cheap.md)
         - [Welcome KataGo](./tech/BUGOUT/welcome_katago.md)
+        - [A Happy Ending](./tech/BUGOUT/a_happy_ending.md)
     - [Vision Project, Object Detection Resources](./tech/object_detection.md)
     - [Misc: Setting up mdBook](./tech/setting_up_mdbook.md)
     - [Misc: Setting up Github Pages](./tech/github_pages.md)
