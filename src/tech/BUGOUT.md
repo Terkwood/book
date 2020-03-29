@@ -55,3 +55,15 @@ It turns out that mapping the tiny domain model of a GO game to kafka streams is
 Finally, both players can be fairly assigned a side, and the game can begin.
 
 ![Your Color](TODO)
+
+It basically worked.  I spent time [making sure the websocket connection between the browser and the BUGOUT gateway server was solid](TODO).  I had to [guarantee that Kafka and all its dependent apps started up in an orderly fashion](TODO).  And I enjoyed writing [functional-ish Kafka Streams code in Kotlin](TODO representative bugout source link):  from a cognitive perspective, it felt clean and tidy, even if [the topology graphs quickly got out of hand](TODO pic from BUGOUT repo).
+
+## Integrate Your Own Friend
+
+But after months of relatively steady operation, I came to the sobering conclusion that most of my close friends were busy with their own lives, and playing a synchronous session of GO with them, often across international time zones, was an exercise in scheduling prowess that surpasses even the most skilled project manager.
+
+So I began to wonder about playing against an [AlphaZero-like](TODO) AI through my browser.
+
+If I can't play against my friends...
+
+...why not _BUILD MY OWN FRIEND?_
