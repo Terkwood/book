@@ -22,4 +22,6 @@ Finally, both players can be fairly assigned a side, and the game can begin.
 
 ![Finally, A Game](https://user-images.githubusercontent.com/38859656/77851232-e55f6c00-71a5-11ea-827e-f0201c6d9f51.png)
 
-It basically worked.  I spent time [making sure the websocket connection between the browser and the BUGOUT gateway server was solid](TODO).  I had to [guarantee that Kafka and all its dependent apps started up in an orderly fashion](TODO).  And I enjoyed writing [functional-ish Kafka Streams code in Kotlin](TODO/representative.bugout.source.link):  from a cognitive perspective, it felt clean and tidy, even if [the topology graphs quickly got out of hand](TODO pic from BUGOUT repo).
+It basically worked.  I spent time [making sure the websocket connection between the browser and the BUGOUT gateway server was solid](https://github.com/Terkwood/BUGOUT/issues/48).  I had to [guarantee that Kafka and all its dependent apps started up in an orderly fashion](https://github.com/Terkwood/BUGOUT/blob/dfb4a63be1b052bdb8dc448993d2feecfd91ce74/game-lobby/src/main/kotlin/Application.kt#L531).  And I enjoyed writing [functional-ish Kafka Streams code in Kotlin](https://github.com/Terkwood/BUGOUT/blob/dfb4a63be1b052bdb8dc448993d2feecfd91ce74/game-lobby/src/main/kotlin/Application.kt#L37):  from a cognitive perspective, it felt clean and tidy, even if the topology graphs quickly got out of hand.
+
+![Game Lobby Message Processing: This is Getting Insane](https://github.com/Terkwood/BUGOUT/tree/unstable/game-lobby#topology)
