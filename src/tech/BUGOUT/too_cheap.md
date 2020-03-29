@@ -1,6 +1,6 @@
 # Too Cheap for Pro Tier
 
-It's pretty obvious to anyone that spends 30 minutes in the Kafka literature, that a production deployment of Kafka involves at least three machines.  I was running a single node, because my average user load was zero.  What's more, I'm paying for Amazon Compute time using a personal credit card, so I've never been exactly fired up about running an individual host that comes anywhere near [the specs recommended by the vendor](https://docs.confluent.io/current/kafka/deployment.html).
+It's pretty obvious to anyone that spends 30 minutes in the Kafka literature, that a production deployment of Kafka involves at least three machines.  I was running a single node, because my average user load was zero.  What's more, I was paying for AWS compute time using a personal credit card, so I've never been exactly fired up about running an individual host that comes anywhere near [the specs recommended by the vendor](https://docs.confluent.io/current/kafka/deployment.html).
 
 Some additional reading turned up that [6GB of RAM is a reasonable minimum](https://www.infoq.com/articles/apache-kafka-best-practices-to-optimize-your-deployment/) for any single host:
 
