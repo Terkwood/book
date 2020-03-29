@@ -4,7 +4,7 @@ I started playing GO sometime during high school.  Several of my friends also le
 
 ![That Good, Old Board](https://user-images.githubusercontent.com/38859656/77853799-16469d80-71b4-11ea-8f14-8ae52b84b81b.jpeg)
 
-We would sometimes meet at a Chinese dive on West 10th Street in Indianapolis, and consume inexpensive but delicious food, and play.
+We would sometimes meet at a Chinese dive on West 10th Street in Indianapolis, consume delicious, sugary food, and play.
 
 GO felt different than chess.  There was a sense of immense possibility.  There was time to think about the future.  Winning was hard.  Getting your skill up with a same-stage newbie was exhilarating, because you grew together.
 
