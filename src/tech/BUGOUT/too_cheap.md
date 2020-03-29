@@ -22,7 +22,7 @@ The windmills were ready to tilt.
 
 Whenever someone comes back to the website and wants to play a game, the system loyally [boots the Kafka host](https://github.com/Terkwood/BUGOUT/tree/unstable/bugle).
 
-And that's great.  I can still afford to eat.  But the user experience is... abysmal.  It takes about 90 seconds for the EC2 instance and its various docker containers to start up.  (81 seconds longer than eternity!)
+And that's great.  I can still afford to eat.  Working with rusoto was painless.  But the user experience of waiting for BUGOUT's Kafka backend to initialize is... abysmal.  It takes about 90 seconds for the EC2 instance and its various docker containers to start up.  That's 81 seconds longer than eternity.
 
 ## Starting on the Micro-Stack
 
