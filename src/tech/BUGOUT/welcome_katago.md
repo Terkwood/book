@@ -8,7 +8,7 @@ If I can't play against my friends...
 
 ...why not _BUILD MY OWN FRIEND?_
 
-## Integrate Your Own Friend
+## KataGo Meets Nano
 
 Thus was born the effort to integrate [KataGo](https://github.com/lightvector/KataGo), a community implementation of cutting edge Go AI that's gotten a nice little boost thanks to [hardware sponsorship from Jane Street](https://blog.janestreet.com/accelerating-self-play-learning-in-go/).
 
