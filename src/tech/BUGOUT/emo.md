@@ -18,7 +18,7 @@ The music was phenomenal, and Wooten's signature fueled my fire.
 
 In college I dreamt that one day I would wake to the sound of an obstreperous trumpet, having been mired in games and strenuous efforts to build some sort of ultimate strategy.  I dreamt that I would wake to a vision of clear dawn.
 
-But the actual time I've spent playing GO in my life is tiny.  Life goes on, and its daily demands slowly obscure our roots.
+But the actual time I've spent playing GO in my life is tiny.  Life goes on, and its daily demands obscure our roots.
 
 Still, the aesthetic delight of GO has been enjoyed by millions of individuals over the centuries, and it's this very beauty which has inspired my work over the last nine months.
 
