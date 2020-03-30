@@ -9,3 +9,7 @@ And then, free from the lamentable desire for human interaction, I'll play again
 ![Love the Log](https://user-images.githubusercontent.com/38859656/77859737-1a38e680-71d9-11ea-9a50-3ca25d7b9558.png)
 
 ![Losing peacefully to SkyNet](https://user-images.githubusercontent.com/38859656/77859794-61bf7280-71d9-11ea-8f00-d9eef8bc437b.png)
+
+## We're Also On Dev.to
+
+This article was [cross-posted on dev.to](https://dev.to/terkwood/bugout-play-go-against-ai-and-human-friends-43a1) on March 30, 2020.
