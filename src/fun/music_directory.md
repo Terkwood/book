@@ -1,6 +1,7 @@
 # Music Directory
 
-Most people like music. 
+We hope you find these to be easy on the ears, with the notable exception
+of references to [Merzbow](https://en.wikipedia.org/wiki/Merzbow).
 
 ## Interesting Apps and Resources
 
