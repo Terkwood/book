@@ -10,6 +10,7 @@
         - [Welcome KataGo](./tech/BUGOUT/welcome_katago.md)
         - [A Happy Ending](./tech/BUGOUT/a_happy_ending.md)
     - [Vision Project, Object Detection Resources](./tech/object_detection.md)
+    - [Systemd and Systemctl](./tech/systemd.md)
     - [Misc: Setting up mdBook](./tech/setting_up_mdbook.md)
     - [Misc: Setting up Github Pages](./tech/github_pages.md)
 - [Fun Stuff](./fun/README.md)
