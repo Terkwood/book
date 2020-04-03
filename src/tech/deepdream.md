@@ -1,8 +1,8 @@
-# Colab Notebooks
+# Deepdream
 
-Colab can be useful.  Sometimes.
+Deepdream is cute.  It's fun to play with yesterday's AI advancements.
 
-## Deepdream
+## Resources
 
 [This is the Deepdream Colab Notebook](https://research.google.com/seedbank/seed/deepdream), it its original location on Seedbank.
 

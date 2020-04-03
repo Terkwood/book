@@ -13,7 +13,7 @@
     - [Vision Project, Object Detection Resources](./tech/object_detection.md)
     - [H264 Live Camera Fork](./tech/h264_live_camera.md)
     - [Junk Drawer](./tech/junk_drawer.md)
-        - [Various Colab Notebooks](./tech/colabs.md)
+        - [Deepdream](./tech/deepdream.md)
         - [Systemd and Systemctl](./tech/systemd.md)
         - [Setting up mdBook](./tech/setting_up_mdbook.md)
         - [Setting up Github Pages](./tech/github_pages.md)
