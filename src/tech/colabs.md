@@ -12,9 +12,7 @@ It can transform strange things into even stranger artifacts.
 
 It's based on TF 1.x, so you need to make sure you use the old version of the lib before starting your notebook.
 
-```
-%tensorflow_version 1.x
-```
+`%tensorflow_version 1.x`
 
 ### Experimenting
 
