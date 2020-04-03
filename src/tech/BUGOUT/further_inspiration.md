@@ -4,7 +4,7 @@ Don't let the crisis get you down.
 
 ![help is on the way](https://pbs.twimg.com/media/EUlyKZCUwAQLMqc?format=jpg&name=4096x4096)
 
-> Yoshiki Kurita (right), who was the first amateur to enter the C-League C-League in the second year of the Tokyo University of Science, will play against Mochizuki Kenpachi 18-dan (left) in the league's first match on the 2nd, winning a white-and-white fifth and a half wins. did. The C league has five races in all. If you win 5 consecutive times, you will participate in the challenger decision tournament and if you win 4 times, you will be promoted to the B league.
+> Yoshiki Kurita (right), who was the first amateur to enter the C-League, [a student] in the second year of the Tokyo University of Science, will play against Mochizuki Kenpachi 18-dan (left) in the league's first match on [April] 2nd [...]. The C league has five races in all. If you win 5 consecutive times, you will participate in the challenger decision tournament and if you win 4 times, you will be promoted to the B league.
 
 Thanks to [asahi_igo](https://twitter.com/asahi_igo/status/1245653101211561984)🐦 for this tweet. Text translated with [Google Translate](https://translate.google.com/).
 
