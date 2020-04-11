@@ -10,7 +10,7 @@ At or around [4947cc6](https://github.com/Terkwood/BUGOUT/commit/4947cc6dc910d88
 
 But wait, the second turn is from the human, but looks duplicated ?
 
-```
+```text
 [2020-04-11T19:02:56Z INFO  micro_judge::io::stream] ACCEPTED: MoveMade { game_id: GameId(abb65823-febe-49fd-9d61-9b9374cf943f), reply_to: ReqId(a848cad4-6d46-44b9-8389-289427307f3d), event_id: EventId(c13797b3-5250-41f8-ac57-0005a59b1d6f), player: BLACK, coord: Some(Coord { x: 2, y: 3 }), captured: [] }
 
 
