@@ -46,3 +46,34 @@ pub type XReadResult = Vec<HashMap<String, Vec<HashMap<String, HashMap<String, S
 `2004.` Trying out deno `file_server -p 8000 .` instead of `python -m SimpleHTTPServer`:
 
 `2020.` I am still tracing through Sabaki trying to find out why `gtp.js` function `listenForMove` doesn't get called.  Done for now.
+
+# Easter 2020
+
+Looks like [Sabaki web branch](https://github.com/SabakiHQ/Sabaki/commit/13e35b45aaee11fdf3c0ed400a645a50a9461657) is deprecated.  Let's consider slimming down our forked `unstable` branch to the bare minimum and trying again with KataGo mods.
+
+`1324.` Trimmed some dead classes out of Sabaki.  Looks like `deno file_server` doesn't like to serve our `/?join=ABC` links!  Back to python...
+
+`1350.` [Closed one set of trimmings](https://github.com/Terkwood/Sabaki/pull/53) and [opened another](https://github.com/Terkwood/Sabaki/pull/54).
+
+`1354.` Here are more things we should delete:
+
+- `fileformats/gib.js` and `ngf.js`
+- `App.js` section `if (prevState.fullScreen !== this.state.fullScreen)`
+
+`1405.` [Opened a PR to remove update checking](https://github.com/Terkwood/Sabaki/pull/55).  Closed #54.
+
+`1425.` Closed #55 and [opened a change set trimming file format procedures](https://github.com/Terkwood/Sabaki/pull/56).  Deployed for a little bit more testing.
+
+`1501.` Merged #56. Ventured into `enginesyncer.js` unsuccessfully.  Gave up on that change set and [opened another one trimming App.js and main.js](https://github.com/Terkwood/Sabaki/pull/57).
+
+`1516.` Test deploy. I'm close to <200KB package for users to download, which is nice.  The initial build, at the very start of BUGOUT effort, was about 315KB?
+
+```text
+bundle.js  191 KiB       0  [emitted]  main
+```
+
+`1536.` Almost messed up the QUIT button.  Ko and suicide popups probably won't work, but that's OK.  Still driving the simplicity score on this app _UP_.  [Yet another PR](https://github.com/Terkwood/Sabaki/pull/58). 182KB size.
+
+`1702.` For a minute I was worried that history provider routines in the browser were broken.  No: as usual, history provider seems to intermittently not respond.  A couple of reboots of the container host and it came back.  Continuing to trim aggressively in #58, will redeploy.
+
+`1706.` 180KB bundle! 🌟
