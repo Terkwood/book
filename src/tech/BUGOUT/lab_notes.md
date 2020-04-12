@@ -40,3 +40,9 @@ pub type XReadResult = Vec<HashMap<String, Vec<HashMap<String, HashMap<String, S
 `1818.`  It worked!  Judge now updates its game state changelog correctly.  All it cost was an extra round of `.clone()`s.  Well, I still can't progress past move two in Sabaki, but that's probably unrelated.  I'm going to commit `micro-judge` and `micro-changelog` now, since they've moved forward.
 
 `1828.` Raised my PR and am shutting down this very pricey `t3.medium` that I use for development. [Isnt-it-romantic](https://github.com/Terkwood/BUGOUT/pull/216).
+
+`1954.` Came back and merged my PR.  Trying again with Sabaki to see where the AI's `made move` event gets dropped.  Gateway and services seem solid enough now.
+
+`2004.` Trying out deno `file_server -p 8000 .` instead of `python -m SimpleHTTPServer`:
+
+`2020.` I am still tracing through Sabaki trying to find out why `gtp.js` function `listenForMove` doesn't get called.  Done for now.
