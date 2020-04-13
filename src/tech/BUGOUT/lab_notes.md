@@ -85,3 +85,24 @@ bundle.js  191 KiB       0  [emitted]  main
 `1831.` The "dead code" in `Goban.js` wasn't so dead. Almost lost the heat map at end-of-game.  [Still finding places to cut](https://github.com/Terkwood/Sabaki/pull/59)! 178KB.
 
 `2124.` [One last pass](https://github.com/Terkwood/Sabaki/pull/60).
+
+# Mon Apr 13, 2020
+
+`1211.` I am very close to having [#67](https://github.com/Terkwood/BUGOUT/issues/67) finished.  I need the browser to work with all of the server components.  I don't believe there are any bugs or gaps left in the server components.
+
+For the browser:
+
+- Do not check whether BUGOUT is online if the `EntryMethod` is `PLAY_BOT`.
+- Go slowly and be deliberate about what you add to the browser codebase.
+- `GatewayConn` needs a method `playBot`.
+- We need to be careful about the modals.  On one hand, it's nice not to overload the existing modals, if possible.  That said, the eventing code which supports the modals is a pain in the butt to work with.
+
+Let's start by adding `EntryMethod`.  We know that's going to be necessary.
+
+`1239.`  Inching into this effort: [we broke up a huge constuctor](https://github.com/Terkwood/Sabaki/pull/61/files) while adding the new `EntryMethod.PLAY_BOT` option.
+
+`1249.` [Refactored the Color Choice dialog](https://github.com/Terkwood/Sabaki/pull/62) for play-vs-humans to have a clearer name.  I don't want to reuse this dialog entirely for the bot-play.  I'll create a new modal for bot-play, but will overload the `choose-color-pref` event which the original dialog emits.
+
+Let's take a break.
+
+`1304.` [Slipped one more](https://github.com/Terkwood/Sabaki/pull/63) change set into the mix before my break.  This is good.  The audits that NPM had been complaining about were taking up more cognitive space than necessary -- just some pesky dev deps. ☕ BREAK TIME!!!!! ☕
