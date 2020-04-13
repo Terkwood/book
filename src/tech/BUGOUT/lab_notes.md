@@ -77,3 +77,11 @@ bundle.js  191 KiB       0  [emitted]  main
 `1702.` For a minute I was worried that history provider routines in the browser were broken.  No: as usual, history provider seems to intermittently not respond.  A couple of reboots of the container host and it came back.  Continuing to trim aggressively in #58, will redeploy.
 
 `1706.` 180KB bundle! 🌟
+
+`1756.` Is there anything else I can trim?
+
+`1822.` 176KB.  And I've trimmed out dead code from none other than the illustrious `Goban.js`.
+
+`1831.` The "dead code" in `Goban.js` wasn't so dead. Almost lost the heat map at end-of-game.  [Still finding places to cut](https://github.com/Terkwood/Sabaki/pull/59)! 178KB.
+
+`2124.` [One last pass](https://github.com/Terkwood/Sabaki/pull/60).
