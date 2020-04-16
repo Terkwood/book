@@ -105,4 +105,13 @@ Let's start by adding `EntryMethod`.  We know that's going to be necessary.
 
 Let's take a break.
 
-`1304.` [Slipped one more](https://github.com/Terkwood/Sabaki/pull/63) change set into the mix before my break.  This is good.  The audits that NPM had been complaining about were taking up more cognitive space than necessary -- just some pesky dev deps. ☕ BREAK TIME!!!!! ☕
+`1304.` [Slipped one more](https://github.com/Terkwood/Sabaki/pull/63) change set into the mix before my break.  This is good.  The audits that NPM had been complaining about were taking up more cognitive space than necessary -- just some pesky dev deps. ☕ BREAK TIME! ☕
+
+# Tue Apr 14, 2020
+
+`1204.` We can add some Modals.
+
+`1737.` We added a [wait for bot modal](https://github.com/Terkwood/Sabaki/pull/64).  Not actually using it, yet, but it's minimal and should work fine for our purposes.
+
+
+
