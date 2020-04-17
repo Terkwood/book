@@ -113,5 +113,17 @@ Let's take a break.
 
 `1737.` We added a [wait for bot modal](https://github.com/Terkwood/Sabaki/pull/64).  Not actually using it, yet, but it's minimal and should work fine for our purposes.
 
+# Fri Apr 17, 2020
+
+`1635.` I plan to refactor some of our multiplayer callbacks into a less-annoying, evented thing.   [I also plan to move Sabaki into the monorepo](https://github.com/Terkwood/BUGOUT/issues/219) so that we can tie BUGOUT-wide releases to a given state of Sabaki.
 
 
+`1642.` It takes seven minutes to write a ticket!?  This is in no way surprising.  It still saves 21 minutes of otherwise-future-time spent thinking about the issue.
+
+`1650.` Chromium just sucks less during the web dev cycle.  I find that I have a hard time getting the freshest version of my changes under FF private mode. 
+
+I HAVE SIX LINES OF CHANGES!
+
+`1708.` [Completed here](https://github.com/Terkwood/Sabaki/pull/65).  Let's consider making some progress on #67.
+
+`1756.` [One more PR to add a modal](https://github.com/Terkwood/Sabaki/pull/66) for color selection for the bot play.  No, it's not yet hooked up to anything!
