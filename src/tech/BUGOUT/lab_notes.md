@@ -127,3 +127,61 @@ I HAVE SIX LINES OF CHANGES!
 `1708.` [Completed here](https://github.com/Terkwood/Sabaki/pull/65).  Let's consider making some progress on #67.
 
 `1756.` [One more PR to add a modal](https://github.com/Terkwood/Sabaki/pull/66) for color selection for the bot play.  No, it's not yet hooked up to anything!
+
+# Sat Apr 18, 2020
+
+`1221.` We should make a pass at the remaining UI work:
+
+- network calls to `gateway`
+- the initial dialog altered
+- re-use the existing board-size dialog
+
+We may want to refactor the existing board-size dialog to make it more extensible.  Not sure if it's necessary.  Let's treat its existing behavior as closed.
+
+`1310.` [Extended the board-size dialog init condition](https://github.com/Terkwood/Sabaki/pull/67).
+
+# Sun Apr 19, 2020
+
+`1907.` Success!  First ever bot game.  But something broke in the system and one of the moves computed by KataGo wasn't communicated back to the browser.  Doesn't matter, we'll figure it out.  Happy path worked for the first time!
+
+There is an important `TODO TODO` in gtp.js related to tracking color.
+
+And we can only play black ?  We need to `listenForMove`.
+
+# Mon Apr 20, 2020
+
+`1524.` Whack-a-bug.  Look at `micro-judge`:
+
+```text
+[2020-04-20T19:19:06Z ERROR micro_judge::io::stream] MOVE REJECTED: MakeMoveCommand {
+        game_id: GameId(
+            22ff3e32-4d60-4582-a7d7-607b89e580d3,
+        ),
+        req_id: ReqId(
+            78b33e57-e8ac-425c-93b7-ba0d5b00988b,
+        ),
+        player: WHITE,
+        coord: Some(
+            Coord {
+                x: 3,
+                y: 3,
+            },
+        ),
+    }
+```
+
+`1626.` Investigating board.js `coordToVertex` and `vertexToCoord` in Sabaki.
+
+`1629.` TINYBRAIN needs to honor the reversal in the Y-Axis.
+
+`1643.` We won't translate the alphanumeric coordinate
+
+`1730.`  Strip `PASS` out at tinybrain.  Send the `(char, u16)` combo up to `botlink`.  `botlink` can remember the board size and convert back to domain-model `Coord`.
+
+```text
+For a 9x9 board,
+
+A1 = Coord { x: 0, y: 8 }
+```
+
+`1902.` [PR open to fix all the coords](https://github.com/Terkwood/BUGOUT/pull/223).
