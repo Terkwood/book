@@ -82,6 +82,10 @@ As promised, this command output an ignition file:
 
 We can launch an instance on AWS.  [See the operating system getting started page](https://docs.fedoraproject.org/en-US/fedora-coreos/getting-started/).
 
-The docs currently ask you to use the `aws` command line interface.  I'm too lazy to do that.  I don't want to learn the options for the `ec2 run instances` command.  I just want to plug some values in via the web interface.
+The docs currently ask you to use the `aws` command line interface.  I'm too lazy to do that.  I don't want to (re)learn the options for the `ec2 run instances` command.  I just want to plug some values in via the web interface.
 
-To do that, 
+To do that, click through the [downloads page](https://getfedora.org/coreos/download?tab=cloud_launchable&stream=stable), look for for your AWS region, click through to the launch instance page within AWS, then look for the "user data" details.
+
+![user data for your igntion config](https://user-images.githubusercontent.com/38859656/80287955-918f6680-8702-11ea-8021-87040838e890.png)
+
+You can enter your ignition config here.
