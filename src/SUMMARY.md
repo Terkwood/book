@@ -20,6 +20,7 @@
         - [Using the clipboard in a linux shell](./tech/linux_clipboard_from_command_line.md)
         - [Setting up mdBook](./tech/setting_up_mdbook.md)
         - [Setting up Github Pages](./tech/github_pages.md)
+        - [AWS CLI](./tech/aws_cli.md)
 - [Reading (Non-Tech)](./reading/README.md)
 - [Fun Stuff](./fun/README.md)
     - [Music Directory](./fun/music_directory.md)
