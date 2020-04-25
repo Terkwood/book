@@ -8,7 +8,7 @@ But CoreOS Container Linux is being put to pasture, so we've decided to try the 
 
 We need to create an ignition file which is intended to be written once, and valid for the life of the image.
 
-See [some docs](https://github.com/coreos/fcct/blob/master/docs/getting-started.md) for getting started.  
+See [some docs](https://github.com/coreos/fcct/blob/master/docs/getting-started.md) for getting started with this configuration tool.  
 
 They recommend using `podman` instead of `docker`, but there's no `snap` install available that doesn't warn about potentially stomping on our localdev ❤️ Debian ❤️ system.
 
@@ -77,3 +77,15 @@ As promised, this command output an ignition file:
   "systemd": {}
 }
 ```
+
+## Launching an Instance on AWS
+
+We can launch an instance on AWS.  [See the operating system getting started page](https://docs.fedoraproject.org/en-US/fedora-coreos/getting-started/).
+
+The docs currently ask you to use the `aws` command line interface.  I'm too lazy to do that.  I don't want to (re)learn the options for the `ec2 run instances` command.  I just want to plug some values in via the web interface.
+
+To do that, click through the [downloads page](https://getfedora.org/coreos/download?tab=cloud_launchable&stream=stable), look for for your AWS region, click through to the launch instance page within AWS, then look for the "user data" details.
+
+![user data for your igntion config](https://user-images.githubusercontent.com/38859656/80287955-918f6680-8702-11ea-8021-87040838e890.png)
+
+You can enter your ignition config here.
