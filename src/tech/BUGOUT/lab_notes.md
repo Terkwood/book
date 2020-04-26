@@ -185,3 +185,31 @@ A1 = Coord { x: 0, y: 8 }
 ```
 
 `1902.` [PR open to fix all the coords](https://github.com/Terkwood/BUGOUT/pull/223).
+
+# Sun Apr 26, 2020
+
+`0431.`  Trying out [SDKMAN!](https://sdkman.io/) for my gradle install.  Haven't needed gradle on this old workstation, until today.  SDKMAN! is the recommended method for unixy installs of gradle, according to gradle's home page.
+
+It went smoothly...
+
+```sh
+sdk install gradle 6.3 
+```
+
+```text
+Downloading: gradle 6.3
+
+In progress...
+
+############################################################################################# 100.0%
+
+Installing: gradle 6.3
+Done installing!
+
+
+Setting gradle 6.3 as default.
+```
+
+That's great.  Debian's default install was a woefully outdated version, which was unusable with the kotlin plugin.
+
+`0455.` [Raised a PR](https://github.com/Terkwood/BUGOUT/pull/243) to emit an event when changelog inits a game state.
