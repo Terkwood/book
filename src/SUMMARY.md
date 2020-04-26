@@ -16,6 +16,7 @@
     - [H264 Live Camera Fork](./tech/h264_live_camera.md)
     - [Junk Drawer](./tech/junk_drawer.md)
         - [Deepdream](./tech/deepdream.md)
+        - [Use Keyboard Shortcut to Focus Alacritty in GNOME](./tech/focus_alacritty_gnome.md)
         - [Systemd and Systemctl](./tech/systemd.md)
         - [Using the clipboard in a linux shell](./tech/linux_clipboard_from_command_line.md)
         - [Setting up mdBook](./tech/setting_up_mdbook.md)
