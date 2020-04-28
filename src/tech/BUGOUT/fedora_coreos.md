@@ -43,7 +43,7 @@ passwd:
 
 ```sh
 docker pull quay.io/coreos/fcct:release
-docker run --rm -v /tmp/example.yaml:/config.yaml:z quay.io/coreos/fcct:release --pretty --strict /config.yaml > example.ign
+docker run  -i --rm quay.io/coreos/fcct:release --pretty --strict <  input.yaml > example.ign
 ```
 
 As promised, this command output an ignition file:
@@ -89,3 +89,282 @@ To do that, click through the [downloads page](https://getfedora.org/coreos/down
 ![user data for your igntion config](https://user-images.githubusercontent.com/38859656/80287955-918f6680-8702-11ea-8021-87040838e890.png)
 
 You can enter your ignition config here.
+
+Finally, you launch the instance and connect:
+
+```text
+Fedora CoreOS 31.20200407.3.0
+Tracker: https://github.com/coreos/fedora-coreos-tracker
+Discuss: https://discussion.fedoraproject.org/c/server/coreos/
+```
+
+## Setting up the system
+
+Right now we're manually exploring the system to see 
+how things feel.
+
+```sh
+git clone https://github.com/Terkwood/BUGOUT.git
+cd BUGOUT
+sudo usermod -aG docker $USER  # we'll fix this in next section
+sudo reboot   # reboot helped
+```
+
+In `build-giant-dc.sh` we were using `docker-compose`.  Let's try an alternate docker socket.
+
+Grab docke-compose by the [cheater method](https://github.com/circleci/circleci-docs/issues/1323#issuecomment-323620271) for now.
+
+```sh
+pushd ~
+curl -L https://github.com/docker/compose/releases/download/1.11.2/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
+chmod +x ~/docker-compose
+sudo mkdir /opt/bin
+sudo mv ~/docker-compose /opt/bin/docker-compose
+export PATH="$PATH:/opt/bin"
+popd
+docker-compose -f dc-giant.yml build judge
+```
+
+You can use `ctop`:
+
+```sh
+docker run -ti -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest
+```
+
+You CANNOT create a `toolbox`:
+
+```sh
+toolbox
+```
+
+```text
+toolbox: missing command
+
+These are some common commands:
+create    Create a new toolbox container
+enter     Enter an existing toolbox container
+list      List all existing toolbox containers and images
+
+Try 'toolbox --help' for more information.
+```
+
+```sh
+toolbox create
+```
+
+```text
+Image required to create toolbox container.
+Download registry.fedoraproject.org/f31/fedora-toolbox:31 (500MB)? [y/N]: y
+Pulling registry.fedoraproject.org/f31/fedora-toolbox:31: [=>---]
+```
+
+You can use `rpm-ostree` to install `htop`:
+
+```sh
+sudo rpm-ostree install htop
+sudo systemctl reboot  # you need to reboot to get access to it
+```
+
+## Exploring Packer
+
+We are clearly going to need to manage the creation of this image.
+Let's try using Packer.
+
+Here is their basic guide to [build an image](https://www.packer.io/intro/getting-started/build-image.html).
+
+We can move on to running something a bit more interesting.
+
+You first need to write a program.
+
+```sh
+cat >hello.ts
+console.log("Welocem Friend 🦕");
+```
+
+You need some env vars specified.
+
+
+```sh
+# set_deno_env.sh
+export VPC_ID="vpc-deadbeef"
+export SUBNET_ID="subnet-bad1dea5"
+```
+
+...then...
+
+```sh
+source set_deno_env.sh
+```
+
+Write some `packer-example.json`
+
+```json
+{
+    "variables": {
+        "aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
+        "aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}",
+        "region":         "us-east-1",
+        "vpc_id":         "{{env `VPC_ID`}}",
+        "subnet_id":      "{{env `SUBNET_ID`}}"
+    },
+    "builders": [
+        {
+            "access_key": "{{user `aws_access_key`}}",
+            "ami_name": "packer-linux-aws-demo-{{timestamp}}",
+            "instance_type": "t3.micro",
+            "region": "{{user `region`}}",
+            "vpc_id": "{{user `vpc_id`}}",
+	          "subnet_id": "{{user `subnet_id`}}",
+            "secret_key": "{{user `aws_secret_key`}}",
+            "source_ami_filter": {
+              "filters": {
+              "virtualization-type": "hvm",
+              "name": "ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*",
+              "root-device-type": "ebs"
+              },
+              "owners": ["099720109477"],
+              "most_recent": true
+            },
+            "ssh_username": "ubuntu",
+            "type": "amazon-ebs"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "file",
+            "source": "./welcome.txt",
+            "destination": "/home/ubuntu/"
+        },
+        {
+            "type": "file",
+            "source": "./hello.ts",
+            "destination": "/home/ubuntu/"
+        },
+        {
+            "type": "shell",
+            "inline":[
+                "ls -al /home/ubuntu",
+                "cat /home/ubuntu/welcome.txt"
+            ]
+        },
+        {
+            "type": "shell",
+            "inline": [
+              "sudo apt install -y unzip",
+              "curl -fsSL https://deno.land/x/install/install.sh | sh"
+              
+            ]
+        },
+        {
+            "type": "shell",
+            "inline":[
+              "export DENO_INSTALL=\"/home/ubuntu/.deno\"",
+              "export PATH=\"$DENO_INSTALL/bin:$PATH\"",
+              "deno hello.ts"
+            ]
+        }
+    ]
+}
+```
+
+You'll see a bunch of glorious progress, and finally, an artifact:
+
+```text
+==> Builds finished. The artifacts of successful builds are:
+--> amazon-ebs: AMIs were created:
+us-east-1: ami-eeeeeeeeeeeeeeeea
+```
+
+Don't forget to deregister the AMI after you're done!
+
+## Putting It All Together With FCOS
+
+That's all well and good, and we're happy about `packer`.
+
+But we need to usable FCOS image which has a few modifications that `packer`, rather than `ignition` is well-suited to handle.
+
+Create an ignition file which you'll include in the packer config:
+
+```yaml
+variant: fcos
+version: 1.0.0
+passwd:
+  users:
+    - name: core
+      groups: [ docker ]
+      ssh_authorized_keys:
+        - ssh-rsa AAAA...
+storage:
+  files:
+    - path: /usr/local/bin/docker-compose
+      overwrite: true
+      mode: 0755
+      contents:
+        source: https://github.com/docker/compose/releases/download/1.25.5/docker-compose-Linux-x86_64
+        verification:
+          hash: sha512-7319dfe6659790c77c6ffa44a991373e9ac7cb7e317a78624ff072b0eed9d043d44b83f17714bc21991d5dadd6a3e1f64b8b4be71b044357a4d0aa100a46d50d
+```
+
+```sh
+docker run  -i --rm quay.io/coreos/fcct:release --pretty --strict <  packed.yaml > packed.ign
+```
+
+Then write your packer config:
+
+```json
+{
+    "variables": {
+        "aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
+        "aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}",
+        "region":         "us-east-1",
+        "vpc_id":         "{{env `VPC_ID`}}",
+        "subnet_id":      "{{env `SUBNET_ID`}}"
+    },
+    "builders": [
+        {
+            "access_key": "{{user `aws_access_key`}}",
+            "ami_name": "fcos-linux-aws-demo-{{timestamp}}",
+            "instance_type": "t3.medium",
+            "region": "{{user `region`}}",
+            "vpc_id": "{{user `vpc_id`}}",
+            "subnet_id": "{{user `subnet_id`}}",
+            "secret_key": "{{user `aws_secret_key`}}",
+            "user_data_file": "packed.ign",
+            "source_ami_filter": {
+              "filters": {
+                "virtualization-type": "hvm",
+                "name": "fedora-coreos-31.20200407.3.0",
+                "root-device-type": "ebs"
+              },
+              "owners": ["125523088429"],
+              "most_recent": true
+            },
+            "ssh_username": "core",
+            "type": "amazon-ebs"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "inline": [
+                "sudo rpm-ostree install htop"
+            ]
+        },
+        {
+            "type": "shell",
+            "inline":[
+                "git clone https://github.com/Terkwood/BUGOUT.git"
+            ]
+        }
+    ]
+}
+```
+
+...and we have a baked image!
+
+Note that `docker-compose` doesn't actually work, but we
+really just need to get the right `rpm-ostree` install
+of python3.
+
+Next up, write some `systemd` data and figure out how
+to seat some `dev.env` files as `.env` files.
