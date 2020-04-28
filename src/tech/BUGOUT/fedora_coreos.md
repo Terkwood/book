@@ -322,19 +322,19 @@ Then write your packer config:
 
 ...and we have a baked image!
 
-We used docker-compose 1.13 because python3.7 fails to link to libcrypt.so.1 on Fedora 31.  :\
+We used docker-compose 1.13 instead of 1.25 because [python3.7 fails to link to libcrypt.so.1 on Fedora 31](https://discuss.python.org/t/libcrypt-so-1-removal-in-fedora-30-impacting-manylinux-builds/1961).  ☹️
 
 ## Launch Templates Are Helpful
 
-So [we created one](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#launch-instance-from-launch-template).
+Creating a [launch template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#launch-instance-from-launch-template) makes the AWS CLI invocation less annoying.
 
-We can then launch the instance like so:
+You can launch the instance using minimal parameters:
 
 ```sh
 aws ec2 run-instances --launch-template LaunchTemplateId=lt-0000,Version=2 --image-id ami-0000 --subnet-id subnet-deadbeef
 ```
 
-You can override user data at the command line.
+In the example above, we pasted the `ignition` user data into the web form.  But you can override user data at the command line, if desired.  
 
 ## Completing the ignition
 
