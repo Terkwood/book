@@ -337,12 +337,7 @@ Then write your packer config:
 
 ...and we have a baked image!
 
-Note that `docker-compose` doesn't actually work, but we
-really just need to get the right `rpm-ostree` install
-of python3.
-
-Next up, write some `systemd` data and figure out how
-to seat some `dev.env` files as `.env` files.
+We used docker-compose 1.13 because python3.7 fails to link to libcrypt.so.1 on Fedora 31.  :\
 
 ## Launch Templates Are Helpful
 
@@ -356,4 +351,7 @@ aws ec2 run-instances --launch-template LaunchTemplateId=lt-0000,Version=2 --ima
 
 You can override user data at the command line.
 
-https://github.com/docker/compose/releases/download/1.13.0/docker-compose-Linux-x86_64
+## Completing the ignition
+
+Next up, write some `systemd` data and figure out how
+to seat some `dev.env` files as `.env` files.
