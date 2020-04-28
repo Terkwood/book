@@ -131,32 +131,7 @@ You can use `ctop`:
 docker run -ti -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest
 ```
 
-You CANNOT create a `toolbox`:
-
-```sh
-toolbox
-```
-
-```text
-toolbox: missing command
-
-These are some common commands:
-create    Create a new toolbox container
-enter     Enter an existing toolbox container
-list      List all existing toolbox containers and images
-
-Try 'toolbox --help' for more information.
-```
-
-```sh
-toolbox create
-```
-
-```text
-Image required to create toolbox container.
-Download registry.fedoraproject.org/f31/fedora-toolbox:31 (500MB)? [y/N]: y
-Pulling registry.fedoraproject.org/f31/fedora-toolbox:31: [=>---]
-```
+You *cannot* use `toolbox`, because it fails.
 
 You can use `rpm-ostree` to install `htop`:
 
@@ -296,13 +271,13 @@ passwd:
         - ssh-rsa AAAA...
 storage:
   files:
-    - path: /usr/local/bin/docker-compose
+    - path: /opt/bin/docker-compose
       overwrite: true
       mode: 0755
       contents:
-        source: https://github.com/docker/compose/releases/download/1.25.5/docker-compose-Linux-x86_64
+        source: https://github.com/docker/compose/releases/download/1.13.0/docker-compose-Linux-x86_64
         verification:
-          hash: sha512-7319dfe6659790c77c6ffa44a991373e9ac7cb7e317a78624ff072b0eed9d043d44b83f17714bc21991d5dadd6a3e1f64b8b4be71b044357a4d0aa100a46d50d
+          hash: sha512-9d2c4317784999064ba1b71dbcb6830dba38174b63b1b0fa922a94a7ef3479f675f0569b49e0c3361011e222df41be4f1168590f7ea871bcb0f2109f5848b897
 ```
 
 ```sh
@@ -368,3 +343,17 @@ of python3.
 
 Next up, write some `systemd` data and figure out how
 to seat some `dev.env` files as `.env` files.
+
+## Launch Templates Are Helpful
+
+So [we created one](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#launch-instance-from-launch-template).
+
+We can then launch the instance like so:
+
+```sh
+aws ec2 run-instances --launch-template LaunchTemplateId=lt-0000,Version=2 --image-id ami-0000 --subnet-id subnet-deadbeef
+```
+
+You can override user data at the command line.
+
+https://github.com/docker/compose/releases/download/1.13.0/docker-compose-Linux-x86_64
