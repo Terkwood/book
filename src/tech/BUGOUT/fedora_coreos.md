@@ -110,28 +110,13 @@ sudo usermod -aG docker $USER  # we'll fix this in next section
 sudo reboot   # reboot helped
 ```
 
-In `build-giant-dc.sh` we were using `docker-compose`.  Let's try an alternate docker socket.
-
-Grab docke-compose by the [cheater method](https://github.com/circleci/circleci-docs/issues/1323#issuecomment-323620271) for now.
-
-```sh
-pushd ~
-curl -L https://github.com/docker/compose/releases/download/1.11.2/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
-chmod +x ~/docker-compose
-sudo mkdir /opt/bin
-sudo mv ~/docker-compose /opt/bin/docker-compose
-export PATH="$PATH:/opt/bin"
-popd
-docker-compose -f dc-giant.yml build judge
-```
-
 You can use `ctop`:
 
 ```sh
 docker run -ti -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest
 ```
 
-You *cannot* use `toolbox`, because it fails.
+You *cannot* use `toolbox`. It [isn't really supposed to work](https://github.com/coreos/fedora-coreos-tracker/issues/458#issuecomment-620582289) due to the permissions structure of FCOS.
 
 You can use `rpm-ostree` to install `htop`:
 
