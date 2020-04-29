@@ -46,3 +46,7 @@ When we entered tmux + alacritty, and then dumped a lot of text into `less`, or 
 These instructions probably apply to other terminal emulators, as well.
 
 This is a happy time. 😄
+
+### Cross-post 
+
+This article was [cross-posted on dev.to](https://dev.to/terkwood/fast-scrolling-with-tmux-and-alacritty-3dmn).
