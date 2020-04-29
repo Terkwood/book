@@ -6,7 +6,7 @@ We want to have a nice experience when scrolling the terminal buffer using both 
 
 When we run alacritty and tmux together and there's a lot of text on the screen (say, by invoking `tree`), we need to hit the following tmux key sequence to scroll back through the terminal history: 
 
-```
+```text
 Ctrl+B 
 [
 PageUp
