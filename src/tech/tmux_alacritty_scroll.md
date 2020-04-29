@@ -1,6 +1,6 @@
-# Fast scrolling with tmux and alacritty
+![be easy](https://user-images.githubusercontent.com/38859656/80623620-78472c80-8a18-11ea-933d-00b52178f809.png)
 
-![be fast](https://user-images.githubusercontent.com/38859656/80623620-78472c80-8a18-11ea-933d-00b52178f809.png)
+# Easy scrolling with tmux and alacritty
 
 We want to have a nice experience when scrolling the terminal buffer using both alacritty and tmux on Debian linux.
 
