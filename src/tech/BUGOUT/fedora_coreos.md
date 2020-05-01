@@ -340,3 +340,44 @@ In the example above, we pasted the `ignition` user data into the web form.  But
 
 Next up, write some `systemd` data and figure out how
 to seat some `dev.env` files as `.env` files.
+
+## Using journalctl for monitoring
+
+You can follow logs with `journalctl`:
+
+```sh
+journalctl -u bugout -f
+```
+
+[DigitalOcean has a nice tutorial](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs).
+
+## Friendly Memory Footprint
+
+We were pleasantly surprised by amount of memory saved by switching from Container OS to Fedora Core OS.  We haven't done any extensive testing yet, but the `/proc/meminfo` shown below were for the same workload (kafka box) under the same conditions (1-3 users playing, system online for less than 15 minutes).
+
+Our old t3.medium Container Linux VM:
+
+```text
+MemTotal:        3979308 kB
+MemFree:         1793524 kB
+MemAvailable:    1920252 kB
+Buffers:           67600 kB
+Cached:           449764 kB
+SwapCached:            0 kB
+Active:          1760416 kB
+Inactive:         280408 kB
+```
+
+
+The new t3.medium Fedora CoreOS VM:
+
+```text
+MemTotal:        3962968 kB
+MemFree:         2971716 kB
+MemAvailable:    3439920 kB
+Buffers:            1108 kB
+Cached:           626192 kB
+SwapCached:            0 kB
+Active:           414104 kB
+Inactive:         405596 kB
+```
