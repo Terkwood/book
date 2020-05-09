@@ -1,6 +1,6 @@
 # Terkwood Farms
 
-This notebook contains items primarily relating to computer technology.  The selection of content may expand over time, to include other subjects.
+This notebook contains items primarily relating to computer technology.
 
 ## About the Author
 
