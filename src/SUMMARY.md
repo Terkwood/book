@@ -19,6 +19,7 @@
     - [Systemd and Systemctl](./tech/systemd.md)
     - [Using the clipboard in a linux shell](./tech/linux_clipboard_from_command_line.md)
     - [AWS CLI](./tech/aws_cli.md)
+    - [Vim](./tech/vim.md)
 - [Junk Drawer](./tech/junk_drawer.md)
     - [Deepdream](./tech/deepdream.md)
     - [Setting up mdBook](./tech/setting_up_mdbook.md)
