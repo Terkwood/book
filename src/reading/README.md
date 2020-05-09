@@ -21,6 +21,3 @@ We exclude anything related to technology from this section.
 [Publisher](https://www.coppercanyonpress.org/books/the-selected-poems-of-tao-chien-by-tao-chien-tr-david-hinton/)
 - Cioran: _The Trouble with Being Born_, which apparently [has been made into a film](https://cineuropa.org/en/newsdetail/386119/). There is a substantial section available in [Wikiquote](https://en.m.wikiquote.org/wiki/Emil_Cioran).
 
-![Édouard Debat-Ponsan: La Vérité sortant du puits, Public domain](https://user-images.githubusercontent.com/38859656/80026718-965cdc00-84b0-11ea-8e33-590bcf21959f.jpg)
-
-Édouard Debat-Ponsan: La Vérité sortant du puits, Public domain
