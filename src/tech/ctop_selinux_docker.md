@@ -2,7 +2,7 @@
 
 Some programs like `ctop` are nice to run using docker containers, so that you don't have to manually download a binary and copy it into `/usr/local/bin`, where it will sit in a sad little corner, unmanaged by apt or yum.
 
-But if you run an SELinux-enabled linux distribution, you'll find that running `ctop` [as the documentation suggests](https://github.com/bcicen/ctop), fails:
+But if you run an SELinux-enabled distribution, you'll find that running `ctop` [as the documentation suggests](https://github.com/bcicen/ctop), fails:
 
 ```sh
 docker run --rm -ti \
