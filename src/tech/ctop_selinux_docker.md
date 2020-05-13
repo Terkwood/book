@@ -1,11 +1,10 @@
 # Privileged mode: Running ctop in docker under SELinux
 
-Some programs like `ctop` are nice to run using docker containers, so that you don't have to manually download a binary and copy it into `/usr/local/bin`, and leave it in a sad little corner, unmanaged by `apt` or `yum`.
+Some programs like `ctop` are nice to run using docker containers, so that you don't have to manually download a binary and copy it into `/usr/local/bin`, where it will sit in a sad little corner, unmanaged by apt or yum.
 
 But if you run an SELinux-enabled linux distribution, you'll find that running `ctop` [as the documentation suggests](https://github.com/bcicen/ctop), fails:
 
 ```sh
-# THIS DOESN'T WORK :(
 docker run --rm -ti \
   --name=ctop \
   --volume /var/run/docker.sock:/var/run/docker.sock:ro \
@@ -30,7 +29,6 @@ What's going on here?  Presumably SELinux is blocking the `ctop` container's acc
 Luckily, there's a very easy fix for this!  You can just run the `ctop` container in privileged mode:
 
 ```sh
-# THIS WORKS! :)
 docker run --privileged --rm -ti   --name=ctop   --volume /var/run/docker.sock:/var/run/docker.sock:ro   quay.io/vektorlab/ctop:latest
 ```
 
