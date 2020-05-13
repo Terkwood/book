@@ -14,6 +14,7 @@
 - [Vision Project, Object Detection Resources](./tech/object_detection.md)
 - [H264 Live Camera Fork](./tech/h264_live_camera.md)
 - [Penguin Hell](./tech/penguin_hell.md)
+    - [Running ctop docker container in privileged mode under SELinux](./tech/ctop_selinux_docker.md)
     - [Use Keyboard Shortcut to Focus Alacritty in GNOME](./tech/focus_alacritty_gnome.md)
     - [Easy scrolling with tmux and alacritty](./tech/tmux_alacritty_scroll.md)
     - [Systemd and Systemctl](./tech/systemd.md)
