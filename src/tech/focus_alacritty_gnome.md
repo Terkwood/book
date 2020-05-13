@@ -63,6 +63,22 @@ if (code === 0) {
 Finally, in gnome settings,
 add a keyboard shortcut which runs our script.
 
-![keybinding](https://user-images.githubusercontent.com/38859656/80314295-afba9c80-87be-11ea-8670-b517246a1262.jpg)
+![keybinding](https://user-images.githubusercontent.com/38859656/81819687-a3904800-94fd-11ea-8f4e-d66c07d600ad.png)
 
 In our case, we assigned the special MENU button on our keyboard to focus on `alacritty`.  We use the default GNOME shortcut (`Super H`/`WindowsKey H`) to hide the window when we're done with it. 
+
+## Updated for deno 1.0.0-rc3
+
+Please note that as of deno 1.0.0-rc3, the command line invocation needed to make this work has changed. You now need to use the `run` subcommand:
+
+```sh
+deno run --allow-run /path/to/raise_alacritty.ts
+```
+
+This article was originally published under an older version, which did not require the subcommand.
+
+```sh
+deno  --allow-run /path/to/raise_alacritty.ts
+```
+
+If you're having trouble getting this to work under the new version of Deno, try adding `run`!
