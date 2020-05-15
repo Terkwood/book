@@ -13,6 +13,7 @@ I'd like to look further into some of these items.
 - [RedoxOS](https://www.redox-os.org/) is a Unix-like Operating System written in Rust, aiming to bring the innovations of Rust to a modern microkernel and full set of applications.
 - [Dev Fonts preview page](https://devfonts.gafi.dev/)
 - [Sparkfun: How to Use a Multimeter](https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/all)
+- [Google Cloud Run Quickstart](https://cloud.google.com/run/docs/quickstarts/build-and-deploy)
 
 ## Articles
 
