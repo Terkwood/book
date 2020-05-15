@@ -63,7 +63,82 @@ aws ec2 delete-snapshot --snapshot-id snap-0dddddddddddddddd
 
 What colossal a waste of time!
 
-## Pleasantly Hyped Automation
+## Pleasantly Hyped Automation 
 
-OK, here's the fun part.  Let's rewrite this drudgery using the shiniest, new tech! 🦕
+OK, here's the fun part.  Let's rewrite this junk using the shiniest,  newest tech! 🦕 
 
+Our workflow requires that we look up both Amazon Machine Image (AMI) IDs, as well as Snapshot IDs.  We deregister the AMIs one by one, and we delete the snapshots one by one, as well.
+
+Executing a command via subprocess is easily accomplished using `Deno.run`.  Here we use `stdout: "piped"` because we'll want to capture the output from the command and manipulate it:
+
+```ts
+const p = Deno.run({ cmd: ["/usr/bin/aws", "ec2", "describe-images", "--owners", "self"], stdout: "piped" });
+
+const { code } = await p.status();
+
+if (code !== 0) {
+    const rawError = await p.stderrOutput();
+    const errorString = new TextDecoder().decode(rawError);
+    console.log(errorString);
+    Deno.exit(code);
+}
+```
+
+If we were to run this command directly in a terminal, we'd see
+something like this:
+
+```json
+{
+    "Images": [
+        {
+            "Architecture": "x86_64",
+            "CreationDate": "1970-01-01T08:25:24.000Z",
+            "ImageId": "ami-0aaaaaaaaaaaaaaaa",
+            // ... SNIP ...
+        },
+        {
+            "Architecture": "x86_64",
+            "CreationDate": "1970-01-01T08:15:13.000Z",
+            "ImageId": "ami-0bbbbbbbbbbbbbbbb",
+            /// ... SNIP ...
+        }
+    ]
+}
+```
+
+Using `grep` to pull out the `ImageId` field will leave you with
+an ugly line of text which you then need to further trim down to
+the actual ID. And I'm too lazy to write a proper regex. 🌝
+
+Thankfully, Typescript makes this dead simple for us, since it
+handles JSON very naturally:
+
+- TODO TODO TODO FIX
+- TODO TODO TODO FIX
+- TODO TODO TODO FIX
+- TODO TODO TODO FIX
+- TODO TODO TODO FIX
+- TODO TODO TODO FIX
+- TODO TODO TODO FIX
+- TODO TODO TODO FIX
+- TODO TODO TODO FIX
+- TODO TODO TODO FIX     below  command string
+
+
+```ts
+const { Images } = JSON.parse(new TextDecoder().decode(await p.output()));
+
+for (let { ImageId } of Images) {
+  await runOrExit(
+    ["aws ec2 deregister-image --image-id " + ImageId],
+    undefined,
+  );
+}
+```
+
+
+## References
+
+[TODO ATTRIBUTION FOR TRAIN](/x/y/z)
+
+Most of the code was shamelessy lifted from the [Deno manual subprocess example](https://deno.land/manual/examples/subprocess).
