@@ -29,7 +29,10 @@ What's going on here?  Presumably SELinux is blocking the `ctop` container's acc
 Luckily, there's a very easy fix for this!  You can just run the `ctop` container in privileged mode:
 
 ```sh
-docker run --privileged --rm -ti   --name=ctop   --volume /var/run/docker.sock:/var/run/docker.sock:ro   quay.io/vektorlab/ctop:latest
+docker run --privileged --rm -ti \
+  --name=ctop  \
+  --volume /var/run/docker.sock:/var/run/docker.sock:ro \
+  quay.io/vektorlab/ctop:latest
 ```
 
 Now you can see all your favorite containers, interact with their log interfaces, dip into their shells, etc:
