@@ -23,6 +23,7 @@
     - [AWS CLI](./tech/aws_cli.md)
     - [Vim](./tech/vim.md)
 - [Junk Drawer](./tech/junk_drawer.md)
+    - [lolbots](./tech/lolbots.md)
     - [Trying Google Cloud Run](./tech/trying_google_cloud_run.md)
     - [Deepdream](./tech/deepdream.md)
     - [Setting up mdBook](./tech/setting_up_mdbook.md)
