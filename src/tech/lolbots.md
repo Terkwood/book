@@ -1,33 +1,29 @@
-# lolbots
+# lolbots 🙄 🤣 🤖 💩
 
 Why not just make a bot which responds ironically to our discord server?  It should train itself based on our local subgroup of freaks and weirdos.  _Obviously_, we would make the source open for the public to scrutinize, because if we don't keep tinkering frenetically with two-star projects on Github, _then we won't achieve immortality_.
 
 We could try using the [DeepMoji](https://github.com/Terkwood/DeepMoji)  project to somehow mix sarcasm into the intellectual brew, but we still need to investigate, and make sure that this isn't going to eat up weeks of time.  I mean, we sort of coasted through that data mining course in grad school without considering the 72 Trillion Dollar AI Hype Machine that would barrel into the world a few short years after we graduated.  Dear Reader, we're not machine learning experts over here.  Just a curious application developer.
 
-![deepmoji test cases](https://user-images.githubusercontent.com/38859656/82142017-6383da80-9807-11ea-925e-38a2a8be1911.png)
+![deepmoji test cases](https://user-images.githubusercontent.com/38859656/82142168-6e8b3a80-9808-11ea-8f6d-a6b0ea15e743.jpg)
 
 We already have an NVIDIA Jetson Nano sitting on our desk computing the moves for our [Goban](https://github.com/Terkwood/BUGOUT) using [KataGo - a slick, community-sponsored neural net](https://github.com/lightvector/KataGo). Please don't judge us by the level of dust collecting on this lil' guy -- we're working in a _very dynamic environment_. 🤧
 
 ![lilbrain in situ](https://user-images.githubusercontent.com/38859656/82141784-2834dc00-9806-11ea-8591-0c9cbdb53074.jpeg)
 
 
-We even created 1/3 of the [necessary architecture](https://github.com/Terkwood/BUGOUT/tree/unstable/botlink) in our recent project: we could just string up a websocket from the local NVIDIA GPU, to a cloud provider, and avoid exposing our blessed domicile's network surface to the world of trolls, bots, and whatever else.  Rather than writing some sort of PULL-based situation, we like receiving pushed events from the cloud, processing them with the NVIDIA Nano GPU in a Machine Learny Sort of Way, and then responding with the answer.
+We even created 1/3 of the [necessary architecture](https://github.com/Terkwood/BUGOUT/tree/unstable/botlink) in our recent project: we could just string up a websocket from the local NVIDIA GPU, to a cloud provider, and avoid exposing our blessed domicile's network surface to the world of trolls, bots, and whatever else.  Rather than creating some sort of PULL-based situation, we would prefer to have some cloud-hosted Discord gateway push data down to the NVIDIA Nano GPU, which would then consider our chats in a Machine Learny Way, and then respond with a snarky reaction.
 
-🙄 🤖 In this case, we're gunning for Artificial Irony. 🤖 🙄
+🙄 🤖 We're gunning for Artificial Irony. 🤖 🙄
 
 ## Install tensorflow on the NVIDIA Jetson Nano
 
-Our Nano is still pretty lightly loaded.  We had to install several packages, and finally TensorFlow, to get this going.  We used the [NVIDIA instructions](https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html)
+Our Nano is still pretty lightly loaded.  We tried to install several packages, hoping to follow something like the [NVIDIA instructions](https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html) to easily run Tensorflow.  Yeah.  Right.
 
 ## The Woe
 
-By now I've given up on my project entirely, realizing that the model wewant to use only supports python 2, while the NVIDIA jetson nano (surprise!) wants us to install TF using python 3.
+After about 38 minutes we've given up on the project entirely, realizing that the model we want to use only supports python 2, while the NVIDIA jetson nano (surprise!) wants us to install TF using python 3.
 
-BUT WAIT THEY'RE STILL WORKING ON IT! [Here is a forked repo with active contribution](https://github.com/nklapste/DeepMoji/tree/feature/SimplePython3Migration), working toward supporting python 3 and TF 2.0.
-
-Here is the [related PR](https://github.com/bfelbo/DeepMoji/pull/53) for the main repo
-
-## Not So Good
+🔥 🚒  🔥
 
 ```text
 Successfully installed absl-py-0.9.0 astor-0.8.1 cachetools-4.1.0 google-auth-1.14.3 google-auth-oauthlib-0.4.1 google-pasta-0.2.0 grpcio-1.29.0 keras-preprocessing-1.1.2 markdown-3.2.2 oauthlib-3.1.0 opt-einsum-3.2.1 pyasn1-0.4.8 pyasn1-modules-0.2.8 requests-oauthlib-1.3.0 rsa-4.0 scipy-1.4.1 tensorboard-2.1.1 tensorflow-2.1.0+nv20.4 tensorflow-estimator-2.1.0 termcolor-1.1.0 werkzeug-1.0.1 wrapt-1.12.1
@@ -45,6 +41,13 @@ Type "help", "copyright", "credits" or "license" for more information.
 2020-05-17 00:03:45.107673: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:30] Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
 >>>
 ```
+
+
+BUT WAIT THEY'RE STILL WORKING ON IT! [Here is a forked repo with active contribution](https://github.com/nklapste/DeepMoji/tree/feature/SimplePython3Migration), working toward supporting python 3 and TF 2.0.  Note that it's TF 2.0.  Not TF 2.1.
+
+Here is the [related PR](https://github.com/bfelbo/DeepMoji/pull/53) on the main DeepMoji repo.
+
+## Not So Good
 
 Sort of fail. [Try TF 2.0.0](https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html#install_multiple_versions_tensorflow).
 
