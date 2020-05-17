@@ -140,3 +140,7 @@ We don't have to sit and watch every step of the process.
 We don't have to even shut down KataGo.  That would be weird.
 
 If it works, it works.  If it doesn't, _FINE!_
+
+# Resolution
+
+We failed to succeed in compilation of TF 2.0 on NVIDIA Jetson Nano.  Thank you.
