@@ -27,7 +27,7 @@ tiny-musl-guy ...(trimmed)...    9.22 MB
 
 You need to serve some sort of minimal HTTP request in order for cloud run to do anything with your program.  We arbitrarily picked the Hello World example from [tide](https://github.com/http-rs/tide).
 
-```rust
+```ignore
 #[async_std::main]
 async fn main() -> Result<(), std::io::Error> {
     let mut app = tide::new();
