@@ -139,6 +139,6 @@ for (let { ImageId } of Images) {
 
 ## References
 
-[TODO ATTRIBUTION FOR TRAIN](/x/y/z)
+[train image](https://ccsearch.creativecommons.org/photos/b66ad5eb-8395-4eaa-a26f-ba680b23f027) by fsse8info is licensed under CC BY-SA 2.0.
 
 Most of the code was shamelessy lifted from the [Deno manual subprocess example](https://deno.land/manual/examples/subprocess).
