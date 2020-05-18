@@ -7,6 +7,18 @@ of an emacs guy, back in the day...
 
 Seriously, they're [SO EASY](https://vim.fandom.com/wiki/Macros).
 
+Record a macro:
+
+```text
+q<letter><commands>q
+```
+
+Execute a macro `number` times, once by default:
+
+```text
+<number>@<letter>
+```
+
 ## Copying Text into Other Linux Apps
 
 It's not fun to copy text out of vim and into other linux applications,
