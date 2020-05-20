@@ -133,7 +133,7 @@ for (let { ImageId } of Images) {
 }
 ```
 
-## The Automatic Triggered Clean-Up Nirvana
+## The Triggered Clean-Up Nirvana
 
 Yes, we prefer to watch Stargate SG-1 and Fringe at 9pm.  We do not remember to clean up our precious AWS resources.
 
