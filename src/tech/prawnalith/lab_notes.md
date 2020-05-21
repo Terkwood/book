@@ -18,7 +18,7 @@ What could be better than spending hundreds of dollars of potentially billable h
 In fact there are several potential ways to go about it, but it looks like there's [a new approach](https://github.com/Terkwood/prawnalith/issues/120) recently published online.
 
 Let's give it a try.  The following procedure will download a gigantic XTENSA toolchain which we can hopefully use to push some
-simple rust code onto an ESP 8266.
+simple rust code onto an ESP 8266.  The docker download is a beefy 5GB!  🐄
 
 ```text
 $ cat /tmp/bootstrap-esp.sh
