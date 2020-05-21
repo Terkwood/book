@@ -22,6 +22,7 @@
     - [Using the clipboard in a linux shell](./tech/linux_clipboard_from_command_line.md)
     - [AWS CLI](./tech/aws_cli.md)
     - [Vim](./tech/vim.md)
+- [OSS Commitment Tracking](./tech/oss_commitment_tracking.md)
 - [Junk Drawer](./tech/junk_drawer.md)
     - [lolbots](./tech/lolbots.md)
     - [Trying Google Cloud Run](./tech/trying_google_cloud_run.md)
