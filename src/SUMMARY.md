@@ -11,6 +11,8 @@
     - [Further Inspiration](./tech/BUGOUT/further_inspiration.md)
     - [Some Lab Notes](./tech/BUGOUT/lab_notes.md)
     - [Fedora CoreOS](./tech/BUGOUT/fedora_coreos.md)
+- [The Prawnalith: Electronics, Tanks, and Glory](./tech/prawnalith/README.md)
+    - [Lab Notes](./tech/prawnalith/lab_notes.md)
 - [Vision Project, Object Detection Resources](./tech/object_detection.md)
 - [H264 Live Camera Fork](./tech/h264_live_camera.md)
 - [Penguin Hell](./tech/penguin_hell.md)
