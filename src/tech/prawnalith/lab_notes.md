@@ -13,7 +13,7 @@ Today we're attempting to reinitialize the entire effort.
 
 💸 Ah, the $6 ESP8266 microcontroller.
 
-What could be better than spending hundreds of dollars of potentially billable hours making them work together?
+What could be better than spending many, many hours trying to make them work together?
 
 In fact there are several potential ways to go about it, but it looks like there's [a new approach](https://github.com/Terkwood/prawnalith/issues/120) recently published online.
 
