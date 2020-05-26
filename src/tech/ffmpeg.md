@@ -13,7 +13,7 @@ ffmpeg -i in.mp4 -filter:v "crop=out_w:out_h:x:y" out.mp4
 e.g. crop a 1080x800 section starting at 0,1000
 
 ```sh
-ffmpeg -i in.mp4 -filter:v "crop=1080:800:0:1000" out.mp4
+ffmpeg -i in.mp4 -filter:v "crop=1080:600:0:900" out.mp4
 ```
 
 ## Shrink Video
