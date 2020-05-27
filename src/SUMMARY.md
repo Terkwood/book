@@ -13,6 +13,7 @@
     - [Fedora CoreOS](./tech/BUGOUT/fedora_coreos.md)
 - [Penguin Hell](./tech/penguin_hell.md)
     - [All Aboard the Deno Hype Train: Trimming AWS Tedium](./tech/all_aboard_the_deno_hype_train_trimming_aws_tedium.md)
+    - [deno file_server upgrade](./tech/deno_file_server_upgrade.md)
     - [Running ctop docker container in privileged mode under SELinux](./tech/ctop_selinux_docker.md)
     - [Use Keyboard Shortcut to Focus Alacritty in GNOME](./tech/focus_alacritty_gnome.md)
     - [Easy scrolling with tmux and alacritty](./tech/tmux_alacritty_scroll.md)
