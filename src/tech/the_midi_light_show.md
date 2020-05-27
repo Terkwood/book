@@ -46,6 +46,13 @@ An ogive is the curve that forms the outline of a pointed gothic arch. Erik Sati
 
 [Source for this MIDI](https://commons.wikimedia.org/wiki/Image:Erik_Satie_-_Ogive_No.2.mid?uselang=zh/)
 
+### The Magic of MIDI: Eternity
+
+<iframe width="560" height="315" sandbox="allow-same-origin allow-scripts allow-popups" src="https://diode.zone/videos/embed/4b24adc5-fdf3-4294-b83c-fd258e7c057a" frameborder="0" allowfullscreen></iframe>
+
+The music was found on archive.org, in ["The Magic of MIDI"](https://archive.org/details/themagicofmidiv1), a nearly 1GB zip file containing thousands of songs. 
+
+
 ## Learn More
 
 Learn more about the wiring used in this prototype, read the source code for the MIDI playback and LED light management, or see additional credits related to the open source software we used, at our [Github page](https://github.com/Terkwood/hello-pi).
