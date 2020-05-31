@@ -133,11 +133,131 @@ for (let { ImageId } of Images) {
 }
 ```
 
+Fast-forwarding a bit, we can streamline our code by pulling out the `JSON.parse` call used with every AWS CLI invocation, and declaring it as a function:
+
+```typescript
+const parseProcessOutput = async (p: Deno.Process) =>
+  JSON.parse(new TextDecoder().decode(await p.output()));
+```
+
+We also wanted to stop "typing", "all", "our", "arguments", "to", "the", "Deno.run", "cmd" as comma-separated strings, because we're lazy 👼:
+
+```typescript
+const awsEc2Cmd = (argStr: string) => {
+  let o = [];
+  o.push("/usr/bin/aws");
+  o.push("ec2");
+  for (let s of argStr.split(" ")) {
+    o.push(s);
+  }
+
+  return o;
+};
+```
+
+With these little helpers declared, cleaning up our expen$ive image snapshots is now easy:
+
+```typescript
+const dsp = await runOrExit(
+  {
+    cmd: awsEc2Cmd("describe-snapshots --owner self"),
+    stdout: "piped",
+  },
+);
+
+const { Snapshots } = await parseProcessOutput(dsp);
+
+for (let { SnapshotId } of Snapshots) {
+  await runOrExit(
+    {
+      cmd: awsEc2Cmd(`delete-snapshot --snapshot-id ${SnapshotId}`),
+      stdout: undefined,
+    },
+  );
+}
+```
+
+That's fully HALF of our daily dev trash that we generate.  We also tend to run a couple of instances in our AWS dev environment.  We want to terminate both of those instances.  One of the two will usually have an elastic IP associated with it, so we make sure to release that IP and avoid charges.
+
+Here's the complete script, which depends on our above helpers being defined in a `procs.ts` file: 
+
+```typescript
+import { runOrExit, parseProcessOutput, awsEc2Cmd } from "./procs.ts";
+import { config as loadEnv } from "https://deno.land/x/dotenv@v0.3.0/mod.ts";
+
+console.log(loadEnv({ safe: true, export: true }));
+
+// This is the instance tag "Name", used to identify
+// our dev environment instances.
+// It's loaded from a .env file which looks like this:
+//
+// KEY_NAME=my-fancy-dev-instance-tag
+const KEY_NAME = Deno.env.get("KEY_NAME");
+
+let instsDescd = runOrExit(
+  { cmd: awsEc2Cmd("describe-instances"), stdout: "piped" },
+);
+
+let addrsDescd = runOrExit(
+  { cmd: awsEc2Cmd("describe-addresses"), stdout: "piped" },
+);
+
+const { Reservations } = await parseProcessOutput(await instsDescd);
+
+let instancesToTerminate = [];
+for (let { Instances } of Reservations) {
+  for (let { InstanceId, KeyName } of Instances) {
+    if (KEY_NAME === KeyName) {
+      instancesToTerminate.push(InstanceId);
+    }
+  }
+}
+
+const { Addresses } = await parseProcessOutput(await addrsDescd);
+
+let addressesToRelease = [];
+for (let { InstanceId, AllocationId, AssociationId } of Addresses) {
+  if (instancesToTerminate.includes(InstanceId)) {
+    addressesToRelease.push({ AllocationId, AssociationId });
+  }
+}
+
+if (addressesToRelease.length > 0) {
+  console.log(`Addresses to release  : ${JSON.stringify(addressesToRelease)}`);
+
+  for (let { AssociationId, AllocationId } of addressesToRelease) {
+    await runOrExit({
+      cmd: awsEc2Cmd(`disassociate-address --association-id ${AssociationId}`),
+    });
+
+    await runOrExit({
+      cmd: awsEc2Cmd(`release-address --allocation-id ${AllocationId}`),
+    });
+  }
+}
+
+if (instancesToTerminate.length > 0) {
+  console.log(
+    `Instances to terminate: ${JSON.stringify(instancesToTerminate)}`
+  );
+
+  await runOrExit({
+    cmd: awsEc2Cmd(
+      `terminate-instances --instance-ids ${instancesToTerminate.join(" ")}`
+    ),
+  });
+}
+
+Deno.exit(0);
+```
+
+When I run this script, my credit card sighs in glorious relief. 🤓
+
 ## The Triggered Clean-Up Nirvana
 
 Yes, we prefer to watch Stargate SG-1 and Fringe at 9pm.  We do not remember to clean up our precious AWS resources.
 
-We need the _cron job_!
+We need a _cron job_!
 
 It should wake up this x86_64 laptop from sleep, and use our local AWS credentials to trigger the cleanup scripts.
 
@@ -145,11 +265,7 @@ Why not just run this on a local raspberry pi, or something?  We have at least o
 
 Well, it turns out that Deno **can't run on ARM platforms yet**.  Oh well!
 
-What about a cloud deployment?
-
-ARE YOU KIDDING ME?
-
-💸 We 💸 Can't 💸 Give 💸 Jeff 💸 All 💸 The 💸 Money! 💸
+As long as we can wake up our power-hungry laptop reliably, we don't mind a little bit of a hacky solution, here.  It beats waking up our _human body_ to take care of such a tedious task!
 
 ### Try Out RtcWake
 
@@ -187,5 +303,3 @@ sudo rtcwake -m no -l -t $(date +%s -d 'today 19:15')
 [train image](https://ccsearch.creativecommons.org/photos/b66ad5eb-8395-4eaa-a26f-ba680b23f027) by fsse8info is licensed under CC BY-SA 2.0.
 
 The initial nugget of subprocess management originates in the [Deno manual subprocess example](https://deno.land/manual/examples/subprocess).
-
-
