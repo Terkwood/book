@@ -2,7 +2,7 @@
 
 I recently [worked on a pull request](https://github.com/mitsuhiko/redis-rs/pull/319) which adds [Redis Streams](https://redis.io/topics/streams-intro) capabilities to [redis-rs](https://github.com/mitsuhiko/redis-rs), the most popular Redis client lib in the Rust community.  The overwhelming majority of the effort was contributed by the community, not by me:  I simply drafted the pull request which combines the two existing works.  This required some very light touch-up, and adding a few examples of how the new API works.
 
-The PR is just now entering its final review phase, as several of us have wanted to put our best foot forward before pestering the hard-working maintainers of redis-rs.  
+The PR is just now entering its final review phase, as several of us have wanted to put our best foot forward before pestering the hard-working maintainers of redis-rs.
 
 Still, I'm feeling the hype. 🔥  What is Redis Streams? Why do we need it in Rust?  Does it have anything to do with Kafka Streams?  And can we share any real-life examples?
 
@@ -16,7 +16,7 @@ To give a little bit of background, Redis Streams was released as part of Redis 
 
 You can think of Redis Streams data as a way to communicate _time-indexed_ data among processes.  Oversimplifying this, you can imagine that each stream is a CSV with a timestamp, flowing through memory.  Digging deeper, Redis Streams exposes functionality that's more advanced than basic pub/sub, as you can have multiple consumer groups eat up a single stream:  even if one consumer happens to be faster than the others, Redis will rationally distribute the data.  
 
-Too, unlike Redis's pub/sub mechanism, Redis Streams are somewhat durable.  If you miss a publication for some reason, it's still available in the stream, with limits; a stream can have a cap on the amount of messages allowed to accumulate.
+Too, unlike Redis's pub/sub mechanism, Redis Streams are somewhat durable.  If you miss a message, it's still available in the stream, with limits; a stream will generally have a cap on the amount of messages allowed to accumulate.
 
 ## Why Does Rust Need Redis Streams? 🔎
 
