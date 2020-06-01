@@ -21,6 +21,7 @@
     - [Using the clipboard in a linux shell](./tech/linux_clipboard_from_command_line.md)
     - [AWS CLI](./tech/aws_cli.md)
     - [Vim](./tech/vim.md)
+- [Adding Redis Streams to Rust](./tech/adding_redis_streams_to_rust.md)
 - [The MIDI Light Show](./tech/the_midi_light_show.md)
 - [The Prawnalith: Electronics, Tanks, and Glory](./tech/prawnalith/README.md)
     - [Lab Notes](./tech/prawnalith/lab_notes.md)
