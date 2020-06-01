@@ -47,7 +47,7 @@ In the Redis Streams implementations, we wrote "entry ID repositories" which all
 
 But our micro Redis Streams written in rust were _miniscule_ in terms of their memory consumption: in a cold system, just after startup, the micro-judge and micro-game-lobby apps take up about 1MB of RAM, while the Kafka Streams apps ⚠️ usually initialize at 100MB+ ⚠️.
 
-Note that these Redis examples don't actually use the nicer API that's discussed as the main focus of this article -- generally we're using the lowest-level interface which specifies Redis commands using strings.  We'll work on upgrading these files after the aforementioned PR is merged! 
+Note that these Redis examples don't actually use the nicer API that's discussed as the main focus of this article -- generally we're using the lowest-level interface which specifies Redis commands using strings.  We'll work on upgrading these files once our [pull request](https://github.com/mitsuhiko/redis-rs/pull/319) is merged! 
 
 ## Conclusion 💛
 
