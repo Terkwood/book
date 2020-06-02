@@ -1,6 +1,6 @@
 # Adding Redis Streams to Rust 🏞️ 🦀 
 
-I recently [worked on a pull request](https://github.com/mitsuhiko/redis-rs/pull/319) which adds [Redis Streams](https://redis.io/topics/streams-intro) capabilities to [redis-rs](https://github.com/mitsuhiko/redis-rs), the most popular Redis client lib in the Rust community.  The overwhelming majority of the effort was contributed by the community, not by me:  I simply drafted the pull request which combines the two existing works.  This required some very light touch-up, and adding a few examples of how the new API works.
+I recently [worked on a pull request](https://github.com/mitsuhiko/redis-rs/pull/319) which adds [Redis Streams](https://redis.io/topics/streams-intro) capabilities to [redis-rs](https://github.com/mitsuhiko/redis-rs), the most popular Redis client lib in the Rust community.  The overwhelming majority of the effort was [contributed by the community](https://github.com/grippy/redis-streams-rs), not by me:  I simply drafted the pull request which combines the two existing works.  This required some very light touch-up, and adding a few examples of how the new API works.
 
 The PR is just now entering its final review phase, as several of us have wanted to put our best foot forward before pestering the hard-working maintainers of redis-rs.
 
@@ -20,7 +20,11 @@ Too, unlike Redis's pub/sub mechanism, Redis Streams are somewhat durable.  If y
 
 ## Why Does Rust Need Redis Streams? 🔎
 
-Regardless of how quickly we all adopt the Redis Streams, the new features are over a year old, so there was [some support expressed](https://github.com/mitsuhiko/redis-rs/issues/162#issuecomment-627459529) for including the streams commands within the main library.  We've implemented it as a Feature, so that if you want to reduce your compile time 🦀, you can explicitly disable streams support.
+Regardless of how quickly we all adopt the Redis Streams, the new features are over a year old, so there was [some support expressed](https://github.com/mitsuhiko/redis-rs/issues/162#issuecomment-627459529) for including the streams commands within the main library.  
+
+It's great that the community came together and created a [separate lib](https://github.com/grippy/redis-streams-rs) exposing the Redis Streams API.  But Redis Streams is a first-class citizen of the larger Redis API, so it makes sense to include it as part of the leading Redis crate.
+
+We've exposed the new Redis Streams commands as a feature in the redis-rs lib. If you want to reduce your compile time 🦀, you can explicitly disable streams support. This is the same as how geospatial operators work in redis-rs, so it should be a familiar concept for developers who have experience with the lib and who want to try out Streams.
 
 
 ## Off-the-Cuff Comparison with Kafka Streams 🌽
