@@ -53,6 +53,16 @@ But our micro Redis Streams written in rust were _miniscule_ in terms of their m
 
 Note that these Redis examples don't actually use the nicer API that's discussed as the main focus of this article -- generally we're using the lowest-level interface which specifies Redis commands using strings.  We'll work on upgrading these files once our [pull request](https://github.com/mitsuhiko/redis-rs/pull/319) is merged! 
 
+## Look Ma, I'm Learning! 🧠
+
+One healthy victory that came from this enterprise, was that I  learned some of the basics for Redis Streams.
+
+Creating an example of basic `XREADGROUP` command patterns gave me an immediate insight into a [shortcoming of my Go/Baduk project](https://github.com/Terkwood/BUGOUT/issues/310):  I was maintaining boilerplate code, tracking the IDs processed in a given stream. This code can be destroyed if I switch from naive `XREAD` to Redis-controlled `XREADGROUP`.
+
+Using the ">" operator in an `XREADGROUP` command tells Redis, "hey, give me only the newest records... and YOU keep track of where I am in the stream!"   This functionality, combined with the automatic `XACK` exposed in the newest addition to redis-rs, makes for a nice combination.
+
+This is [further detailed](https://redis.io/commands/xreadgroup#differences-between-xread-and-xreadgroup) in the Redis documentation.
+
 ## Conclusion 💛
 
 From my own, narrow POV, Redis Streams was quite nice to use, especially considering that I'm the one paying for my app's AWS hosting, and want to conserve memory!
