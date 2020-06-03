@@ -73,3 +73,6 @@ If you're using Redis Streams in your own work, we'd love to hear from you.
 
 We're also very much open to fact-checking on our claims in this article, and interested in hearing criticisms of Redis Streams, if you have them!
 
+### Attribution
+
+Thank you to [Audrey](https://www.flickr.com/photos/audreyjm529/) for the [image used in the header](https://www.flickr.com/photos/98799884@N00/235458062).  It is licensed under [CC by 2.0](https://creativecommons.org/licenses/by/2.0/). I cropped the image in order to make it fit a bit better as a header.
