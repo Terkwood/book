@@ -4,9 +4,9 @@
 
 I recently [worked on a pull request](https://github.com/mitsuhiko/redis-rs/pull/319) which adds [Redis Streams](https://redis.io/topics/streams-intro) capabilities to [redis-rs](https://github.com/mitsuhiko/redis-rs), the most popular Redis client in Rust's ecosystem.  The overwhelming majority of the effort was [contributed by the community](https://github.com/grippy/redis-streams-rs), not by me: I drafted the pull request which combines the two existing works.  In addition to addressing review comments, I added a few examples of how the new API works.
 
-I'm feeling the hype. 🔥  What is Redis Streams? Why do we need it in Rust?  Does it have anything to do with Kafka Streams?  And can we share any real-life examples?
+I'm feeling the hype! 🔥  What is Redis Streams? Why do we need it in Rust?  Does it have anything to do with Kafka Streams?  And can we share any real-life examples?
 
-Please read on!
+Please read on...
 
 ## What is Redis Streams? 🤔
 
@@ -24,7 +24,7 @@ The Streams commands are over a year old, so there was [some support expressed](
 
 It's great that the community came together and created a [separate lib](https://github.com/grippy/redis-streams-rs) exposing the Redis Streams API.  But Redis Streams is a first-class citizen of the larger Redis API, so it makes sense to include it as part of the leading Redis crate.
 
-We've exposed the new Redis Streams commands as an opt-out feature in redis-rs. If you want to reduce your compile time 🦀, you can explicitly disable streams support. This is the same as how geospatial operators work in redis-rs, so it should be a familiar concept for developers who have experience with the lib and who want to try out Streams.
+We've exposed the new Redis Streams commands as an opt-out feature in redis-rs. If you want to reduce your compile time 🐌 🦀, you can explicitly disable streams support. This is the same as how geospatial operators work in redis-rs, so it should be a familiar concept for developers who have experience with the lib and who want to try out Streams.
 
 
 ## Off-the-Cuff Comparison with Kafka Streams 🌽
@@ -40,14 +40,14 @@ Despite the similar naming conventions, the use cases for Kafka Streams and Redi
 
 ## Practical Comparison 🔧
 
-Out of sheer, nerdtastic enthusiasm, I had already written several Kafka Streams applications to process game states and various player-coordination functions for BUGOUT, our implementation of the ancient board game Go (Baduk). I went ahead and rewrote some of this functionality using rust and Redis Streams.  You can see some direct comparisons of how one might structure a Redis Streams app versuse a Kafka Streams app.
+Out of sheer, nerdtastic enthusiasm, I had already written several Kafka Streams applications to process game states and various player-coordination functions for BUGOUT, our implementation of the ancient board game Go (Baduk). I went ahead and rewrote some of this functionality using rust and Redis Streams.  You can see some direct comparisons of how one might structure a Redis Streams app versus a Kafka Streams app.
 
 - judging moves in [Rust/Redis Streams](https://github.com/Terkwood/BUGOUT/tree/unstable/micro-judge) vs [Kafka Streams](https://github.com/Terkwood/BUGOUT/tree/unstable/judge)
 - assigning players to game instances in [Rust/Redis Streams](https://github.com/Terkwood/BUGOUT/tree/unstable/micro-game-lobby) vs [Kafka Streams](https://github.com/Terkwood/BUGOUT/tree/unstable/game-lobby)
 
 The declarative style of Kafka Streams apps really stood out as an advantage:  we could just focus on the logic required by our game system, and didn't have to write quite as much boilerplate.
 
-But our Redis Streams apps written in rust were _miniscule_ in terms of their memory consumption: in a cold system, just after startup, the micro-judge and micro-game-lobby apps take up about 1MB of RAM, while the Kafka Streams apps ⚠️ usually initialize at 100MB+ ⚠️.  Meanwhile, the Redis server itself continues to cruise along with a similarly small main-memory footprint (~3MB in our low-traffic system).
+But our Redis Streams apps written in rust were _minuscule_ in terms of their memory consumption: in a cold system, just after startup, the micro-judge and micro-game-lobby apps take up about 1MB of RAM, while the Kafka Streams apps ⚠️ usually initialize at 100MB+ ⚠️.  Meanwhile, the Redis server itself continues to cruise along with a similarly small main-memory footprint (~3MB in our low-traffic system).
 
 Note that these Redis examples don't actually use the nicer API that's discussed as the main focus of this article -- generally we're using the lowest-level interface which specifies Redis commands using strings.  We'll work on upgrading these files once our [pull request](https://github.com/mitsuhiko/redis-rs/pull/319) is merged! 
 
@@ -55,16 +55,20 @@ Note that these Redis examples don't actually use the nicer API that's discussed
 
 As a result of working the merge, I improved my understanding of the concepts underlying Redis Streams.
 
-Creating an example of `XREADGROUP` command patterns gave me an immediate insight into a [shortcoming of my board game project](https://github.com/Terkwood/BUGOUT/issues/310):  I was maintaining boilerplate code, tracking the time IDs processed in a given stream. This code can be destroyed once I switch from naive `XREAD` to Redis-controlled `XREADGROUP`.
+Creating an example of `XREADGROUP` command patterns gave me an immediate insight into a [shortcoming of my board game project](https://github.com/Terkwood/BUGOUT/issues/310):  I was maintaining unnecessary boilerplate code, tracking the time IDs processed in a given stream. This code can be destroyed once I switch from naive `XREAD` to Redis-controlled `XREADGROUP`.
 
 Using the ">" operator in an `XREADGROUP` command tells Redis, "hey, give me only the newest records... and YOU keep track of where I am in the stream!"   This functionality, combined with the automatic `XACK` provided in in the new additions to redis-rs, makes for a nice combination.
 
 ## Conclusion 💛
 
-If you're exicited about seeing the Redis Streams support finally make it into the Rust ecosystem in a nice way, please [dust the PR with emojis](https://github.com/mitsuhiko/redis-rs/pull/319), or better yet, with critical review. 🔬
+If you're excited about seeing the Redis Streams support finally make it into the Rust ecosystem in a nice way, please [dust the PR with emojis](https://github.com/mitsuhiko/redis-rs/pull/319), or better yet, with critical review. 🔬
 
 If you're using Redis Streams in your own work, we'd love to hear from you.
 
 ### Attribution
 
 Thank you to [Audrey](https://www.flickr.com/photos/audreyjm529/) for the [image used in the header](https://www.flickr.com/photos/98799884@N00/235458062).  It is licensed under [CC by 2.0](https://creativecommons.org/licenses/by/2.0/). I cropped the image in order to make it fit a bit better as a header.
+
+### Around the Web
+
+You can also find this article on [LinkedIn](https://www.linkedin.com/pulse/adding-redis-streams-rust-felix-terkhorn) and [dev.to](https://dev.to/terkwood/adding-redis-streams-to-rust-464j).
