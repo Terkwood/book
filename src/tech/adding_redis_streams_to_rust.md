@@ -1,4 +1,4 @@
-# Adding Redis Streams to Rust 🏞️ 🦀 
+# Adding Redis Streams to Rust 💾 🦀 
 
 I recently [worked on a pull request](https://github.com/mitsuhiko/redis-rs/pull/319) which adds [Redis Streams](https://redis.io/topics/streams-intro) capabilities to [redis-rs](https://github.com/mitsuhiko/redis-rs), the most popular Redis client lib in the Rust community.  The overwhelming majority of the effort was [contributed by the community](https://github.com/grippy/redis-streams-rs), not by me:  I simply drafted the pull request which combines the two existing works.  This required some very light touch-up, and adding a few examples of how the new API works.
 
