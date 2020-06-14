@@ -298,6 +298,24 @@ sudo rtcwake -m no -l -t $(date +%s -d 'today 19:15')
 
 🌞 No problems!
 
+### Add some crontab love 💟
+
+Well, we left a disk sitting around in AWS for a couple of weeks and it cost us a bit of money.  We dithered and didn't bother to release our article.  NOW WE HAVE GREAT RESOLVE!
+
+We shall run a crontab.
+
+We shall always clean up our expensive dev trash!
+
+[We shall google for how to do this and then tell you about it](https://serverfault.com/a/352837).
+
+Entering the local user and editing the crontab file for correctness before committing it
+
+```sh
+sudo crontab -u FRIENDLY_USER -e
+```
+
+
+
 ## References and Attributions
 
 [train image](https://ccsearch.creativecommons.org/photos/b66ad5eb-8395-4eaa-a26f-ba680b23f027) by fsse8info is licensed under CC BY-SA 2.0.
