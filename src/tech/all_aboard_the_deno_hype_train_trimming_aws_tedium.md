@@ -298,6 +298,52 @@ sudo rtcwake -m no -l -t $(date +%s -d 'today 19:15')
 
 🌞 No problems!
 
+### Add some crontab love 💟
+
+Well, we left a disk sitting around in AWS for a couple of weeks and it cost us a bit of money.  We dithered and didn't bother to release our article.  NOW WE HAVE GREAT RESOLVE!
+
+We shall run a crontab.
+
+We shall always clean up our expensive dev trash!
+
+[We shall google for how to do this and then tell you about it](https://serverfault.com/a/352837).
+
+Entering the local user and editing the crontab file for correctness before committing it
+
+```sh
+sudo crontab -u FRIENDLY_USER -e
+```
+
+This was our test run.  We tried a deno script which invoked `wall`, to make sure we could run our more complex deno logic for the dev environment & AMI/snapshot cleanups.
+
+![test drive](https://user-images.githubusercontent.com/38859656/84583409-360a5c80-adc6-11ea-8983-5e4925771d85.png)
+
+### Final Plan 📆
+
+- crontab: (as root!) periodically schedule RTC wake at 23:27 
+- crontab (as user, three minutes later): destroy all snapshots and AMIs using deno script
+- crontab (as user, also three minutes later): destroy any dev environment instances
+
+That's it.  Our laptop is configured to go back to sleep relatively quickly, so we shouldn't burn too much disgusting coal power (don't hate, we live in Indiana 🤢 🏭) after it kicks on.
+
+#### The RTC Wake-Up Spammer used by ROOT Crontab
+
+![rtc spammer as root](https://user-images.githubusercontent.com/38859656/84583855-ba131300-adcb-11ea-9525-439d1a4ad5a1.png)
+
+#### The cleanup crontab for Normal User
+
+![normal user cleanup](https://user-images.githubusercontent.com/38859656/84583924-ca77bd80-adcc-11ea-91c9-a4f98cbca6ff.png)
+
+We need to make sure the `KEY_NAME` var is exposed in the environment.  First attempt above, failed.
+
+Add another pic...
+
+#### Checking for Correctness
+
+We should make sure that the instances are destroyed, their disks destroyed, elastic IP released completely, snapshots destroyed, AMIs destroyed.
+
+Although our overall approach is a hack, we're willing to accept the disorganization... _as long as everything actually works_!
+
 ## References and Attributions
 
 [train image](https://ccsearch.creativecommons.org/photos/b66ad5eb-8395-4eaa-a26f-ba680b23f027) by fsse8info is licensed under CC BY-SA 2.0.

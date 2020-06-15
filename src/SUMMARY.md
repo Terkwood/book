@@ -11,6 +11,7 @@
     - [Further Inspiration](./tech/BUGOUT/further_inspiration.md)
     - [Some Lab Notes](./tech/BUGOUT/lab_notes.md)
     - [Fedora CoreOS](./tech/BUGOUT/fedora_coreos.md)
+    - [More Lab Notes](./tech/BUGOUT/more_lab_notes.md)
 - [Shrine to Bill](./tech/shrine_to_bill.md)
 - [DenoLand](./tech/denoland.md)
     - [All Aboard the Deno Hype Train: Trimming AWS Tedium](./tech/all_aboard_the_deno_hype_train_trimming_aws_tedium.md)
