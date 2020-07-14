@@ -113,4 +113,6 @@ So we're connected, but can we create a table? Yes. We waited 20 seconds for it 
 
 ![Creating a basic table](https://user-images.githubusercontent.com/38859656/87456320-bba34700-c5d4-11ea-8f67-12d5e589078c.png)
 
+## Thanks for Reading
 
+This article was drafted on July 14, 2020.
