@@ -38,6 +38,6 @@ We also had to install [libssl-dev](https://github.com/sfackler/rust-openssl/iss
 
 The above issues should be [reported to the TiKV docs website](https://github.com/tikv/website):
 
-- [ ] libssl-dev install
-- [ ] DEBIAN_FRONTEND=noninteractive in dockerfile
-- [ ] removal of rust-toolchain version file hack
+- 🍔 libssl-dev install
+- 🍟 DEBIAN_FRONTEND=noninteractive in dockerfile
+- 🌻 removal of rust-toolchain version file hack
