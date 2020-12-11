@@ -4,11 +4,11 @@ Dec 11, 2020. I am tinkering with TiKV and trying to use the rust client.
 
 After spending some time in the rust client README but not having much success, I found [this document](https://tikv.org/docs/4.0/tasks/try/docker-stack/) explaining how to operate TiKV alone, using docker stack.
 
-We published a [working example of using TiKV rust client with TiKV in docker stack on Github](https://github.com/Terkwood/hello-tikv-rust).
+I published a [working example of using TiKV rust client with TiKV in docker stack on Github](https://github.com/Terkwood/hello-tikv-rust).
 
 ## Things that didn't work
 
-We had to make a few changes to the rust client dockerfile.
+I had to make a few changes to the rust client dockerfile.
 
 ### non-interactive install for tzdata
 
@@ -34,7 +34,7 @@ COPY Cargo.toml /builder/build/
 
 ### Missing libssl-dev
 
-We also had to install [libssl-dev](https://github.com/sfackler/rust-openssl/issues/763#issuecomment-339269157).
+I also had to install [libssl-dev](https://github.com/sfackler/rust-openssl/issues/763#issuecomment-339269157).
 
 ## Report these issues
 
