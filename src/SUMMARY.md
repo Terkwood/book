@@ -13,6 +13,7 @@
   - [Fedora CoreOS](./tech/BUGOUT/fedora_coreos.md)
   - [More Lab Notes](./tech/BUGOUT/more_lab_notes.md)
 - [Trying out Yugabyte](./tech/trying_out_yugabyte.md)
+- [Hello TiKV](./tech/hello_tikv.md)
 - [DenoLand](./tech/denoland.md)
   - [All Aboard the Deno Hype Train: Trimming AWS Tedium](./tech/all_aboard_the_deno_hype_train_trimming_aws_tedium.md)
   - [deno file_server upgrade](./tech/deno_file_server_upgrade.md)
