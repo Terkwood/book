@@ -6,10 +6,11 @@ various open source projects.
 
 ## Outstanding
 
-- [Raise issue for TiKV client example](./hello_tikv.html#report-these-issues)
+Nothing right now, _thankfully_.
 
 ## Completed
 
+- [Raised issue for TiKV client example](./hello_tikv.html#report-these-issues)
 - [Deno Redis Streams](https://github.com/keroxp/deno-redis/pull/86)
 - [Provide merge for redis-streams-rs work into redis-rs](https://github.com/mitsuhiko/redis-rs/pull/319)
 - [Tidy up README for sled](https://github.com/spacejam/sled/pull/1075)
