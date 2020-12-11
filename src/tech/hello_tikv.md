@@ -12,7 +12,7 @@ I had to make a few changes to the rust client dockerfile.
 
 ### non-interactive install for tzdata
 
-The suggested Dockerfile for building the rust client required a small change to use `DEBIAN_FRONTEND="noninteractive"`, so that `tzdata` would not prompt during installation. I also had to use `apt-get` instead of `apt`!
+I used `DEBIAN_FRONTEND="noninteractive"`, so that `tzdata` would not prompt during installation. I also had to use `apt-get` instead of `apt`!
 
 ```text
 RUN DEBIAN_FRONTEND="noninteractive" apt-get install --yes build-essential protobuf-compiler curl cmake golang
@@ -20,7 +20,7 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get install --yes build-essential proto
 
 ### rust stable has async await
 
-The doc website is also out of date by requiring a nightly rust toolchain. This is no longer necessary since `async`/`await` functionality has landed in rust stable. I removed all references to the version-hacking file `rust-toolchain`.
+The doc website incorrectly requires a nightly rust toolchain. This is no longer necessary since `async`/`await` functionality has landed in rust stable. I removed all references to the version-hacking file `rust-toolchain`.
 
 ```text
 # ...snip...
