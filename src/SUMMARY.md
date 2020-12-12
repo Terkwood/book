@@ -14,7 +14,7 @@
   - [More Lab Notes](./tech/BUGOUT/more_lab_notes.md)
 - [Trying out Yugabyte](./tech/trying_out_yugabyte.md)
 - [Hello TiKV](./tech/hello_tikv.md)
-- [Cloud Crap](/tech/cloud_crap.md)
+- [Cloud Crap](./tech/cloud_crap.md)
   - [AWS CLI](./tech/aws_cli.md)
   - [Trying Google Cloud Run](./tech/trying_google_cloud_run.md)
   - [Using Git Annex with Google Cloud Storage](./tech/using_git_annex_with_google_cloud_storage.md)
