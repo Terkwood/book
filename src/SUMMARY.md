@@ -18,6 +18,7 @@
   - [AWS CLI](./tech/aws_cli.md)
   - [Trying Google Cloud Run](./tech/trying_google_cloud_run.md)
   - [Using Git Annex with Google Cloud Storage](./tech/using_git_annex_with_google_cloud_storage.md)
+  - [GCP: Show size of bucket using gsutil](./tech/gcp_show_size_of_bucket_gsutil.md)
 - [DenoLand](./tech/denoland.md)
   - [All Aboard the Deno Hype Train: Trimming AWS Tedium](./tech/all_aboard_the_deno_hype_train_trimming_aws_tedium.md)
   - [deno file_server upgrade](./tech/deno_file_server_upgrade.md)
