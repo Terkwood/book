@@ -40,3 +40,5 @@ To configure `git-annex` with a 5MB chunk size:
 ```sh
 BUCKET=some-bucket-name RCLONE_REMOTE=rclone-remote-name git annex initremote gcs-ruins type=external externaltype=rclone target=$RCLONE_REMOTE prefix=$BUCKET chunk=5MiB encryption=shared mac=HMACSHA512 rclone_layout=lower
 ```
+
+Finally, we symlinked `~/.rclone.conf` to `~/.config/rclone/rclone.conf` so that `rclone` would pick up the config on our Debian-derived system.
