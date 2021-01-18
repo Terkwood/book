@@ -14,3 +14,4 @@ But that's OK. I'd like to improve my skill with making DSLs, and it's fun revis
 
 - [Video Lang](https://github.com/videolang/video)
 - [Lindenmayer Systems](https://github.com/rfindler/lindenmayer), and also a [paper](https://users.cs.northwestern.edu/~sfq833/resources/papers/herbarium_racketensis_2017.pdf)
+- [Scratchy: Demo of implementing a language](https://github.com/mflatt/scratchy). Here's its [lexer/parser code](https://github.com/mflatt/scratchy/blob/master/scratchy/reader.rkt)
