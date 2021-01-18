@@ -4,6 +4,13 @@ It's not super easy to learn Racket. There aren't thousands of marauding program
 
 But that's OK. I'd like to improve my skill with making DSLs, and it's fun revisiting the world of Scheme.
 
+## Articles
+
 - [The PL of your dreams](http://rilouw.eu/article/the-programming-language-of-your-dreams-part-1)
 - [Beautiful Racket](https://beautifulracket.com/)
 - [Lang section in the official docs](https://docs.racket-lang.org/guide/languages.html)
+
+## Example Projects
+
+- [Video Lang](https://github.com/videolang/video)
+- [Lindenmayer Systems](https://github.com/rfindler/lindenmayer)
