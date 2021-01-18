@@ -13,4 +13,4 @@ But that's OK. I'd like to improve my skill with making DSLs, and it's fun revis
 ## Example Projects
 
 - [Video Lang](https://github.com/videolang/video)
-- [Lindenmayer Systems](https://github.com/rfindler/lindenmayer)
+- [Lindenmayer Systems](https://github.com/rfindler/lindenmayer), and also a [paper](https://users.cs.northwestern.edu/~sfq833/resources/papers/herbarium_racketensis_2017.pdf)
