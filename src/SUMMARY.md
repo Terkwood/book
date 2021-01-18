@@ -12,6 +12,7 @@
   - [Some Lab Notes](./tech/BUGOUT/lab_notes.md)
   - [Fedora CoreOS](./tech/BUGOUT/fedora_coreos.md)
   - [More Lab Notes](./tech/BUGOUT/more_lab_notes.md)
+- [Racket](./tech/racket.md)
 - [Trying out Yugabyte](./tech/trying_out_yugabyte.md)
 - [Hello TiKV](./tech/hello_tikv.md)
 - [Cloud Crap](./tech/cloud_crap.md)
