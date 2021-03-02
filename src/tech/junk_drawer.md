@@ -1,4 +1,4 @@
-# The Junk Drawer
+# Everything Else
 
 Everything in this section has so far resisted categorization.
 
@@ -16,7 +16,7 @@ I'd like to look further into some of these items.
 
 ## Articles
 
-- [Jason Williams: A possible new backend for rust](https://jason-williams.co.uk/a-possible-new-backend-for-rust), which provides faster compile times.  How buggy would it be to switch back and forth between Cranelift for dev and LLVM for release?
+- [Jason Williams: A possible new backend for rust](https://jason-williams.co.uk/a-possible-new-backend-for-rust), which provides faster compile times. How buggy would it be to switch back and forth between Cranelift for dev and LLVM for release?
 - [Adi Polak: Bite-sized intro to Spark](https://dev.to/adipolak/apache-spark-bitesize-series-1jd2)
 - [João H. Capucho: A nice introduction to Kafka](https://dev.to/hcapucho/apache-kafka-101-introduction-567a)
 - [Jess Frazelle: Power to the People](https://blog.jessfraz.com/post/power-to-the-people/), an analysis of power usage in data centers.
