@@ -45,6 +45,7 @@
   - [Setting up mdBook](./tech/setting_up_mdbook.md)
   - [Setting up Github Pages](./tech/github_pages.md)
   - [ffmpeg](./tech/ffmpeg.md)
+  - [WTF WHY IS FIREFOX SO SLOW ON LINUX](./tech/wtf_why_is_firefox_so_slow_on_linux.md)
 - [Fun Stuff](./fun/README.md)
   - [Music Directory](./fun/music_directory.md)
   - [Fallout Shelter: 9999 Lunch Boxes Cheat](./fun/fallout_shelter_9999_lunch_boxes.md)
