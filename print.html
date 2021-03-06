@@ -1,0 +1,1794 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js coal">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Terkwood Farms</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "coal";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('coal')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="chapter-item expanded "><a href="tech/BUGOUT/index.html"><strong aria-hidden="true">1.</strong> BUGOUT: Play Go against AI 💪 and Human Friends 👪</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tech/BUGOUT/emo.html"><strong aria-hidden="true">1.1.</strong> Emotional Backdrop</a></li><li class="chapter-item expanded "><a href="tech/BUGOUT/building_the_project.html"><strong aria-hidden="true">1.2.</strong> Building the Project</a></li><li class="chapter-item expanded "><a href="tech/BUGOUT/too_cheap.html"><strong aria-hidden="true">1.3.</strong> Too Cheap for Pro Tier</a></li><li class="chapter-item expanded "><a href="tech/BUGOUT/welcome_katago.html"><strong aria-hidden="true">1.4.</strong> Welcome KataGo</a></li><li class="chapter-item expanded "><a href="tech/BUGOUT/a_happy_ending.html"><strong aria-hidden="true">1.5.</strong> A Happy Ending</a></li><li class="chapter-item expanded "><a href="tech/BUGOUT/further_inspiration.html"><strong aria-hidden="true">1.6.</strong> Further Inspiration</a></li><li class="chapter-item expanded "><a href="tech/BUGOUT/lab_notes.html"><strong aria-hidden="true">1.7.</strong> Some Lab Notes</a></li><li class="chapter-item expanded "><a href="tech/BUGOUT/fedora_coreos.html"><strong aria-hidden="true">1.8.</strong> Fedora CoreOS</a></li><li class="chapter-item expanded "><a href="tech/BUGOUT/more_lab_notes.html"><strong aria-hidden="true">1.9.</strong> More Lab Notes</a></li></ol></li><li class="chapter-item expanded "><a href="tech/adding_redis_streams_to_rust.html"><strong aria-hidden="true">2.</strong> Adding Redis Streams to Rust</a></li><li class="chapter-item expanded "><a href="tech/the_midi_light_show.html"><strong aria-hidden="true">3.</strong> The MIDI Light Show</a></li><li class="chapter-item expanded "><a href="tech/prawnalith/index.html"><strong aria-hidden="true">4.</strong> The Prawnalith: Electronics, Tanks, and Glory</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tech/prawnalith/lab_notes.html"><strong aria-hidden="true">4.1.</strong> Lab Notes</a></li></ol></li><li class="chapter-item expanded "><a href="tech/object_detection.html"><strong aria-hidden="true">5.</strong> Vision Project, Object Detection Resources</a></li><li class="chapter-item expanded "><a href="tech/penguin_hell.html"><strong aria-hidden="true">6.</strong> Penguin Hell</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tech/convert_mp4_to_gif_using_ffmpeg.html"><strong aria-hidden="true">6.1.</strong> Convert MP4 to GIF using ffmpeg</a></li><li class="chapter-item expanded "><a href="tech/ctop_selinux_docker.html"><strong aria-hidden="true">6.2.</strong> Running ctop docker container in privileged mode under SELinux</a></li><li class="chapter-item expanded "><a href="tech/focus_alacritty_gnome.html"><strong aria-hidden="true">6.3.</strong> Use Keyboard Shortcut to Focus Alacritty in GNOME</a></li><li class="chapter-item expanded "><a href="tech/tmux_alacritty_scroll.html"><strong aria-hidden="true">6.4.</strong> Easy scrolling with tmux and alacritty</a></li><li class="chapter-item expanded "><a href="tech/systemd.html"><strong aria-hidden="true">6.5.</strong> Systemd and Systemctl</a></li><li class="chapter-item expanded "><a href="tech/linux_clipboard_from_command_line.html"><strong aria-hidden="true">6.6.</strong> Using the clipboard in a linux shell</a></li><li class="chapter-item expanded "><a href="tech/vim.html"><strong aria-hidden="true">6.7.</strong> Vim</a></li></ol></li><li class="chapter-item expanded "><a href="tech/distributed_wasteland.html"><strong aria-hidden="true">7.</strong> Distributed Wasteland</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tech/trying_out_yugabyte.html"><strong aria-hidden="true">7.1.</strong> Trying out Yugabyte</a></li><li class="chapter-item expanded "><a href="tech/hello_tikv.html"><strong aria-hidden="true">7.2.</strong> Hello TiKV</a></li></ol></li><li class="chapter-item expanded "><a href="tech/cloud_crap.html"><strong aria-hidden="true">8.</strong> Cloud Crap</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tech/aws_cli.html"><strong aria-hidden="true">8.1.</strong> AWS CLI</a></li><li class="chapter-item expanded "><a href="tech/trying_google_cloud_run.html"><strong aria-hidden="true">8.2.</strong> Trying Google Cloud Run</a></li><li class="chapter-item expanded "><a href="tech/using_git_annex_with_google_cloud_storage.html"><strong aria-hidden="true">8.3.</strong> Using Git Annex with Google Cloud Storage</a></li><li class="chapter-item expanded "><a href="tech/gcp_show_size_of_bucket_gsutil.html"><strong aria-hidden="true">8.4.</strong> GCP: Show size of bucket using gsutil</a></li></ol></li><li class="chapter-item expanded "><a href="tech/denoland.html"><strong aria-hidden="true">9.</strong> DenoLand</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tech/all_aboard_the_deno_hype_train_trimming_aws_tedium.html"><strong aria-hidden="true">9.1.</strong> All Aboard the Deno Hype Train: Trimming AWS Tedium</a></li><li class="chapter-item expanded "><a href="tech/deno_file_server_upgrade.html"><strong aria-hidden="true">9.2.</strong> deno file_server upgrade</a></li><li class="chapter-item expanded "><a href="tech/using_deno_in_vscode.html"><strong aria-hidden="true">9.3.</strong> Using Deno in VsCode</a></li></ol></li><li class="chapter-item expanded "><a href="tech/junk_drawer.html"><strong aria-hidden="true">10.</strong> Else</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tech/h264_live_camera.html"><strong aria-hidden="true">10.1.</strong> H264 Live Camera Fork</a></li><li class="chapter-item expanded "><a href="tech/racket.html"><strong aria-hidden="true">10.2.</strong> Racket</a></li><li class="chapter-item expanded "><a href="tech/lolbots.html"><strong aria-hidden="true">10.3.</strong> lolbots</a></li><li class="chapter-item expanded "><a href="tech/deepdream.html"><strong aria-hidden="true">10.4.</strong> Deepdream</a></li><li class="chapter-item expanded "><a href="tech/setting_up_mdbook.html"><strong aria-hidden="true">10.5.</strong> Setting up mdBook</a></li><li class="chapter-item expanded "><a href="tech/github_pages.html"><strong aria-hidden="true">10.6.</strong> Setting up Github Pages</a></li><li class="chapter-item expanded "><a href="tech/ffmpeg.html"><strong aria-hidden="true">10.7.</strong> ffmpeg</a></li><li class="chapter-item expanded "><a href="tech/wtf_why_is_firefox_so_slow_on_linux.html"><strong aria-hidden="true">10.8.</strong> WTF WHY IS FIREFOX SO SLOW ON LINUX</a></li></ol></li><li class="chapter-item expanded "><a href="tech/oss_commitment_tracking.html"><strong aria-hidden="true">11.</strong> OSS Commitment Tracking</a></li><li class="chapter-item expanded "><a href="fun/index.html"><strong aria-hidden="true">12.</strong> Fun Stuff</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="fun/music_directory.html"><strong aria-hidden="true">12.1.</strong> Music Directory</a></li><li class="chapter-item expanded "><a href="fun/fallout_shelter_9999_lunch_boxes.html"><strong aria-hidden="true">12.2.</strong> Fallout Shelter: 9999 Lunch Boxes Cheat</a></li></ol></li><li class="chapter-item expanded "><a href="source.html">Source Code</a></li><li class="chapter-item expanded affix "><a href="feedback.html">Providing Feedback</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Terkwood Farms</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="terkwood-farms"><a class="header" href="#terkwood-farms">Terkwood Farms</a></h1>
+<p>This notebook contains items primarily relating to computer technology.</p>
+<h2 id="about-the-author"><a class="header" href="#about-the-author">About the Author</a></h2>
+<p>I am an independent software producer specialized in data and distributed systems.</p>
+<p>I have made <a href="https://github.com/Terkwood">various open source works available on Github</a>.</p>
+<h1 id="bugout-play-go-against-ai--and-human-friends-"><a class="header" href="#bugout-play-go-against-ai--and-human-friends-">BUGOUT: Play Go against AI 💪 and Human Friends 👪</a></h1>
+<p>BUGOUT provides a web interface to <a href="https://github.com/lightvector/KataGo">KataGo</a>, a leading, community-driven AI skilled in the <a href="https://en.wikipedia.org/wiki/Go_(game)">classic board game, Go</a>.</p>
+<p>BUGOUT also features a multiplayer option for playing against human friends, if you're lucky enough to have them.</p>
+<p>BUGOUT's web interface is a <a href="https://github.com/Terkwood/Sabaki">derivative</a> of <a href="https://github.com/SabakiHQ/Sabaki">Sabaki</a>, the much-loved desktop app which is already capable of hooking into KataGo, <a href="https://zero.sjeng.org/home">Leela Zero</a>, and <a href="https://www.gnu.org/software/gnugo/">GNU Go</a>.</p>
+<h2 id="source-code-for-the-project"><a class="header" href="#source-code-for-the-project">Source Code for the Project</a></h2>
+<p>The project is open-sourced, currently under MIT license. It is <a href="https://github.com/Terkwood/BUGOUT">available on Github</a>.</p>
+<h1 id="emotional-backdrop"><a class="header" href="#emotional-backdrop">Emotional Backdrop</a></h1>
+<p>I started playing GO sometime during high school.  Several of my friends also learned to play.  We would often play chess, for which I had a neat little carrying case with a simple game clock, a rollout board, and sturdy pieces.  I came into a possession of a GO board of standard dimensions, and used plastic pieces that were just heavy enough to feel like they mattered.</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/77853799-16469d80-71b4-11ea-8f14-8ae52b84b81b.jpeg" alt="That Good, Old Board" /></p>
+<p>We would sometimes meet at a Chinese dive on West 10th Street in Indianapolis, consume delicious, sugary food, and play.</p>
+<p>GO felt different than chess.  There was a sense of immense possibility.  There was time to think about the future.  Winning was hard.  Getting your skill up with a same-stage newbie was exhilarating, because you grew together.</p>
+<p>Eventually I got my board signed by <a href="https://www.victorwooten.com/">VICTOR WOOTEN</a> while attending a concert performance given by <a href="https://www.flecktones.com/">Béla Fleck and the Flecktones</a> at the <a href="https://www.indianaroof.com/">Indiana Roof Ballroom</a>:  we had been playing some small rounds prior to the start of the concert.</p>
+<p>It must have been... 1999?  Victor Wooten was super gracious, and inspired everyone to a wholesome life of technical mastery.  I was young.  I wore an undersized fedora.</p>
+<p>The music was phenomenal, and Wooten's signature fueled my fire.</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/77853798-15157080-71b4-11ea-9a92-0fba25eb780d.jpeg" alt="That Good Wooten" /></p>
+<p>In college I dreamt that one day I would wake to the sound of an obstreperous trumpet, having been mired in games and strenuous efforts to build some sort of ultimate strategy.  I dreamt that I would wake to a vision of clear dawn.</p>
+<p>But the actual time I've spent playing GO in my life is tiny.  Life goes on, and its daily demands obscure our roots.</p>
+<p>Still, the aesthetic delight of GO has been enjoyed by millions of individuals over the centuries, and it's this very beauty which has inspired my work over the last nine months.</p>
+<p>GO is a game which helps me combat the lassitude of experience and boredom.</p>
+<p>GO is not a game which must be won.  It's enough to face a player whose skill exceeds yours, and to learn.  When I play 9x9 against KataGo running on a 5W computer, I'm happy if I manage not to lose an embarrassing number of pieces.</p>
+<p><em>GO keeps me sharp</em>.</p>
+<h1 id="building-the-project"><a class="header" href="#building-the-project">Building the Project</a></h1>
+<p>BUGOUT started out as an excuse to implement something (anything) using <a href="https://kafka.apache.org/">Kafka</a>.  My previous two professional engagements had barely skirted opportunities to legitimately include a Kafka install:  one was simple enough to rely on HTTP microservices, <a href="https://github.com/WW-Digital/reactive-kinesis">another had opted for Kinesis</a>.</p>
+<p>Fresh into successful semi-retirement, I didn't want to bother with finding a use case for my implementation.  I wanted what I couldn't have reasonably argued for in past, commercial settings.  I wanted to play with <a href="https://kafka.apache.org/documentation/streams/">Kafka Streams</a>!</p>
+<p>It turns out that mapping the <a href="https://github.com/Terkwood/BUGOUT/blob/unstable/judge/src/main/kotlin/Model.kt">tiny domain model</a> of a GO game to kafka streams is... easy.  Initially BUGOUT was envisioned as a multiplayer GO board which could easily run in any modern browser and provide an enjoyable, boutique alternative to more popular servers and venues.  I wanted to play again with my old friends, just like when we were kids.  So the project <a href="https://github.com/Terkwood/BUGOUT/issues/42">quickly incorporated a game lobby system</a> which allowed players to choose between joining a quick 19x19 game with the next person to visit the web page, or creating a nicely-formatted URL (<code>https://example.com/?join=nXblGBE7erWyocXYYpRN1YOzdD</code>) for their private game and sharing it with a friend.</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/77851229-e42e3f00-71a5-11ea-8a91-93da91abf87a.png" alt="Choosing a Venue" /></p>
+<p><img src="https://user-images.githubusercontent.com/38859656/77851228-e2647b80-71a5-11ea-9467-cf086d76fb8e.png" alt="Board Size Options" /></p>
+<p><img src="https://user-images.githubusercontent.com/38859656/77851227-e1cbe500-71a5-11ea-8faa-264996a2257a.png" alt="Turn Order Preference" /></p>
+<p><img src="https://user-images.githubusercontent.com/38859656/77851226-e1334e80-71a5-11ea-834f-0c76a0e35080.png" alt="Sharing a Link to a Game" /></p>
+<p><img src="https://user-images.githubusercontent.com/38859656/77851225-ded0f480-71a5-11ea-92a6-bb23755df74c.png" alt="Joining a Link to a Game" /></p>
+<p>Finally, both players can be fairly assigned a side, and the game can begin.</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/77851236-e7c1c600-71a5-11ea-94a3-750bbeab74df.png" alt="Your Color" /></p>
+<p><img src="https://user-images.githubusercontent.com/38859656/77851232-e55f6c00-71a5-11ea-827e-f0201c6d9f51.png" alt="Finally, A Game" /></p>
+<p>It basically worked.  I spent time <a href="https://github.com/Terkwood/BUGOUT/issues/48">making sure the websocket connection between the browser and the BUGOUT gateway server was solid</a>.  I had to <a href="https://github.com/Terkwood/BUGOUT/blob/dfb4a63be1b052bdb8dc448993d2feecfd91ce74/game-lobby/src/main/kotlin/Application.kt#L531">guarantee that Kafka and all its dependent apps started up in an orderly fashion</a>.  And I enjoyed writing <a href="https://github.com/Terkwood/BUGOUT/blob/dfb4a63be1b052bdb8dc448993d2feecfd91ce74/game-lobby/src/main/kotlin/Application.kt#L37">functional-ish Kafka Streams code in Kotlin</a>:  from a cognitive perspective, it felt clean and tidy, even if the topology graphs quickly got out of hand.</p>
+<p><img src="https://raw.githubusercontent.com/Terkwood/BUGOUT/unstable/game-lobby/topo.jpg" alt="Game Lobby Message Processing: This is Getting Insane" /></p>
+<h1 id="too-cheap-for-pro-tier"><a class="header" href="#too-cheap-for-pro-tier">Too Cheap for Pro Tier</a></h1>
+<p>It's pretty obvious to anyone that spends 30 minutes in the Kafka literature, that a production deployment of Kafka involves at least three machines.  I was running a single node, because my average user load was zero.  What's more, I was paying for AWS compute time using a personal credit card, so I've never been exactly fired up about running an individual host that comes anywhere near <a href="https://docs.confluent.io/current/kafka/deployment.html">the specs recommended by the vendor</a>.</p>
+<p>Some additional reading turned up that <a href="https://www.infoq.com/articles/apache-kafka-best-practices-to-optimize-your-deployment/">6GB of RAM is a reasonable minimum</a> for any single host:</p>
+<blockquote>
+<p>In most cases, Kafka can run optimally with 6 GB of RAM for heap space. For especially heavy production loads, use machines with 32 GB or more. Extra RAM will be used to bolster OS page cache and improve client throughput. While Kafka can run with less RAM, its ability to handle load is hampered when less memory is available.</p>
+</blockquote>
+<p>Ever the miser, I settled on running a <code>t3.medium</code> compute host for my degenerate Kafka cluster with its single, lonely node.  4GB of RAM certainly worked well enough for my theoretically scalable backend -- at least as long as it didn't become popular.</p>
+<p>Anyway, who cares about vendor reccomended minima or a realistic-looking deployment?  I was liberated from corporate hierarchy, profit motive, etc, and was ready to experience the raw freedom that I'd always dreamed about as a junior developer.  I was ready to <em>play with toys</em>.</p>
+<p>The only problem was that running even a <code>t3.medium</code> around the clock <a href="https://www.ec2instances.info/?filter=t3&amp;cost_duration=daily">cost about $1/day</a>.</p>
+<p>🤑 That's expensive! 🤑</p>
+<h2 id="turning-kafka-on-and-off-with-rust--aws"><a class="header" href="#turning-kafka-on-and-off-with-rust--aws">Turning Kafka On and Off with Rust + AWS</a></h2>
+<p>The windmills were ready to tilt.</p>
+<p><a href="https://github.com/Terkwood/BUGOUT/issues/75">I spent a non-trivial amount of effort</a> using <a href="https://github.com/rusoto/rusoto">rusoto</a> to control the startup and shutdown of my &quot;very expensive&quot; <code>t3.medium</code> instance.  Whenever the system detects that there are no users connected, a timer starts, and after a few minutes, <a href="https://github.com/Terkwood/BUGOUT/tree/unstable/reaper">it shuts down</a> the <code>t3.medium</code> running Kafka, and all of the memory-hogging Kafka Streams apps supporting gameplay.</p>
+<p>Whenever someone comes back to the website and wants to play a game, the system loyally <a href="https://github.com/Terkwood/BUGOUT/tree/unstable/bugle">boots the Kafka host</a>.</p>
+<p>And that's great.  I can still afford to eat.  Working with rusoto was painless.  But the user experience of waiting for BUGOUT's Kafka backend to initialize is... abysmal.  It takes about 90 seconds for the EC2 instance and its various docker containers to start up.  That's 81 seconds longer than eternity.</p>
+<h2 id="starting-on-the-micro-stack"><a class="header" href="#starting-on-the-micro-stack">Starting on the Micro-Stack</a></h2>
+<p>Enough was enough.  I had no boss.  I had no users.  I had no chains.  My self-respect was questionable.</p>
+<p>I would re-implement the backend <a href="https://dev.to/pdambrauskas/event-sourcing-with-redis-45ha">with redis streams</a>, so that my game could be online 24/7, using leftover CPU and RAM on the <code>t3.micro</code> instance that I was already paying for.</p>
+<p>Why not?  Redis is awesome!  And by choosing <code>rust</code> for this portion of the impl, I knew I could keep my memory and CPU footprint low.</p>
+<p><a href="https://github.com/Terkwood/BUGOUT/issues/174">The effort is ongoing</a>. It will eventually be completed in the way that one completes a crocheted scarf.</p>
+<h1 id="welcome-katago"><a class="header" href="#welcome-katago">Welcome KataGo</a></h1>
+<p>After months of relatively steady operation, I came to the sobering conclusion that most of my close friends were busy with their own lives, and playing a synchronous session of GO with them, often across international time zones, was an exercise in scheduling prowess that surpasses even the most skilled project manager.</p>
+<p>So I began to wonder about playing against an <a href="https://en.wikipedia.org/wiki/AlphaZero">AlphaZero-like</a> AI through my browser.</p>
+<p>If I can't play against my friends...</p>
+<p>...why not <em>BUILD MY OWN FRIEND?</em></p>
+<h2 id="kata-meets-nano"><a class="header" href="#kata-meets-nano">Kata Meets Nano</a></h2>
+<p>Thus was born the effort to integrate <a href="https://github.com/lightvector/KataGo">KataGo</a>, a community implementation of cutting edge Go AI that's gotten a nice little boost thanks to <a href="https://blog.janestreet.com/accelerating-self-play-learning-in-go/">hardware sponsorship from Jane Street</a>.</p>
+<p>In fact, <a href="https://online-go.com/player/592684/">you can already play against KataGo online</a>.</p>
+<p>That's fine. I like building things on my own -- or in this case, integrating other people's things on my own.  So I purchased an <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-nano-developer-kit/">NVIDIA Jetson Nano System-on-a-Chip</a> and set about <a href="https://github.com/Terkwood/BUGOUT/issues/67">linking it to my existing infrastructure</a>.</p>
+<p>The effort proceeded smoothly.  Soon I was suffering regular blows to my pride, delivered easily by a 128-core GPU that can subside on a mere 5W of power.  NVIDIA's pre-installed CUDA libs made compilation of KataGo relatively easy.  Hooking up the tiny SoC in my office to my dirt-cheap AWS <code>t3.micro</code> felt pleasantly conservative.</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/77859879-e611f580-71d9-11ea-898a-e2f928605cac.jpeg" alt="Nvidia Jetson Nano Unboxed" /></p>
+<h1 id="a-happy-ending"><a class="header" href="#a-happy-ending">A Happy Ending</a></h1>
+<p>There isn't much work left before the AI subsystem is complete.  It's already possible to play against KataGo through the web interface, if you're patient enough to run a read-eval-print-loop and put Kata's pieces on the board manually.</p>
+<p>After just a few more hours of work, I'll be able to head to my website from anywhere in the world, and play a power-efficient little bot that's just right for my skill level.</p>
+<p>And then, free from the lamentable desire for human interaction, I'll play against my own, new type of friend:  a friend born of silicon of and parallel arithmetic.</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/77859737-1a38e680-71d9-11ea-9a50-3ca25d7b9558.png" alt="Love the Log" /></p>
+<p><img src="https://user-images.githubusercontent.com/38859656/77859794-61bf7280-71d9-11ea-8f00-d9eef8bc437b.png" alt="Losing peacefully to SkyNet" /></p>
+<h2 id="were-also-on-devto"><a class="header" href="#were-also-on-devto">We're Also On Dev.to</a></h2>
+<p>This article was <a href="https://dev.to/terkwood/bugout-play-go-against-ai-and-human-friends-43a1">cross-posted on dev.to</a> on March 30, 2020.</p>
+<h1 id="further-inspiration"><a class="header" href="#further-inspiration">Further Inspiration</a></h1>
+<p>Don't let the crisis get you down.</p>
+<p><img src="https://pbs.twimg.com/media/EUlyKZCUwAQLMqc?format=jpg&amp;name=4096x4096" alt="help is on the way" /></p>
+<blockquote>
+<p>Yoshiki Kurita (right), who was the first amateur to enter the C-League, [a student] in the second year of the Tokyo University of Science, will play against Mochizuki Kenpachi 18-dan (left) in the league's first match on [April] 2nd [...]. The C league has five races in all. If you win 5 consecutive times, you will participate in the challenger decision tournament and if you win 4 times, you will be promoted to the B league.</p>
+</blockquote>
+<p>Thanks to <a href="https://twitter.com/asahi_igo/status/1245653101211561984">asahi_igo</a>🐦 for this tweet. Text translated with <a href="https://translate.google.com/">Google Translate</a>.</p>
+<h2 id="agent-57-outperforming-the-human-atari-benchmark-deepmind"><a class="header" href="#agent-57-outperforming-the-human-atari-benchmark-deepmind">Agent 57: Outperforming the Human Atari Benchmark (Deepmind)</a></h2>
+<p><a href="https://deepmind.com/blog/article/Agent57-Outperforming-the-human-Atari-benchmark">This article</a> talks about general intelligence as it applies to playing a bunch of Atari games.</p>
+<h2 id="american-go-assocation"><a class="header" href="#american-go-assocation">American Go Assocation</a></h2>
+<p><a href="https://www.usgo.org/">American Go Assocation</a> has made a lot of information available over a long period of time.  Try browsing their <a href="https://www.usgo.org/learn-play">Learn to Play</a> page.</p>
+<p><a href="https://www.usgo.org/news/">Their news column</a> may contain <a href="https://www.usgo.org/news/2020/04/go-spotting-new-york-times-obituary-for-nobel-prize-winner-phillip-anderson/">rewarding reading</a>.</p>
+<h2 id="michael-redmond"><a class="header" href="#michael-redmond">Michael Redmond</a></h2>
+<p>Even abysmal players stuck with the English language can find some resources budding online.</p>
+<p>Take a look at <a href="https://twitter.com/RedmondGoPro">Michael Redmond's Twitter profile</a>🐦 for interesting plays and tips.</p>
+<h2 id="still-feeling-sluggish"><a class="header" href="#still-feeling-sluggish">Still Feeling Sluggish?</a></h2>
+<p><a href="https://blog.goo.ne.jp/igoshiraishi/e/936e5d6db5c38f74ff991459a5961e54">You can keep digging</a> and find inspiration.  Don't give up! ♟️</p>
+<h1 id="last-mile-of-katago-apr-11-2020"><a class="header" href="#last-mile-of-katago-apr-11-2020">Last Mile of KataGo (Apr 11, 2020)</a></h1>
+<p>At or around <a href="https://github.com/Terkwood/BUGOUT/commit/4947cc6dc910d88202dad45afc3be94b92f6bece">4947cc6</a>...</p>
+<h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
+<p><code>1200.</code> Issue #67 is almost complete.  KataGo responds if the human picks WHITE.  The response is lost because the UI seems broken (undef dialog).</p>
+<p><code>1500.</code> If you play a 19x19 with human as WHITE, KataGo is able to send a move back.  Highlighted that 9x9 has wrong board coords attached at some point in the system (Sabaki receives a MakeMove from BUGOUT with a negative coord).</p>
+<p>But wait, the second turn is from the human, but looks duplicated ?</p>
+<pre><code class="language-text">[2020-04-11T19:02:56Z INFO  micro_judge::io::stream] ACCEPTED: MoveMade { game_id: GameId(abb65823-febe-49fd-9d61-9b9374cf943f), reply_to: ReqId(a848cad4-6d46-44b9-8389-289427307f3d), event_id: EventId(c13797b3-5250-41f8-ac57-0005a59b1d6f), player: BLACK, coord: Some(Coord { x: 2, y: 3 }), captured: [] }
+
+
+[2020-04-11T19:03:04Z INFO  micro_judge::io::stream] ACCEPTED: MoveMade { game_id: GameId(abb65823-febe-49fd-9d61-9b9374cf943f), reply_to: ReqId(3c34a9e5-911c-4d6f-9030-abd43aca4f75), event_id: EventId(2415ac47-2ece-423c-a9e9-acb861d11fb5), player: BLACK, coord: Some(Coord { x: 2, y: 3 }), captured: [] }
+</code></pre>
+<p><code>1522.</code> Hacked Sabaki (<code>3fc20268</code>) to avoid sending duplicates.  Now I see that game state changelog isn't being propagated correctly.  Time for a break.</p>
+<p><code>1542.</code> Time to consolidate my progress in <code>gateway</code> and make a commit.</p>
+<p><code>1636.</code> I don't understand why <code>micro-changelog</code> tracks game states correctly, but <code>micro-judge</code> doesn't.  The changelog service XADDs faithfully.  <code>micro-judge</code> seems to miss the update.</p>
+<p><code>1705.</code> Judge is failing to update ITS game state changelog entry.  Changelog service is reading its own stream and updating its repo correctly.  BAD Judge.  GOOD Changelog!</p>
+<p><code>1716.</code> Judge appears to be spinning in its stream processor. :</p>
+<p><code>1738.</code> I can see that the XRead EntryID in judge isn't updated for game state.</p>
+<p><code>1755.</code> Is the Redis XREAD deserialization type correct? </p>
+<pre><code class="language-rs">pub type XReadResult = Vec&lt;HashMap&lt;String, Vec&lt;HashMap&lt;String, HashMap&lt;String, String&gt;&gt;&gt;&gt;&gt;;
+</code></pre>
+<p><code>1812.</code> Commit <code>e73e8e2</code> has Judge assuming an XREAD with <code>Vec&lt;u8&gt;</code> data, not <code>String</code>.  Gonna be annoying to pull this out if it doesn't help, which it probably won't.</p>
+<p><code>1818.</code>  It worked!  Judge now updates its game state changelog correctly.  All it cost was an extra round of <code>.clone()</code>s.  Well, I still can't progress past move two in Sabaki, but that's probably unrelated.  I'm going to commit <code>micro-judge</code> and <code>micro-changelog</code> now, since they've moved forward.</p>
+<p><code>1828.</code> Raised my PR and am shutting down this very pricey <code>t3.medium</code> that I use for development. <a href="https://github.com/Terkwood/BUGOUT/pull/216">Isnt-it-romantic</a>.</p>
+<p><code>1954.</code> Came back and merged my PR.  Trying again with Sabaki to see where the AI's <code>made move</code> event gets dropped.  Gateway and services seem solid enough now.</p>
+<p><code>2004.</code> Trying out deno <code>file_server -p 8000 .</code> instead of <code>python -m SimpleHTTPServer</code>:</p>
+<p><code>2020.</code> I am still tracing through Sabaki trying to find out why <code>gtp.js</code> function <code>listenForMove</code> doesn't get called.  Done for now.</p>
+<h1 id="easter-2020"><a class="header" href="#easter-2020">Easter 2020</a></h1>
+<p>Looks like <a href="https://github.com/SabakiHQ/Sabaki/commit/13e35b45aaee11fdf3c0ed400a645a50a9461657">Sabaki web branch</a> is deprecated.  Let's consider slimming down our forked <code>unstable</code> branch to the bare minimum and trying again with KataGo mods.</p>
+<p><code>1324.</code> Trimmed some dead classes out of Sabaki.  Looks like <code>deno file_server</code> doesn't like to serve our <code>/?join=ABC</code> links!  Back to python...</p>
+<p><code>1350.</code> <a href="https://github.com/Terkwood/Sabaki/pull/53">Closed one set of trimmings</a> and <a href="https://github.com/Terkwood/Sabaki/pull/54">opened another</a>.</p>
+<p><code>1354.</code> Here are more things we should delete:</p>
+<ul>
+<li><code>fileformats/gib.js</code> and <code>ngf.js</code></li>
+<li><code>App.js</code> section <code>if (prevState.fullScreen !== this.state.fullScreen)</code></li>
+</ul>
+<p><code>1405.</code> <a href="https://github.com/Terkwood/Sabaki/pull/55">Opened a PR to remove update checking</a>.  Closed #54.</p>
+<p><code>1425.</code> Closed #55 and <a href="https://github.com/Terkwood/Sabaki/pull/56">opened a change set trimming file format procedures</a>.  Deployed for a little bit more testing.</p>
+<p><code>1501.</code> Merged #56. Ventured into <code>enginesyncer.js</code> unsuccessfully.  Gave up on that change set and <a href="https://github.com/Terkwood/Sabaki/pull/57">opened another one trimming App.js and main.js</a>.</p>
+<p><code>1516.</code> Test deploy. I'm close to &lt;200KB package for users to download, which is nice.  The initial build, at the very start of BUGOUT effort, was about 315KB?</p>
+<pre><code class="language-text">bundle.js  191 KiB       0  [emitted]  main
+</code></pre>
+<p><code>1536.</code> Almost messed up the QUIT button.  Ko and suicide popups probably won't work, but that's OK.  Still driving the simplicity score on this app <em>UP</em>.  <a href="https://github.com/Terkwood/Sabaki/pull/58">Yet another PR</a>. 182KB size.</p>
+<p><code>1702.</code> For a minute I was worried that history provider routines in the browser were broken.  No: as usual, history provider seems to intermittently not respond.  A couple of reboots of the container host and it came back.  Continuing to trim aggressively in #58, will redeploy.</p>
+<p><code>1706.</code> 180KB bundle! 🌟</p>
+<p><code>1756.</code> Is there anything else I can trim?</p>
+<p><code>1822.</code> 176KB.  And I've trimmed out dead code from none other than the illustrious <code>Goban.js</code>.</p>
+<p><code>1831.</code> The &quot;dead code&quot; in <code>Goban.js</code> wasn't so dead. Almost lost the heat map at end-of-game.  <a href="https://github.com/Terkwood/Sabaki/pull/59">Still finding places to cut</a>! 178KB.</p>
+<p><code>2124.</code> <a href="https://github.com/Terkwood/Sabaki/pull/60">One last pass</a>.</p>
+<h1 id="mon-apr-13-2020"><a class="header" href="#mon-apr-13-2020">Mon Apr 13, 2020</a></h1>
+<p><code>1211.</code> I am very close to having <a href="https://github.com/Terkwood/BUGOUT/issues/67">#67</a> finished.  I need the browser to work with all of the server components.  I don't believe there are any bugs or gaps left in the server components.</p>
+<p>For the browser:</p>
+<ul>
+<li>Do not check whether BUGOUT is online if the <code>EntryMethod</code> is <code>PLAY_BOT</code>.</li>
+<li>Go slowly and be deliberate about what you add to the browser codebase.</li>
+<li><code>GatewayConn</code> needs a method <code>playBot</code>.</li>
+<li>We need to be careful about the modals.  On one hand, it's nice not to overload the existing modals, if possible.  That said, the eventing code which supports the modals is a pain in the butt to work with.</li>
+</ul>
+<p>Let's start by adding <code>EntryMethod</code>.  We know that's going to be necessary.</p>
+<p><code>1239.</code>  Inching into this effort: <a href="https://github.com/Terkwood/Sabaki/pull/61/files">we broke up a huge constuctor</a> while adding the new <code>EntryMethod.PLAY_BOT</code> option.</p>
+<p><code>1249.</code> <a href="https://github.com/Terkwood/Sabaki/pull/62">Refactored the Color Choice dialog</a> for play-vs-humans to have a clearer name.  I don't want to reuse this dialog entirely for the bot-play.  I'll create a new modal for bot-play, but will overload the <code>choose-color-pref</code> event which the original dialog emits.</p>
+<p>Let's take a break.</p>
+<p><code>1304.</code> <a href="https://github.com/Terkwood/Sabaki/pull/63">Slipped one more</a> change set into the mix before my break.  This is good.  The audits that NPM had been complaining about were taking up more cognitive space than necessary -- just some pesky dev deps. ☕ BREAK TIME! ☕</p>
+<h1 id="tue-apr-14-2020"><a class="header" href="#tue-apr-14-2020">Tue Apr 14, 2020</a></h1>
+<p><code>1204.</code> We can add some Modals.</p>
+<p><code>1737.</code> We added a <a href="https://github.com/Terkwood/Sabaki/pull/64">wait for bot modal</a>.  Not actually using it, yet, but it's minimal and should work fine for our purposes.</p>
+<h1 id="fri-apr-17-2020"><a class="header" href="#fri-apr-17-2020">Fri Apr 17, 2020</a></h1>
+<p><code>1635.</code> I plan to refactor some of our multiplayer callbacks into a less-annoying, evented thing.   <a href="https://github.com/Terkwood/BUGOUT/issues/219">I also plan to move Sabaki into the monorepo</a> so that we can tie BUGOUT-wide releases to a given state of Sabaki.</p>
+<p><code>1642.</code> It takes seven minutes to write a ticket!?  This is in no way surprising.  It still saves 21 minutes of otherwise-future-time spent thinking about the issue.</p>
+<p><code>1650.</code> Chromium just sucks less during the web dev cycle.  I find that I have a hard time getting the freshest version of my changes under FF private mode. </p>
+<p>I HAVE SIX LINES OF CHANGES!</p>
+<p><code>1708.</code> <a href="https://github.com/Terkwood/Sabaki/pull/65">Completed here</a>.  Let's consider making some progress on #67.</p>
+<p><code>1756.</code> <a href="https://github.com/Terkwood/Sabaki/pull/66">One more PR to add a modal</a> for color selection for the bot play.  No, it's not yet hooked up to anything!</p>
+<h1 id="sat-apr-18-2020"><a class="header" href="#sat-apr-18-2020">Sat Apr 18, 2020</a></h1>
+<p><code>1221.</code> We should make a pass at the remaining UI work:</p>
+<ul>
+<li>network calls to <code>gateway</code></li>
+<li>the initial dialog altered</li>
+<li>re-use the existing board-size dialog</li>
+</ul>
+<p>We may want to refactor the existing board-size dialog to make it more extensible.  Not sure if it's necessary.  Let's treat its existing behavior as closed.</p>
+<p><code>1310.</code> <a href="https://github.com/Terkwood/Sabaki/pull/67">Extended the board-size dialog init condition</a>.</p>
+<h1 id="sun-apr-19-2020"><a class="header" href="#sun-apr-19-2020">Sun Apr 19, 2020</a></h1>
+<p><code>1907.</code> Success!  First ever bot game.  But something broke in the system and one of the moves computed by KataGo wasn't communicated back to the browser.  Doesn't matter, we'll figure it out.  Happy path worked for the first time!</p>
+<p>There is an important <code>TODO TODO</code> in gtp.js related to tracking color.</p>
+<p>And we can only play black ?  We need to <code>listenForMove</code>.</p>
+<h1 id="mon-apr-20-2020"><a class="header" href="#mon-apr-20-2020">Mon Apr 20, 2020</a></h1>
+<p><code>1524.</code> Whack-a-bug.  Look at <code>micro-judge</code>:</p>
+<pre><code class="language-text">[2020-04-20T19:19:06Z ERROR micro_judge::io::stream] MOVE REJECTED: MakeMoveCommand {
+        game_id: GameId(
+            22ff3e32-4d60-4582-a7d7-607b89e580d3,
+        ),
+        req_id: ReqId(
+            78b33e57-e8ac-425c-93b7-ba0d5b00988b,
+        ),
+        player: WHITE,
+        coord: Some(
+            Coord {
+                x: 3,
+                y: 3,
+            },
+        ),
+    }
+</code></pre>
+<p><code>1626.</code> Investigating board.js <code>coordToVertex</code> and <code>vertexToCoord</code> in Sabaki.</p>
+<p><code>1629.</code> TINYBRAIN needs to honor the reversal in the Y-Axis.</p>
+<p><code>1643.</code> We won't translate the alphanumeric coordinate</p>
+<p><code>1730.</code>  Strip <code>PASS</code> out at tinybrain.  Send the <code>(char, u16)</code> combo up to <code>botlink</code>.  <code>botlink</code> can remember the board size and convert back to domain-model <code>Coord</code>.</p>
+<pre><code class="language-text">For a 9x9 board,
+
+A1 = Coord { x: 0, y: 8 }
+</code></pre>
+<p><code>1902.</code> <a href="https://github.com/Terkwood/BUGOUT/pull/223">PR open to fix all the coords</a>.</p>
+<h1 id="sun-apr-26-2020"><a class="header" href="#sun-apr-26-2020">Sun Apr 26, 2020</a></h1>
+<p><code>0431.</code>  Trying out <a href="https://sdkman.io/">SDKMAN!</a> for my gradle install.  Haven't needed gradle on this old workstation, until today.  SDKMAN! is the recommended method for unixy installs of gradle, according to gradle's home page.</p>
+<p>It went smoothly...</p>
+<pre><code class="language-sh">sdk install gradle 6.3 
+</code></pre>
+<pre><code class="language-text">Downloading: gradle 6.3
+
+In progress...
+
+############################################################################################# 100.0%
+
+Installing: gradle 6.3
+Done installing!
+
+
+Setting gradle 6.3 as default.
+</code></pre>
+<p>That's great.  Debian's default install was a woefully outdated version, which was unusable with the kotlin plugin.</p>
+<p><code>0455.</code> <a href="https://github.com/Terkwood/BUGOUT/pull/243">Raised a PR</a> to emit an event when changelog inits a game state.</p>
+<h1 id="experimenting-with-fedora-core-os"><a class="header" href="#experimenting-with-fedora-core-os">Experimenting with Fedora Core OS</a></h1>
+<p>As part of <a href="https://github.com/Terkwood/BUGOUT/issues/176">BUGOUT</a>, we want to attempt supporting Fedora CoreOS.  We previously ran our stateful container deployment on CoreOS Container Linux and enjoyed the automatic OS upgrades. It used a relatively small amount of RAM. We were too lazy to move beyond using <code>docker-compose</code>, and that wasn't a problem:  after writing a couple of tiny <code>systemd</code> configs, our system always started up reliably.</p>
+<p>But CoreOS Container Linux is being put to pasture, so we've decided to try the new thing. </p>
+<h2 id="first-steps-with-fcct"><a class="header" href="#first-steps-with-fcct">First Steps with FCCT</a></h2>
+<p>We need to create an ignition file which is intended to be written once, and valid for the life of the image.</p>
+<p>See <a href="https://github.com/coreos/fcct/blob/master/docs/getting-started.md">some docs</a> for getting started with this configuration tool.</p>
+<p>They recommend using <code>podman</code> instead of <code>docker</code>, but there's no <code>snap</code> install available that doesn't warn about potentially stomping on our localdev ❤️ Debian ❤️ system.</p>
+<pre><code class="language-sh">sudo snap install --edge podman
+</code></pre>
+<pre><code class="language-text">error: The publisher of snap &quot;podman&quot; has indicated that they do not consider this revision to be
+       of production quality and that it is only meant for development or testing at this point. As
+       a consequence this snap will not refresh automatically and may perform arbitrary system
+       changes outside of the security sandbox snaps are generally confined to, which may put your
+       system at risk.
+
+       If you understand and want to proceed repeat the command including --devmode; if instead you
+       want to install the snap forcing it into strict confinement repeat the command including
+       --jailmode.
+</code></pre>
+<p>Use <code>docker</code> to produce the ignition file, instead.  First we created an example YAML file that fcct could read.  This was a bit unclear based on the current state of the documentation, as we used <code>.yaml</code> for the file extension instead of <code>.fcc</code>.</p>
+<pre><code class="language-yaml"># local example.yaml
+variant: fcos
+version: 1.0.0
+passwd:
+  users:
+    - name: core
+      ssh_authorized_keys:
+        - ssh-rsa AAAAB3NzaC1yc...
+</code></pre>
+<pre><code class="language-sh">docker pull quay.io/coreos/fcct:release
+docker run  -i --rm quay.io/coreos/fcct:release --pretty --strict &lt;  input.yaml &gt; example.ign
+</code></pre>
+<p>As promised, this command output an ignition file:</p>
+<pre><code class="language-json">{
+  &quot;ignition&quot;: {
+    &quot;config&quot;: {
+      &quot;replace&quot;: {
+        &quot;source&quot;: null,
+        &quot;verification&quot;: {}
+      }
+    },
+    &quot;security&quot;: {
+      &quot;tls&quot;: {}
+    },
+    &quot;timeouts&quot;: {},
+    &quot;version&quot;: &quot;3.0.0&quot;
+  },
+  &quot;passwd&quot;: {
+    &quot;users&quot;: [
+      {
+        &quot;name&quot;: &quot;core&quot;,
+        &quot;sshAuthorizedKeys&quot;: [
+          &quot;ssh-rsa AAAAB3NzaC1yc...&quot;
+        ]
+      }
+    ]
+  },
+  &quot;storage&quot;: {},
+  &quot;systemd&quot;: {}
+}
+</code></pre>
+<h2 id="launching-an-instance-on-aws"><a class="header" href="#launching-an-instance-on-aws">Launching an Instance on AWS</a></h2>
+<p>We can launch an instance on AWS.  <a href="https://docs.fedoraproject.org/en-US/fedora-coreos/getting-started/">See the operating system getting started page</a>.</p>
+<p>The docs currently ask you to use the <code>aws</code> command line interface.  I'm too lazy to do that.  I don't want to (re)learn the options for the <code>ec2 run instances</code> command.  I just want to plug some values in via the web interface.</p>
+<p>To do that, click through the <a href="https://getfedora.org/coreos/download?tab=cloud_launchable&amp;stream=stable">downloads page</a>, look for for your AWS region, click through to the launch instance page within AWS, then look for the &quot;user data&quot; details.</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/80287955-918f6680-8702-11ea-8021-87040838e890.png" alt="user data for your igntion config" /></p>
+<p>You can enter your ignition config here.</p>
+<p>Finally, you launch the instance and connect:</p>
+<pre><code class="language-text">Fedora CoreOS 31.20200407.3.0
+Tracker: https://github.com/coreos/fedora-coreos-tracker
+Discuss: https://discussion.fedoraproject.org/c/server/coreos/
+</code></pre>
+<h2 id="setting-up-the-system"><a class="header" href="#setting-up-the-system">Setting up the system</a></h2>
+<p>Right now we're manually exploring the system to see 
+how things feel.</p>
+<pre><code class="language-sh">git clone https://github.com/Terkwood/BUGOUT.git
+cd BUGOUT
+sudo usermod -aG docker $USER  # we'll fix this in next section
+sudo reboot   # reboot helped
+</code></pre>
+<p>You can use <code>ctop</code>:</p>
+<pre><code class="language-sh">docker run -ti -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest
+</code></pre>
+<p>You <em>cannot</em> use <code>toolbox</code>. It <a href="https://github.com/coreos/fedora-coreos-tracker/issues/458#issuecomment-620582289">isn't really supposed to work</a> due to the permissions structure of FCOS.</p>
+<p>You can use <code>rpm-ostree</code> to install <code>htop</code>:</p>
+<pre><code class="language-sh">sudo rpm-ostree install htop
+sudo systemctl reboot  # you need to reboot to get access to it
+</code></pre>
+<h2 id="exploring-packer"><a class="header" href="#exploring-packer">Exploring Packer</a></h2>
+<p>We are clearly going to need to manage the creation of this image.
+Let's try using Packer.</p>
+<p>Here is their basic guide to <a href="https://www.packer.io/intro/getting-started/build-image.html">build an image</a>.</p>
+<p>We can move on to running something a bit more interesting.</p>
+<p>You first need to write a program.</p>
+<pre><code class="language-sh">cat &gt;hello.ts
+console.log(&quot;Welocem Friend 🦕&quot;);
+</code></pre>
+<p>You need some env vars specified.</p>
+<pre><code class="language-sh"># set_deno_env.sh
+export VPC_ID=&quot;vpc-deadbeef&quot;
+export SUBNET_ID=&quot;subnet-bad1dea5&quot;
+</code></pre>
+<p>...then...</p>
+<pre><code class="language-sh">source set_deno_env.sh
+</code></pre>
+<p>Write some <code>packer-example.json</code></p>
+<pre><code class="language-json">{
+    &quot;variables&quot;: {
+        &quot;aws_access_key&quot;: &quot;{{env `AWS_ACCESS_KEY_ID`}}&quot;,
+        &quot;aws_secret_key&quot;: &quot;{{env `AWS_SECRET_ACCESS_KEY`}}&quot;,
+        &quot;region&quot;:         &quot;us-east-1&quot;,
+        &quot;vpc_id&quot;:         &quot;{{env `VPC_ID`}}&quot;,
+        &quot;subnet_id&quot;:      &quot;{{env `SUBNET_ID`}}&quot;
+    },
+    &quot;builders&quot;: [
+        {
+            &quot;access_key&quot;: &quot;{{user `aws_access_key`}}&quot;,
+            &quot;ami_name&quot;: &quot;packer-linux-aws-demo-{{timestamp}}&quot;,
+            &quot;instance_type&quot;: &quot;t3.micro&quot;,
+            &quot;region&quot;: &quot;{{user `region`}}&quot;,
+            &quot;vpc_id&quot;: &quot;{{user `vpc_id`}}&quot;,
+	          &quot;subnet_id&quot;: &quot;{{user `subnet_id`}}&quot;,
+            &quot;secret_key&quot;: &quot;{{user `aws_secret_key`}}&quot;,
+            &quot;source_ami_filter&quot;: {
+              &quot;filters&quot;: {
+              &quot;virtualization-type&quot;: &quot;hvm&quot;,
+              &quot;name&quot;: &quot;ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*&quot;,
+              &quot;root-device-type&quot;: &quot;ebs&quot;
+              },
+              &quot;owners&quot;: [&quot;099720109477&quot;],
+              &quot;most_recent&quot;: true
+            },
+            &quot;ssh_username&quot;: &quot;ubuntu&quot;,
+            &quot;type&quot;: &quot;amazon-ebs&quot;
+        }
+    ],
+    &quot;provisioners&quot;: [
+        {
+            &quot;type&quot;: &quot;file&quot;,
+            &quot;source&quot;: &quot;./welcome.txt&quot;,
+            &quot;destination&quot;: &quot;/home/ubuntu/&quot;
+        },
+        {
+            &quot;type&quot;: &quot;file&quot;,
+            &quot;source&quot;: &quot;./hello.ts&quot;,
+            &quot;destination&quot;: &quot;/home/ubuntu/&quot;
+        },
+        {
+            &quot;type&quot;: &quot;shell&quot;,
+            &quot;inline&quot;:[
+                &quot;ls -al /home/ubuntu&quot;,
+                &quot;cat /home/ubuntu/welcome.txt&quot;
+            ]
+        },
+        {
+            &quot;type&quot;: &quot;shell&quot;,
+            &quot;inline&quot;: [
+              &quot;sudo apt install -y unzip&quot;,
+              &quot;curl -fsSL https://deno.land/x/install/install.sh | sh&quot;
+              
+            ]
+        },
+        {
+            &quot;type&quot;: &quot;shell&quot;,
+            &quot;inline&quot;:[
+              &quot;export DENO_INSTALL=\&quot;/home/ubuntu/.deno\&quot;&quot;,
+              &quot;export PATH=\&quot;$DENO_INSTALL/bin:$PATH\&quot;&quot;,
+              &quot;deno hello.ts&quot;
+            ]
+        }
+    ]
+}
+</code></pre>
+<p>You'll see a bunch of glorious progress, and finally, an artifact:</p>
+<pre><code class="language-text">==&gt; Builds finished. The artifacts of successful builds are:
+--&gt; amazon-ebs: AMIs were created:
+us-east-1: ami-eeeeeeeeeeeeeeeea
+</code></pre>
+<p>Don't forget to deregister the AMI after you're done!</p>
+<h2 id="putting-it-all-together-with-fcos"><a class="header" href="#putting-it-all-together-with-fcos">Putting It All Together With FCOS</a></h2>
+<p>That's all well and good, and we're happy about <code>packer</code>.</p>
+<p>But we need to usable FCOS image which has a few modifications that <code>packer</code>, rather than <code>ignition</code> is well-suited to handle.</p>
+<p>Create an ignition file which you'll include in the packer config:</p>
+<pre><code class="language-yaml">variant: fcos
+version: 1.0.0
+passwd:
+  users:
+    - name: core
+      groups: [ docker ]
+      ssh_authorized_keys:
+        - ssh-rsa AAAA...
+storage:
+  files:
+    - path: /opt/bin/docker-compose
+      overwrite: true
+      mode: 0755
+      contents:
+        source: https://github.com/docker/compose/releases/download/1.13.0/docker-compose-Linux-x86_64
+        verification:
+          hash: sha512-9d2c4317784999064ba1b71dbcb6830dba38174b63b1b0fa922a94a7ef3479f675f0569b49e0c3361011e222df41be4f1168590f7ea871bcb0f2109f5848b897
+</code></pre>
+<pre><code class="language-sh">docker run  -i --rm quay.io/coreos/fcct:release --pretty --strict &lt;  packed.yaml &gt; packed.ign
+</code></pre>
+<p>Then write your packer config:</p>
+<pre><code class="language-json">{
+    &quot;variables&quot;: {
+        &quot;aws_access_key&quot;: &quot;{{env `AWS_ACCESS_KEY_ID`}}&quot;,
+        &quot;aws_secret_key&quot;: &quot;{{env `AWS_SECRET_ACCESS_KEY`}}&quot;,
+        &quot;region&quot;:         &quot;us-east-1&quot;,
+        &quot;vpc_id&quot;:         &quot;{{env `VPC_ID`}}&quot;,
+        &quot;subnet_id&quot;:      &quot;{{env `SUBNET_ID`}}&quot;
+    },
+    &quot;builders&quot;: [
+        {
+            &quot;access_key&quot;: &quot;{{user `aws_access_key`}}&quot;,
+            &quot;ami_name&quot;: &quot;fcos-linux-aws-demo-{{timestamp}}&quot;,
+            &quot;instance_type&quot;: &quot;t3.medium&quot;,
+            &quot;region&quot;: &quot;{{user `region`}}&quot;,
+            &quot;vpc_id&quot;: &quot;{{user `vpc_id`}}&quot;,
+            &quot;subnet_id&quot;: &quot;{{user `subnet_id`}}&quot;,
+            &quot;secret_key&quot;: &quot;{{user `aws_secret_key`}}&quot;,
+            &quot;user_data_file&quot;: &quot;packed.ign&quot;,
+            &quot;source_ami_filter&quot;: {
+              &quot;filters&quot;: {
+                &quot;virtualization-type&quot;: &quot;hvm&quot;,
+                &quot;name&quot;: &quot;fedora-coreos-31.20200407.3.0&quot;,
+                &quot;root-device-type&quot;: &quot;ebs&quot;
+              },
+              &quot;owners&quot;: [&quot;125523088429&quot;],
+              &quot;most_recent&quot;: true
+            },
+            &quot;ssh_username&quot;: &quot;core&quot;,
+            &quot;type&quot;: &quot;amazon-ebs&quot;
+        }
+    ],
+    &quot;provisioners&quot;: [
+        {
+            &quot;type&quot;: &quot;shell&quot;,
+            &quot;inline&quot;: [
+                &quot;sudo rpm-ostree install htop&quot;
+            ]
+        },
+        {
+            &quot;type&quot;: &quot;shell&quot;,
+            &quot;inline&quot;:[
+                &quot;git clone https://github.com/Terkwood/BUGOUT.git&quot;
+            ]
+        }
+    ]
+}
+</code></pre>
+<p>...and we have a baked image!</p>
+<p>We used docker-compose 1.13 instead of 1.25 because <a href="https://discuss.python.org/t/libcrypt-so-1-removal-in-fedora-30-impacting-manylinux-builds/1961">python3.7 fails to link to libcrypt.so.1 on Fedora 31</a>.  ☹️</p>
+<h2 id="launch-templates-are-helpful"><a class="header" href="#launch-templates-are-helpful">Launch Templates Are Helpful</a></h2>
+<p>Creating a <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#launch-instance-from-launch-template">launch template</a> makes the AWS CLI invocation less annoying.</p>
+<p>You can launch the instance using minimal parameters:</p>
+<pre><code class="language-sh">aws ec2 run-instances --launch-template LaunchTemplateId=lt-0000,Version=2 --image-id ami-0000 --subnet-id subnet-deadbeef
+</code></pre>
+<p>In the example above, we pasted the <code>ignition</code> user data into the web form.  But you can override user data at the command line, if desired.</p>
+<h2 id="completing-the-ignition"><a class="header" href="#completing-the-ignition">Completing the ignition</a></h2>
+<p>Next up, write some <code>systemd</code> data and figure out how
+to seat some <code>dev.env</code> files as <code>.env</code> files.</p>
+<h2 id="using-journalctl-for-monitoring"><a class="header" href="#using-journalctl-for-monitoring">Using journalctl for monitoring</a></h2>
+<p>You can follow logs with <code>journalctl</code>:</p>
+<pre><code class="language-sh">journalctl -u bugout -f
+</code></pre>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs">DigitalOcean has a nice tutorial</a>.</p>
+<h2 id="friendly-memory-footprint"><a class="header" href="#friendly-memory-footprint">Friendly Memory Footprint</a></h2>
+<p>We were pleasantly surprised by amount of memory saved by switching from Container OS to Fedora Core OS.  We haven't done any extensive testing yet, but the <code>/proc/meminfo</code> shown below were for the same workload (kafka box) under the same conditions (1-3 users playing, system online for less than 15 minutes).</p>
+<p>Our old t3.medium Container Linux VM:</p>
+<pre><code class="language-text">MemTotal:        3979308 kB
+MemFree:         1793524 kB
+MemAvailable:    1920252 kB
+Buffers:           67600 kB
+Cached:           449764 kB
+SwapCached:            0 kB
+Active:          1760416 kB
+Inactive:         280408 kB
+</code></pre>
+<p>The new t3.medium Fedora CoreOS VM:</p>
+<pre><code class="language-text">MemTotal:        3962968 kB
+MemFree:         2971716 kB
+MemAvailable:    3439920 kB
+Buffers:            1108 kB
+Cached:           626192 kB
+SwapCached:            0 kB
+Active:           414104 kB
+Inactive:         405596 kB
+</code></pre>
+<h1 id="juneteenth--1-2020"><a class="header" href="#juneteenth--1-2020">Juneteenth + 1, 2020</a></h1>
+<p>Greetings.  We are attempting a dev-gateway build with a t3.xlarge.</p>
+<p>Started at 1014 local time.</p>
+<p>The dev build on a t3.medium takes a LONG time:  40 minutes plus !  This is because we build a number of things:</p>
+<ul>
+<li>gateway</li>
+<li>reaper</li>
+<li>micro-judge</li>
+<li>micro-changelog</li>
+<li>micro-game-lobby</li>
+<li>bugle</li>
+</ul>
+<p>And we rely on CADDY and REDIS images, also!</p>
+<h2 id="observations"><a class="header" href="#observations">Observations</a></h2>
+<p>Just that the build is faster.  This is not a measured or accurate statement, but on the other hand we've done packer builds over and over using t3 medium, because we're stingy!  And the experience with XL is moving along at a better pace.</p>
+<h2 id="goal-"><a class="header" href="#goal-">Goal 🥅</a></h2>
+<p>WE WANT TO BUILD <code>tinker/streams</code> BRANCH ON THE LAUNCHED GATEWAY INSTANCE!</p>
+<p>We want to move all rust stream based services to implementations that do not require tracking entity IDs on our own.  We will use <code>XREADGROUP</code> and let Redis track the IDs.</p>
+<p>We will need to write code which performs creation of consumer groups</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/83622799-7532e500-a55e-11ea-844e-763782e45657.jpg" alt="Get Into Teh Streamss" /></p>
+<h1 id="adding-redis-streams-to-rust--"><a class="header" href="#adding-redis-streams-to-rust--">Adding Redis Streams to Rust 💾 🦀</a></h1>
+<p>I recently <a href="https://github.com/mitsuhiko/redis-rs/pull/319">worked on a pull request</a> which adds <a href="https://redis.io/topics/streams-intro">Redis Streams</a> capabilities to <a href="https://github.com/mitsuhiko/redis-rs">redis-rs</a>, the most popular Redis client in Rust's ecosystem.  The overwhelming majority of the effort was <a href="https://github.com/grippy/redis-streams-rs">contributed by the community</a>, not by me: I drafted the pull request which combines the two existing works.  In addition to addressing review comments, I added a few examples of how the new API works.</p>
+<p>I'm feeling the hype! 🔥  What is Redis Streams? Why do we need it in Rust?  Does it have anything to do with Kafka Streams?  And can we share any real-life examples?</p>
+<p>Please read on...</p>
+<h2 id="what-is-redis-streams-"><a class="header" href="#what-is-redis-streams-">What is Redis Streams? 🤔</a></h2>
+<p>To give a little bit of background, Redis Streams was released as part of Redis 5.0, all the way back <a href="https://redislabs.com/blog/redis-5-0-is-here/">in Oct 2018</a>.</p>
+<p><a href="http://antirez.com/news/128">antirez posts a great explanation of the new features</a>.</p>
+<p>You can think of Redis Streams data as a way to communicate <em>time-indexed</em> data among processes.  Oversimplifying this, you can imagine that each stream is a CSV with a timestamp.  Digging deeper, Redis Streams exposes functionality that's more advanced than basic pub/sub, as you can have multiple consumers process a single stream:  even if one consumer happens to be faster than the others, Redis will rationally distribute the data.</p>
+<p>Unlike Redis's pub/sub mechanism, Redis Streams are somewhat durable.  If you miss a message, it's still available in the stream, with limits; a stream will generally have a cap on the amount of messages allowed to accumulate.</p>
+<h2 id="why-does-rust-need-redis-streams-"><a class="header" href="#why-does-rust-need-redis-streams-">Why Does Rust Need Redis Streams? 🔎</a></h2>
+<p>The Streams commands are over a year old, so there was <a href="https://github.com/mitsuhiko/redis-rs/issues/162#issuecomment-627459529">some support expressed</a> for including them in redis-rs.</p>
+<p>It's great that the community came together and created a <a href="https://github.com/grippy/redis-streams-rs">separate lib</a> exposing the Redis Streams API.  But Redis Streams is a first-class citizen of the larger Redis API, so it makes sense to include it as part of the leading Redis crate.</p>
+<p>We've exposed the new Redis Streams commands as an opt-out feature in redis-rs. If you want to reduce your compile time 🐌 🦀, you can explicitly disable streams support. This is the same as how geospatial operators work in redis-rs, so it should be a familiar concept for developers who have experience with the lib and who want to try out Streams.</p>
+<h2 id="off-the-cuff-comparison-with-kafka-streams-"><a class="header" href="#off-the-cuff-comparison-with-kafka-streams-">Off-the-Cuff Comparison with Kafka Streams 🌽</a></h2>
+<p>After looking into Redis Streams on my own, I did some initial comparisions with Kafka Streams and came to some conclusions:</p>
+<ul>
+<li>Redis Streams is a subset of the Redis server API.  The stream commands are exposed by the basic Redis server, not through separate lib.  On the other hand, Kafka Streams is a combination of the server (Kafka) combined with a JVM-based framework/lib (Kafka Streams).</li>
+<li>Kafka Streams apps coordinate data partitioning on the client side, while in Redis Streams, the server decides which consumer group gets which slice of data.  This helps Kafka achieve extraordinary scale: clients can work together to distribute load without the server becoming a bottleneck.</li>
+<li>Naive Kafka Streams apps consume a LOT of RAM, so if you're stingy about that sort of thing (and don't plan on scaling to infinity), Redis Streams can be a great fit.</li>
+<li>The data types exposed by Redis Streams are somewhat deeply nested, and can take a little while to get used to.</li>
+</ul>
+<p>Despite the similar naming conventions, the use cases for Kafka Streams and Redis Streams don't overlap as much as you might think.  Redis works great when you have one or two boxes (potentially with an enormous amount of RAM).  Kafka is built for massive, horizontal scale.</p>
+<h2 id="practical-comparison-"><a class="header" href="#practical-comparison-">Practical Comparison 🔧</a></h2>
+<p>Out of sheer, nerdtastic enthusiasm, I had already written several Kafka Streams applications to process game states and various player-coordination functions for BUGOUT, our implementation of the ancient board game Go (Baduk). I went ahead and rewrote some of this functionality using rust and Redis Streams.  You can see some direct comparisons of how one might structure a Redis Streams app versus a Kafka Streams app.</p>
+<ul>
+<li>judging moves in <a href="https://github.com/Terkwood/BUGOUT/tree/unstable/micro-judge">Rust/Redis Streams</a> vs <a href="https://github.com/Terkwood/BUGOUT/tree/unstable/judge">Kafka Streams</a></li>
+<li>assigning players to game instances in <a href="https://github.com/Terkwood/BUGOUT/tree/unstable/micro-game-lobby">Rust/Redis Streams</a> vs <a href="https://github.com/Terkwood/BUGOUT/tree/unstable/game-lobby">Kafka Streams</a></li>
+</ul>
+<p>The declarative style of Kafka Streams apps really stood out as an advantage:  we could just focus on the logic required by our game system, and didn't have to write quite as much boilerplate.</p>
+<p>But our Redis Streams apps written in rust were <em>minuscule</em> in terms of their memory consumption: in a cold system, just after startup, the micro-judge and micro-game-lobby apps take up about 1MB of RAM, while the Kafka Streams apps ⚠️ usually initialize at 100MB+ ⚠️.  Meanwhile, the Redis server itself continues to cruise along with a similarly small main-memory footprint (~3MB in our low-traffic system).</p>
+<p>Note that these Redis examples don't actually use the nicer API that's discussed as the main focus of this article -- generally we're using the lowest-level interface which specifies Redis commands using strings.  We'll work on upgrading these files once our <a href="https://github.com/mitsuhiko/redis-rs/pull/319">pull request</a> is merged! </p>
+<h2 id="look-ma-im-learning-"><a class="header" href="#look-ma-im-learning-">Look Ma, I'm Learning! 🧠</a></h2>
+<p>As a result of working the merge, I improved my understanding of the concepts underlying Redis Streams.</p>
+<p>Creating an example of <code>XREADGROUP</code> command patterns gave me an immediate insight into a <a href="https://github.com/Terkwood/BUGOUT/issues/310">shortcoming of my board game project</a>:  I was maintaining unnecessary boilerplate code, tracking the time IDs processed in a given stream. This code can be destroyed once I switch from naive <code>XREAD</code> to Redis-controlled <code>XREADGROUP</code>.</p>
+<p>Using the &quot;&gt;&quot; operator in an <code>XREADGROUP</code> command tells Redis, &quot;hey, give me only the newest records... and YOU keep track of where I am in the stream!&quot;   This functionality, combined with the automatic <code>XACK</code> provided in in the new additions to redis-rs, makes for a nice combination.</p>
+<h2 id="conclusion-"><a class="header" href="#conclusion-">Conclusion 💛</a></h2>
+<p>If you're excited about seeing the Redis Streams support finally make it into the Rust ecosystem in a nice way, please <a href="https://github.com/mitsuhiko/redis-rs/pull/319">dust the PR with emojis</a>, or better yet, with critical review. 🔬</p>
+<p>If you're using Redis Streams in your own work, we'd love to hear from you.</p>
+<h3 id="attribution"><a class="header" href="#attribution">Attribution</a></h3>
+<p>Thank you to <a href="https://www.flickr.com/photos/audreyjm529/">Audrey</a> for the <a href="https://www.flickr.com/photos/98799884@N00/235458062">image used in the header</a>.  It is licensed under <a href="https://creativecommons.org/licenses/by/2.0/">CC by 2.0</a>. I cropped the image in order to make it fit a bit better as a header.</p>
+<h3 id="around-the-web"><a class="header" href="#around-the-web">Around the Web</a></h3>
+<p>You can also find this article on <a href="https://www.linkedin.com/pulse/adding-redis-streams-rust-felix-terkhorn">LinkedIn</a> and <a href="https://dev.to/terkwood/adding-redis-streams-to-rust-464j">dev.to</a>.</p>
+<h1 id="the-midi-light-show"><a class="header" href="#the-midi-light-show">The MIDI Light Show</a></h1>
+<p>It all started with an <a href="https://github.com/Terkwood/hello-pi">innocent attempt to learn anything about electronics</a>.  We liked rust 🦀, and we liked a Raspberry Pi 3 B+ 🤖, and we liked Bach 🎵.</p>
+<p>Who doesn't, right?</p>
+<h2 id="arrangements"><a class="header" href="#arrangements">Arrangements</a></h2>
+<p>We went thoroughly overboard and created video for several of these productions.</p>
+<h3 id="js-bach-fantasia-in-g-major"><a class="header" href="#js-bach-fantasia-in-g-major">JS Bach, Fantasia in G Major</a></h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QYRhCIzzoi0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>MIDI arrangement by Jamie Holdham, licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC 1.0 Universal Public Domain Dedication</a></p>
+<ul>
+<li><a href="https://musescore.com/user/5199981/scores/5157919">The arrangment on MuseScore</a>.</li>
+<li><a href="https://musescore.com/user/5199981">Jamie Holdham's user page</a></li>
+</ul>
+<p>Johannes Roussel created the <a href="http://www.johannes.fr/">Electric Piano Soundfont</a>, which is used to render MIDI into audio wavelengths.</p>
+<h3 id="gf-handel-organ-concerto-in-g-major-op-4-no-1"><a class="header" href="#gf-handel-organ-concerto-in-g-major-op-4-no-1">GF Handel, Organ Concerto in G Major Op 4 No 1</a></h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TB8kNX9LkIo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>The audio was sourced through the generous efforts of fellow free-license contributors:</p>
+<ul>
+<li>
+<p>Charles Adams transcribed the MIDI via MuseScore.  It is licensed under CC 4.0.  (The score itself: https://musescore.com/user/18579/scor... ; his MuseScore page: https://musescore.com/user/18579 ; the CC 4.0 license: https://creativecommons.org/licenses/...)  The MIDI itself was modified only slightly, to combine all notes into a single clef.</p>
+</li>
+<li>
+<p>Johannes Roussel created the <a href="http://www.johannes.fr/">high-quality Church Organ Soundfont</a>.</p>
+</li>
+</ul>
+<h3 id="erik-satie-ogive-2"><a class="header" href="#erik-satie-ogive-2">Erik Satie, Ogive #2</a></h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/M-bh_AfZ8rU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>This MIDI light show is powered by a Raspberry Pi with 24 LEDs.  Since each musical octave has 12 half-steps, it allows us to show two full octaves of sound before &quot;wrapping&quot;.</p>
+<p>In this selection, we play the second of four &quot;Ogives&quot; written by Erik Satie, a composer from the early 20th century. </p>
+<p>This description of the music is provided by Wikipedia:</p>
+<p>An ogive is the curve that forms the outline of a pointed gothic arch. Erik Satie gave this title to a set of four piano miniatures published in 1886 at the beginning of his career. Their calm, slow melodies are built up from paired phrases reminiscent of plainchant. He wanted to evoke a large pipe organ reverberating in the depth of a cathedral, and achieved this sonority by using full harmonies, octave doubling and sharply contrasting dynamics.</p>
+<p><a href="https://commons.wikimedia.org/wiki/Image:Erik_Satie_-_Ogive_No.2.mid?uselang=zh/">Source for this MIDI</a></p>
+<h3 id="the-magic-of-midi-eternity"><a class="header" href="#the-magic-of-midi-eternity">The Magic of MIDI: Eternity</a></h3>
+<iframe width="560" height="315" sandbox="allow-same-origin allow-scripts allow-popups" src="https://diode.zone/videos/embed/4b24adc5-fdf3-4294-b83c-fd258e7c057a" frameborder="0" allowfullscreen></iframe>
+<p>The music was found on archive.org, in <a href="https://archive.org/details/themagicofmidiv1">&quot;The Magic of MIDI&quot;</a>, a nearly 1GB zip file containing thousands of songs. </p>
+<h2 id="learn-more"><a class="header" href="#learn-more">Learn More</a></h2>
+<p>Learn more about the wiring used in this prototype, read the source code for the MIDI playback and LED light management, or see additional credits related to the open source software we used, at our <a href="https://github.com/Terkwood/hello-pi">Github page</a>.</p>
+<h1 id="the-prawnalith-electronics-tanks-and-glory"><a class="header" href="#the-prawnalith-electronics-tanks-and-glory">The Prawnalith: Electronics, Tanks, and Glory</a></h1>
+<p><img src="https://gist.githubusercontent.com/Terkwood/c37c50d41bcc84b409eeaa555f788ed0/raw/ec42ccbdee0c3f518400253b5e1270f5488f4f1c/prawnto.gif" alt="The Prawnalith" /></p>
+<p>My wife and I learned to raise chickens for eggs (mostly) and meat (sometimes), having been inspired by <a href="https://en.wikipedia.org/wiki/The_Omnivore%27s_Dilemma">Michael Pollan</a> and <a href="https://en.wikipedia.org/wiki/Joel_Salatin">Joel Salatin</a> in 2011.  She has since gone on to do a lot of research into raising <a href="https://en.wikipedia.org/wiki/Macrobrachium_rosenbergii">freshwater prawns</a>, and experimented with breeding them in 2018.</p>
+<p>At the same time, we took on a minor interest in electronics and
+created several little utilities related to monitoring temperature and pH for prawns raised in a 200 gallon stock tank, and a 55 gallon aquarium.  We also built a simple, wireless device to monitor the temperature and humidity of a local area:  the building where we initially kept the tank, or, nowadays, our front yard. We developed a very humble, scrolling LED display that kept us apprised of our data from the comfort of the living room.  We tracked the current temperature and pH data so that it could be displayed on a secure web application.  And we experimented with viewing long-term charts of the data in grafana, using InfluxDB as a time series database. </p>
+<p><img src="https://user-images.githubusercontent.com/38859656/82582037-6f510300-9b5f-11ea-9c98-6439998a7556.jpg" alt="Pleasantly Scrolling" /></p>
+<p>Now it's 2020, and we're not currently raising prawns, but the old stock tank is being used as a reservoir to help sustain a small crop of onions in an aquaponics table.  Maybe we'll raise some fish?</p>
+<p>Regardless of the hobbyist agriculture angle, it's time to revisit the hobbyist electronics treasure trove.  It's been too long.</p>
+<p><em>May 21, 2020.</em></p>
+<h1 id="lab-notes"><a class="header" href="#lab-notes">Lab Notes</a></h1>
+<p>Today we're attempting to reinitialize the entire effort.</p>
+<h2 id="state-of-affairs-may-21-2020"><a class="header" href="#state-of-affairs-may-21-2020">State of Affairs: May 21, 2020</a></h2>
+<ul>
+<li>The <a href="https://github.com/Terkwood/prawnalith/tree/unstable/microcontrollers/area_dht11_esp8266">outdoor temp microcontroller</a> <em>lives</em>.</li>
+<li>We completely abandoned <a href="https://github.com/Terkwood/prawnalith/pull/98">some work to simplify the data model</a>.  Revisiting this would be conscientious, as the work is not difficult.</li>
+</ul>
+<h2 id="trying-rust-on-the-esp8266"><a class="header" href="#trying-rust-on-the-esp8266">Trying rust on the ESP8266</a></h2>
+<p>🦀 Ah, rust.</p>
+<p>💸 Ah, the $6 ESP8266 microcontroller.</p>
+<p>What could be better than spending many, many hours trying to make them work together?</p>
+<p>In fact there are several potential ways to go about it, but it looks like there's <a href="https://github.com/Terkwood/prawnalith/issues/120">a new approach</a> recently published online.</p>
+<p>Let's give it a try.  The following procedure will download a gigantic XTENSA toolchain which we can hopefully use to push some
+simple rust code onto an ESP 8266.  The docker download is a beefy 5GB!  🐄</p>
+<pre><code class="language-text">$ cat /tmp/bootstrap-esp.sh
+#!/bin/bash
+docker run -ti -v $PWD:/home/project:z quay.io/ctron/rust-esp create-project
+
+$ sh /tmp/bootstrap-esp.sh
+Creating Makefile (Makefile)
+Creating esp-idf symlink (esp-idf -&gt; /esp-idf)
+Creating cargo config (.cargo/config)
+Creating main application wrapper (main/esp_app_main.c)
+</code></pre>
+<h1 id="vision-project"><a class="header" href="#vision-project">vision project</a></h1>
+<p>This is our small experiment with object detection in tensorflow.js (pre 1.0!): <a href="https://vision.prawn.farm">vision.prawn.farm</a></p>
+<p>It does not collect any data from user devices and is intended simply as a &quot;hello world&quot; style introduction to object detection in TFJS.</p>
+<p>The source for this project is available <a href="https://github.com/Terkwood/vision">on Github</a>.</p>
+<h1 id="object-detection-resources"><a class="header" href="#object-detection-resources">Object Detection Resources</a></h1>
+<ul>
+<li><a href="https://docs.opencv.org/master/index.html">OpenCV home page</a></li>
+<li><a href="https://www.dlology.com/blog/how-to-train-an-object-detection-model-easy-for-free/">dlology: Train an object detection model for free</a></li>
+<li><a href="https://github.com/ifzhang/FairMOT">FairMOT</a>, a simple baseline for multi-object tracking.</li>
+</ul>
+<h1 id="penguin-hell"><a class="header" href="#penguin-hell">Penguin Hell</a></h1>
+<p>These articles describe tidbits of linux and command
+line practices that I've recently developed.</p>
+<p>If you just want to be happy, you should ignore all
+my technobabble and head straight for 
+<a href="http://hannahmontana.sourceforge.net/">the Hannah Montana Linux website</a>.</p>
+<h1 id="convert-mp4-to-gif-using-ffmpeg"><a class="header" href="#convert-mp4-to-gif-using-ffmpeg">Convert MP4 to GIF using ffmpeg</a></h1>
+<p>We captured an mp4 and wanted to convert it to an animated gif, but without the complex invocations below, it will look grainy!</p>
+<pre><code class="language-sh">ffmpeg my-video.mp4 -filter_complex &quot;[0:v] palettegen&quot; /tmp/palette.png
+ffmpeg -i my-video.mp4 -i /tmp/palette.png  -filter_complex &quot;[0:v][1:v] paletteuse&quot; my-video.gif
+</code></pre>
+<h1 id="privileged-mode-running-ctop-in-docker-under-selinux"><a class="header" href="#privileged-mode-running-ctop-in-docker-under-selinux">Privileged mode: Running ctop in docker under SELinux</a></h1>
+<p>Some programs like <code>ctop</code> are nice to run using docker containers, so that you don't have to manually download a binary and copy it into <code>/usr/local/bin</code>, where it will sit in a sad little corner, unmanaged by apt or yum.</p>
+<p>But if you run an SELinux-enabled distribution, you'll find that running <code>ctop</code> <a href="https://github.com/bcicen/ctop">as the documentation suggests</a>, fails:</p>
+<pre><code class="language-sh">docker run --rm -ti \
+  --name=ctop \
+  --volume /var/run/docker.sock:/var/run/docker.sock:ro \
+  quay.io/vektorlab/ctop:latest
+</code></pre>
+<p>🐳 🐳 🐳</p>
+<pre><code class="language-text">ctop - error ───────
+  │                                                                                 │
+  │  [12:54:15 UTC] attempting to reconnect...                                      │
+  │                                                                                 │
+  │  [12:54:16 UTC] Get http://unix.sock/info: dial unix /var/run/docker.sock: con  │
+  │  nect: permission denied                                               
+</code></pre>
+<p>What's going on here?  Presumably SELinux is blocking the <code>ctop</code> container's access to information necesarry for monitoring the other containers.</p>
+<h2 id="the-fix"><a class="header" href="#the-fix">The Fix</a></h2>
+<p>Luckily, there's a very easy fix for this!  You can just run the <code>ctop</code> container in privileged mode:</p>
+<pre><code class="language-sh">docker run --privileged --rm -ti \
+  --name=ctop  \
+  --volume /var/run/docker.sock:/var/run/docker.sock:ro \
+  quay.io/vektorlab/ctop:latest
+</code></pre>
+<p>Now you can see all your favorite containers, interact with their log interfaces, dip into their shells, etc:</p>
+<pre><code class="language-text">  ctop - 12:57:42 UTC   8 containers
+
+     NAME        CID         CPU         MEM         NET RX/TX   IO R/W      PIDS
+
+   ◉  bugout_bot… 8f84fe3983…      1%       2M / 944M 19M / 16M   1M / 0B     6
+   ◉  bugout_bug… 16f1479be4…      0%       3M / 944M 1M / 1M     6M / 0B     5
+   ◉  bugout_gat… fc951914df…      0%       3M / 944M 56M / 35M   256K / 0B   21
+</code></pre>
+<h1 id="use-keyboard-shortcut-to-focus-alacritty-in-gnome"><a class="header" href="#use-keyboard-shortcut-to-focus-alacritty-in-gnome">Use Keyboard Shortcut to Focus alacritty in Gnome</a></h1>
+<p><a href="https://github.com/alacritty/alacritty">alacritty</a> is a 🔥 hot, fast terminal emulator 🔥 written in rust. We've been using it for the last 38 microseconds and really enjoy it.</p>
+<p>We want to hit a single key and focus on <code>alacritty</code> while using GNOME. If <code>alacritty</code> isn't already
+open, it should start up. This would give us functionality somewhat equivalent to <a href="http://guake-project.org/">Guake</a>.</p>
+<p>As a bonus, we'll use <a href="https://deno.land/">deno</a> to write a quick helper script and 😇 avoid learning <code>bash</code>. 😇</p>
+<p>Here's what we did to accomplish this task.</p>
+<h2 id="install-wmctrl"><a class="header" href="#install-wmctrl">Install wmctrl</a></h2>
+<p>Install <code>wmctrl</code> so that we can focus on an existing <code>alacritty</code> window using a program.</p>
+<p>For debian &amp; ubuntu-flavored linux:</p>
+<pre><code class="language-sh">sudo apt install wmctrl
+</code></pre>
+<p>For the redhats:</p>
+<pre><code class="language-sh">sudo yum install wmctrl
+</code></pre>
+<p>Start <code>alacritty</code> up for just a moment and take note of its handle as given by <code>wmctrl -xl</code>:</p>
+<pre><code class="language-text">...snip...
+0x04800002  1 Alacritty.Alacritty   mybox Alacritty
+...snip...
+</code></pre>
+<p>We can then use <code>wmctrl</code> to focus on a running instance of <code>alacritty</code>:</p>
+<pre><code class="language-sh">wmctrl -xa Alacritty.Alacritty
+</code></pre>
+<h2 id="create-script-to-raise-or-start-up-terminal"><a class="header" href="#create-script-to-raise-or-start-up-terminal">Create script to raise or start-up terminal</a></h2>
+<p>Create a <code>deno</code> script to either focus on the existing <code>alacritty</code> window, or start a new one:</p>
+<pre><code class="language-ts">// saved to /home/nope/bin/raise_alacritty.ts
+const p = Deno.run({
+  cmd: [&quot;/usr/bin/pgrep&quot;, &quot;alacritty&quot;],
+});
+
+const { code } = await p.status();
+
+if (code === 0) {
+  await Deno.run({ cmd: [&quot;wmctrl&quot;, &quot;-xa&quot;, &quot;Alacritty.Alacritty&quot;] }).status();
+} else {
+  await Deno.run({ cmd: [&quot;alacritty&quot;] }).status();
+}
+</code></pre>
+<h2 id="bind-keyboard-shortcut"><a class="header" href="#bind-keyboard-shortcut">Bind keyboard shortcut</a></h2>
+<p>Finally, in gnome settings,
+add a keyboard shortcut which runs our script.</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/81819687-a3904800-94fd-11ea-8f4e-d66c07d600ad.png" alt="keybinding" /></p>
+<p>In our case, we assigned the special MENU button on our keyboard to focus on <code>alacritty</code>. We use the default GNOME shortcut (<code>Super H</code>/<code>WindowsKey H</code>) to hide the window when we're done with it.</p>
+<h2 id="updated-for-deno-100-rc3"><a class="header" href="#updated-for-deno-100-rc3">Updated for deno 1.0.0-rc3</a></h2>
+<p>Please note that as of deno 1.0.0-rc3, the command line invocation needed to make this work has changed. You now need to use the <code>run</code> subcommand:</p>
+<pre><code class="language-sh">deno run --allow-run /path/to/raise_alacritty.ts
+</code></pre>
+<p>This article was originally published under an older version, which did not require the subcommand.</p>
+<pre><code class="language-sh">deno  --allow-run /path/to/raise_alacritty.ts
+</code></pre>
+<p>If you're having trouble getting this to work under the new version of Deno, try adding <code>run</code>!</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/80623620-78472c80-8a18-11ea-933d-00b52178f809.png" alt="be easy" /></p>
+<h1 id="easy-scrolling-with-tmux-and-alacritty"><a class="header" href="#easy-scrolling-with-tmux-and-alacritty">Easy scrolling with tmux and alacritty</a></h1>
+<p>We want to have a nice experience when scrolling the terminal buffer using both alacritty and tmux on Debian linux.</p>
+<p>When we run alacritty and tmux together and there's a lot of text on the screen (say, by invoking <code>tree</code>), we need to hit the following tmux key sequence to scroll back through the terminal history: </p>
+<pre><code class="language-text">Ctrl+B 
+[
+PageUp
+</code></pre>
+<p>This is difficult.  Others have <a href="https://github.com/alacritty/alacritty/issues/1194">asked about this</a>.</p>
+<p>We followed the workaround advice given by the author.  We disabled faux scrolling in <code>.tmux.conf</code>: </p>
+<pre><code class="language-text">set -ga terminal-overrides ',*256color*:smcup@:rmcup@'
+</code></pre>
+<p>In <code>.alacritty.conf</code>, the default scrolling key combination, <code>Shift+PageUp</code>, isn't too bad.  We can just leave it commented to use it, but if we want to try our own settings, we can:</p>
+<pre><code class="language-text">key_bindings:
+#
+# ...snip...
+#
+- { key: PageUp,   mods: Shift, action: ScrollPageUp,   mode: ~Alt       }
+- { key: PageDown, mods: Shift, action: ScrollPageDown, mode: ~Alt       }
+- { key: Home,     mods: Shift, action: ScrollToTop,    mode: ~Alt       }
+- { key: End,      mods: Shift, action: ScrollToBottom, mode: ~Alt       }
+</code></pre>
+<h2 id="resolution"><a class="header" href="#resolution">Resolution</a></h2>
+<p>With the changes to <code>.tmux.conf</code>, we can now start an alacritty terminal, enter tmux, and scroll to our hearts' content, without using a difficult key combination.</p>
+<p>🔥 It's FAST! 🔥</p>
+<p>We found that scrolling through history with some basic command line apps wasn't negatively impacted. </p>
+<p>When we entered tmux + alacritty, and then dumped a lot of text into <code>less</code>, or navigated <code>man bash</code>, we scrolled happily and without interruption.</p>
+<p>These instructions probably apply to other terminal emulators, as well.</p>
+<p>This is a happy time. 😄</p>
+<h3 id="cross-post"><a class="header" href="#cross-post">Cross-post</a></h3>
+<p>This article was <a href="https://dev.to/terkwood/fast-scrolling-with-tmux-and-alacritty-3dmn">cross-posted on dev.to</a>.</p>
+<h1 id="systemd-and-systemctl"><a class="header" href="#systemd-and-systemctl">Systemd and Systemctl</a></h1>
+<p><code>systemd</code> is really useful.  It's a great way to ensure services
+start up on linux servers reliably.</p>
+<p>Fedora CoreOS features <code>systemd</code> units in its <a href="https://docs.fedoraproject.org/en-US/fedora-coreos/fcct-config/#_configuring_systemd_units_systemd">machine-provisioning
+specification</a>.</p>
+<h2 id="resources"><a class="header" href="#resources">Resources</a></h2>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units">DigitalOcean: How To Use Systemctl to Manage Systemd Services and Units</a></li>
+<li><a href="https://github.com/Terkwood/prawnalith/blob/unstable/cloud_images/systemd/prawnalith.service">prawnalith: cloud startup example</a></li>
+</ul>
+<h1 id="copying-to-the-clipboard-from-the-linux-command-line"><a class="header" href="#copying-to-the-clipboard-from-the-linux-command-line">Copying to the clipboard from the Linux command line</a></h1>
+<p>Just use <code>xsel</code>.</p>
+<p>Debian install:</p>
+<pre><code class="language-sh">sudo apt install xsel
+</code></pre>
+<p>Demo:</p>
+<pre><code class="language-sh">cat /tmp/takeout-order | xsel --clipboard
+</code></pre>
+<h1 id="vim"><a class="header" href="#vim">Vim</a></h1>
+<p>I am just now learning vim in some earnest.  I was always more
+of an emacs guy, back in the day...</p>
+<h2 id="macros-in-vim"><a class="header" href="#macros-in-vim">Macros in Vim</a></h2>
+<p>Seriously, they're <a href="https://vim.fandom.com/wiki/Macros">SO EASY</a>.</p>
+<p>Record a macro:</p>
+<pre><code class="language-text">q&lt;letter&gt;&lt;commands&gt;q
+</code></pre>
+<p>Execute a macro <code>number</code> times, once by default:</p>
+<pre><code class="language-text">&lt;number&gt;@&lt;letter&gt;
+</code></pre>
+<h2 id="copying-text-into-other-linux-apps"><a class="header" href="#copying-text-into-other-linux-apps">Copying Text into Other Linux Apps</a></h2>
+<p>It's not fun to copy text out of vim and into other linux applications,
+but here's how you do it:</p>
+<ol>
+<li>Select the text in vim using your mouse!</li>
+<li>The text is now in your <a href="https://stackoverflow.com/questions/1129943/how-do-i-paste-from-vim-to-other-apps-with-linux">&quot;middle click register&quot;</a></li>
+<li>You can now use the mouse middle click to paste it into other apps</li>
+</ol>
+<h1 id="distributed-wasteland"><a class="header" href="#distributed-wasteland">Distributed Wasteland</a></h1>
+<h1 id="trying-out-yugabyte"><a class="header" href="#trying-out-yugabyte">Trying Out Yugabyte</a></h1>
+<p>Let's try installing a three-node Yugabyte cluster on a 2011-era laptop running Debian linux!</p>
+<p><a href="https://docs.yugabyte.com/latest/quick-start/create-local-cluster/linux/#create-a-3-node-cluster-with-rf-of-3">The quickstart guide is here.</a>.</p>
+<p>We ran the suggested:</p>
+<pre><code class="language-sh">./bin/yb-ctl --rf 3 create
+</code></pre>
+<p>But it initially failed, because we had a Redis server running on the default port.  So let's turn that off...</p>
+<pre><code class="language-sh">sudo systemctl stop redis
+</code></pre>
+<p>We need to destroy the partially-created system before retrying:</p>
+<pre><code class="language-sh"> ./bin/yb-ctl --rf 3 destroy
+</code></pre>
+<p>Then we retried the creation of three nodes, but our disks didn't spin fast enough to satisfy the default timeout values!  So we found another failure.</p>
+<pre><code class="language-text">Creating cluster.
+Waiting for cluster to be ready.
+Traceback (most recent call last):
+  File &quot;./bin/yb-ctl&quot;, line 2021, in &lt;module&gt;
+    control.run()
+  File &quot;./bin/yb-ctl&quot;, line 1998, in run
+    self.args.func()
+  File &quot;./bin/yb-ctl&quot;, line 1755, in create_cmd_impl
+    self.wait_for_cluster_or_raise()
+  File &quot;./bin/yb-ctl&quot;, line 1598, in wait_for_cluster_or_raise
+    raise RuntimeError(&quot;Timed out waiting for a YugaByte DB cluster!&quot;)
+RuntimeError: Timed out waiting for a YugaByte DB cluster!
+...snip...
+Error: Leader not ready to serve requests. (yb/master/scoped_leader_shared_lock.cc:93):
+ Unable to list tablet servers: Leader not yet ready to serve requests: leader_ready_te
+rm_ = -1; cstate.current_term = 1
+</code></pre>
+<p>Let's increase all the possible timeout values and hope that the install works:</p>
+<pre><code class="language-sh">
+# values in seconds
+./bin/yb-ctl --timeout-yb-admin-sec 3000 --timeout-processes-running-sec 3000 --rf 3 create
+</code></pre>
+<p>This time it worked!</p>
+<pre><code class="language-text">Creating cluster.
+Waiting for cluster to be ready.
+---------------------------------------------------------------------------------------
+-------------
+| Node Count: 3 | Replication Factor: 3
+            |
+---------------------------------------------------------------------------------------
+-------------
+| JDBC                : jdbc:postgresql://127.0.0.1:5433/postgres
+            |
+| YSQL Shell          : bin/ysqlsh
+            |
+| YCQL Shell          : bin/ycqlsh
+            |
+| YEDIS Shell         : bin/redis-cli
+            |
+| Web UI              : http://127.0.0.1:7000/
+            |
+| Cluster Data        : /home/whoever/yugabyte-data
+            |
+--------------------------------------------------------------------------------------$
+-------------
+</code></pre>
+<p>Can we connect to the redis-like interface (YEDIS)? Yes.</p>
+<pre><code class="language-sh">./bin/redis-cli
+</code></pre>
+<pre><code class="language-text">127.0.0.1:6379&gt; ping
+PONG
+127.0.0.1:6379&gt; ping
+PONG
+127.0.0.1:6379&gt;
+</code></pre>
+<p>Can we connect to Yugabyte as a SQL database using the provided shell script?  Yes.</p>
+<pre><code class="language-sh">bin/ysqlsh
+</code></pre>
+<p>Let's create a user and then try to connect with one of our favorite SQL GUIs, <a href="http://www.sql-workbench.eu/index.html">SQLWorkbench/J</a>.</p>
+<pre><code class="language-text">yugabyte=# create user whoever with password 'superhardtoguess';
+CREATE ROLE
+</code></pre>
+<p>Now we can connect using SQLWorkbench/J. We need to check the box for <code>AUTOCOMMIT</code> so that it's enabled.  Notice that the port differs from the default of 5432.  Also, <em>helpfully</em>, the team at Yugabyte made sure that there's <a href="https://docs.yugabyte.com/latest/tools/sql-workbench/">a tutorial for connecting with SQLWorkbench/J</a>.  Thank you!</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/87455428-6f0b3c00-c5d3-11ea-8596-f787264d7322.png" alt="Connect with SQLWorkbench/J" /></p>
+<p>So we're connected, but can we create a table? Yes. We waited 20 seconds for it to happen.</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/87456320-bba34700-c5d4-11ea-8f67-12d5e589078c.png" alt="Creating a basic table" /></p>
+<h2 id="thanks-for-reading"><a class="header" href="#thanks-for-reading">Thanks for Reading</a></h2>
+<p>This article was drafted on July 14, 2020.</p>
+<h1 id="hello-tikv"><a class="header" href="#hello-tikv">Hello TiKV</a></h1>
+<p>Dec 11, 2020. I am tinkering with TiKV and trying to use the rust client.</p>
+<p>After spending some time in the rust client README but not having much success, I found <a href="https://tikv.org/docs/4.0/tasks/try/docker-stack/">this document</a> explaining how to operate TiKV alone, using docker stack.</p>
+<p>I published a <a href="https://github.com/Terkwood/hello-tikv-rust">working example of using TiKV rust client with TiKV in docker stack on Github</a>.</p>
+<h2 id="things-that-didnt-work"><a class="header" href="#things-that-didnt-work">Things that didn't work</a></h2>
+<p>I had to make a few changes to the rust client dockerfile.</p>
+<h3 id="non-interactive-install-for-tzdata"><a class="header" href="#non-interactive-install-for-tzdata">non-interactive install for tzdata</a></h3>
+<p>I used <code>DEBIAN_FRONTEND=&quot;noninteractive&quot;</code>, so that <code>tzdata</code> would not prompt during installation. I also had to use <code>apt-get</code> instead of <code>apt</code>!</p>
+<pre><code class="language-text">RUN DEBIAN_FRONTEND=&quot;noninteractive&quot; apt-get install --yes build-essential protobuf-compiler curl cmake golang
+</code></pre>
+<h3 id="rust-stable-has-async-await"><a class="header" href="#rust-stable-has-async-await">rust stable has async await</a></h3>
+<p>The doc website incorrectly requires a nightly rust toolchain. This is no longer necessary since <code>async</code>/<code>await</code> functionality has landed in rust stable. I removed all references to the version-hacking file <code>rust-toolchain</code>.</p>
+<pre><code class="language-text"># ...snip...
+# Install Rust
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+ENV PATH=&quot;/builder/.cargo/bin:${PATH}&quot;
+
+# Fetch, then prebuild all deps
+COPY Cargo.toml /builder/build/
+</code></pre>
+<h3 id="missing-libssl-dev"><a class="header" href="#missing-libssl-dev">Missing libssl-dev</a></h3>
+<p>I also had to install <a href="https://github.com/sfackler/rust-openssl/issues/763#issuecomment-339269157">libssl-dev</a>.</p>
+<h2 id="report-these-issues"><a class="header" href="#report-these-issues">Report these issues</a></h2>
+<p>The above issues were <a href="https://github.com/tikv/website/issues/214">reported to the TiKV docs website</a>.</p>
+<h1 id="cloud-crap"><a class="header" href="#cloud-crap">Cloud Crap</a></h1>
+<p>Here are articles about doing things in the cloud. 🌤💩</p>
+<h1 id="aws-cli-crib-notes"><a class="header" href="#aws-cli-crib-notes">AWS CLI crib notes</a></h1>
+<p>AWS CLI isn't very exciting, but it's helpful.</p>
+<h2 id="starting-and-stopping-instances-with-wait"><a class="header" href="#starting-and-stopping-instances-with-wait">Starting and Stopping Instances with Wait</a></h2>
+<p>You can start and stop instances.  Take note of the <code>wait instance-stopped</code> command, which makes this little trick good.</p>
+<pre><code class="language-sh">aws ec2 stop-instances --instance-ids $INSTANCE_ID 
+aws ec2 wait instance-stopped --instance-ids $INSTANCE_ID
+aws ec2 modify-instance-attribute --instance-id $INSTANCE_ID --instance-type $INSTANCE_TYPE 
+aws ec2 start-instances --instance-ids $INSTANCE_ID
+</code></pre>
+<h2 id="attach-an-elastic-ip-to-an-aws-instance-using-cli"><a class="header" href="#attach-an-elastic-ip-to-an-aws-instance-using-cli">Attach an Elastic IP to an AWS Instance using CLI</a></h2>
+<pre><code class="language-sh">aws ec2 allocate-address --domain vpc  # returns an eipalloc
+aws ec2 associate-address --instance-id i-aaaaaaaaaaaa --allocation-id eipalloc-000000000000
+</code></pre>
+<h2 id="destroy-your-amis-and-their-snapshots"><a class="header" href="#destroy-your-amis-and-their-snapshots">Destroy Your AMIs and Their Snapshots!</a></h2>
+<p>We frequently create AMIs with packer. This script can help clean
+up the images and their associated snapshots.</p>
+<pre><code class="language-sh">aws ec2 describe-images --owners self|grep ami
+aws ec2 deregister-image --image-id ami-0000aaaa
+aws ec2 describe-snapshots --owner self | grep snap-
+aws ec2 delete-snapshot --snapshot-id snap-aaaa0000
+</code></pre>
+<h1 id="trying-google-cloud-run"><a class="header" href="#trying-google-cloud-run">Trying Google Cloud Run</a></h1>
+<p>This is just a quick try-out of Google Cloud Run.</p>
+<p>We will build minimal containers that serve Hello World text over HTTP using both Rust 🦀 and Deno 🦕.</p>
+<p>Google provides <a href="https://cloud.google.com/run/docs/quickstarts/build-and-deploy?_ga=2.252230089.-199990648.1584658988#containerizing">very nice documentation</a> to help get started.</p>
+<h2 id="using-rust-on-google-cloud-run"><a class="header" href="#using-rust-on-google-cloud-run">Using Rust on Google Cloud Run</a></h2>
+<p>We expect to be able to run Hello World in rust using a tiny docker build image.  <a href="https://github.com/emk/rust-musl-builder/blob/master/examples/using-diesel/Dockerfile">The rust musl builder</a> from emk &amp; community is simply wonderful in this regard. You can create a tiny little rust program in a tiny little docker container.  When you're counting your cloud provider's storage quota in terms pennies and cents, that's a very good thing.</p>
+<p>We compared the docker image size of a trivial Hello World built using  <a href="https://hub.docker.com/_/rust">the primary rust docker image</a> to the docker image size of the same program built using the <a href="https://github.com/emk/rust-musl-builder">rust musl builder</a>.  Here are the results:</p>
+<pre><code class="language-sh">docker images |grep traditional
+docker images |grep tiny-musl-guy
+</code></pre>
+<p>▶️ ▶️ ▶️</p>
+<pre><code class="language-text">traditional   ...(trimmed)...     1.6 GB
+tiny-musl-guy ...(trimmed)...    9.22 MB
+</code></pre>
+<h2 id="buddy-have-an-http"><a class="header" href="#buddy-have-an-http">Buddy Have An HTTP</a></h2>
+<p>You need to serve some sort of minimal HTTP request in order for cloud run to do anything with your program.  We arbitrarily picked the Hello World example from <a href="https://github.com/http-rs/tide">tide</a>.</p>
+<pre><code class="language-ignore">#[async_std::main]
+async fn main() -&gt; Result&lt;(), std::io::Error&gt; {
+    let mut app = tide::new();
+    app.at(&quot;/&quot;).get(|_| async { Ok(&quot;Hello, world!&quot;) });
+    app.listen(&quot;127.0.0.1:8080&quot;).await?;
+    Ok(())
+}
+</code></pre>
+<h2 id="actually-have-google-do-the-cloud-things-now"><a class="header" href="#actually-have-google-do-the-cloud-things-now">Actually Have Google Do The Cloud Things Now</a></h2>
+<p>This part is refreshingly straightforward.  First, <a href="https://cloud.google.com/sdk/docs/quickstarts">we installed the gcloud command line utility</a>.  Dead simple.</p>
+<h3 id="building-a-docker-image-in-gcr"><a class="header" href="#building-a-docker-image-in-gcr">Building a Docker Image in GCR</a></h3>
+<p>The remotely-created docker build will just work on the first try, because Google loves you. (Does that sound creepy? 🤔)</p>
+<p>We built it remotely using <code>gcloud</code>, after which it is automatically stored in the Google container registry:</p>
+<pre><code class="language-sh">gcloud builds submit --tag gcr.io/PROJECT_NAME/rust-gcr-demo
+</code></pre>
+<p>We received a very comforting stream of text indicating forward progress while engaging with google's cloud in this way:</p>
+<pre><code class="language-text">Creating temporary tarball archive of 8 file(s) totalling 2.0 KiB before compression.
+Uploading tarball of [.] to [gs://PROJECT_NAME_cloudbuild/source/9999999999.34-aaaaaad7496d917b02d0cdd1b30a.tgz]
+Created \[https://cloudbuild.googleapis.com/v1/projects/PROJECT_NAME/builds/e0e0e0e0-aaaa-ffff-928b-9a9a9a9a9a9a\].
+Logs are available at \[https://console.cloud.google.com/cloud-build/builds/e0e0e0e0-aaaa-ffff-928b-9a9a9a9a9a9a?project=000000000000\].
+--------------------------------- REMOTE BUILD OUTPUT ---------------------------------
+starting build &quot;e0e0e0e0-aaaa-ffff-928b-9a9a9a9a9a9a&quot;
+
+FETCHSOURCE
+Fetching storage object: gs://PROJECT_NAME_cloudbuild/source/9999999999.34-9999999999999999999999.tgz#8888888888888888
+Copying gs://PROJECT_NAME_cloudbuild/source/999999999934-9999999999999999999999.tgz#8888888888888888...
+/ [1 files][  1.5 KiB/  1.5 KiB]
+Operation completed over 1 objects/1.5 KiB.
+BUILD
+Already have image (with digest): gcr.io/cloud-builders/docker
+Sending build context to Docker daemon  9.728kB
+Step 1/6 : FROM hayd/alpine-deno
+f5a1a52ea0cc: Pull complete
+91f70b368d00: Pull complete
+Digest: sha256:68c60a649aadbb7139bd4fd248eb7426d3f829f4574ce78ebc97fc3e22059498
+Status: Downloaded newer image for hayd/alpine-deno:latest
+ ---&gt; 4b8d66a41759
+Step 2/6 : WORKDIR /var/hello
+ ---&gt; Running in 78f3fc613ff3
+
+...SNIP...
+
+Step 6/6 : CMD [&quot;run&quot;,&quot;--allow-env&quot;,&quot;--allow-net&quot;,&quot;index.ts&quot;]
+ ---&gt; Running in 45e58559d684
+Removing intermediate container 45e58559d684
+ ---&gt; 3ecf00d3c661
+Successfully built 3ecf00d3c661
+Successfully tagged gcr.io/PROJECT_NAME/rust-gcr-demo:latest
+PUSH
+Pushing gcr.io/PROJECT_NAME/rust-gcr-demo
+The push refers to repository [gcr.io/PROJECT_NAME/rust-gcr-demo]
+5ca1b5bf7698: Preparing
+
+...SNIP...
+
+f8d7c190aaa1: Pushed
+3b7d1dad260a: Pushed
+5216338b40a7: Layer already exists
+517a217ae4f9: Pushed
+70c4b84bb2a4: Pushed
+latest: digest: sha256:e1563eb2fdcba0a36b23c34050a2145b47833ce607adc912ee750348bc512e9$
+ size: 1573
+DONE
+--------------------------------------------------------------------------------------$
+
+ID                                    CREATE_TIME                DURATION  SOURCE
+                                                                          IMAGES
+                         STATUS
+e0e0e0e0-aaaa-ffff-928b-9e9a9a9a9a9a  2020-05-15T23:18:50+00:00  20S       gs://PROJECT_NAME_cloudbuild/source/6666666666.34-aaaaaaaaaaaaaaaaaaaaaa.tgz  gcr.io/PROJECT_NAME/rust-gcr-demo (+1 more)  SUCCESS
+</code></pre>
+<p>The build output is tiny.  When we finally added <code>tide</code> to the hello world example  pictured below, the artifact was closer to 4.4MB... but you get the idea.</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/82101143-acd60c00-96d9-11ea-9009-06ffaa96d6c1.png" alt="here is a pic of a tiny build, having been uploaded" /></p>
+<h3 id="deploying-to-google-cloud-run"><a class="header" href="#deploying-to-google-cloud-run">Deploying to Google Cloud Run</a></h3>
+<p>Deployment is also painless.  Make sure you bind to the host <code>0.0.0.0</code> in your application, and obey the <code>PORT</code> variable expected by GCR.  We are lazy and just hardcoded port <code>8080</code> in our code, ignoring best practices for the sake of a quick, throwaway learning experience.</p>
+<p><code>gcloud</code> CLI deployment remains simple:</p>
+<pre><code class="language-sh">gcloud run deploy --image gcr.io/PROJECT_NAME/rust-gcr-demo --platform managed
+</code></pre>
+<p>And there is another pleasing interaction waiting for you in your terminal:</p>
+<pre><code class="language-text">Service name (rust-gcr-demo):
+
+Allow unauthenticated invocations to [rust-gcr-demo] (y/N)?
+
+Deploying container to Cloud Run service [rust-gcr-demo] in project [PROJECT_NAME] region [us-east1]
+✓ Deploying new service... Done.
+  ✓ Creating Revision...
+  ✓ Routing traffic...
+Done.
+Service [rust-gcr-demo] revision [rust-gcr-demo-00001-qow] has been deployed and is serving 100 percent of traffic at https://rust-gcr-demo-somenonsense-xx.z.run.app
+</code></pre>
+<h2 id="comparison-to-a-deno-hello-world"><a class="header" href="#comparison-to-a-deno-hello-world">Comparison to a Deno Hello World</a></h2>
+<p>We did the same thing over again</p>
+<h1 id="using-git-annex-with-google-cloud-storage"><a class="header" href="#using-git-annex-with-google-cloud-storage">Using Git Annex with Google Cloud Storage</a></h1>
+<p>Dec 11, 2020.  We are trying to use <code>git annex</code> to store large
+files in a Google Cloud Storage bucket.</p>
+<h2 id="set-up-rclone"><a class="header" href="#set-up-rclone">Set Up rclone</a></h2>
+<p>Let's set up <code>rclone</code> so that it's linked to our Google Cloud
+account.</p>
+<ul>
+<li>Install <a href="https://git-annex.branchable.com/install/">git annex</a>.</li>
+<li>Install <a href="https://rclone.org/install/">rclone</a>.</li>
+<li>Set up rclone <a href="https://rclone.org/googlecloudstorage/">for Google Cloud Storage</a>.</li>
+</ul>
+<p>You will be prompted in your browser to allow <code>rclone</code> access
+to your Google Cloud account.</p>
+<p>Once you complete these steps, you will be able to see the
+contents of your cloud storage bucket:</p>
+<pre><code class="language-text">$ rclone lsd my-remote:
+-1 2020-12-11 16:00:02        -1 some-project-name
+</code></pre>
+<h2 id="set-up-git-annex"><a class="header" href="#set-up-git-annex">Set Up git-annex</a></h2>
+<p>Now let's set up <code>git-annex</code> so that it can use the newly-defined
+<code>rclone</code> remote.</p>
+<p>You need the bash script from <a href="https://github.com/DanielDent/git-annex-remote-rclone">git-annex-remote-rclone</a> to tie everything together:</p>
+<pre><code class="language-sh">curl https://raw.githubusercontent.com/DanielDent/git-annex-remote-rclone/master/git-annex-remote-rclone --output ~/bin/git-annex-remote-rclone
+chmod 755 ~/bin/git-annex-remote-rclone
+</code></pre>
+<p>To configure <code>git-annex</code> with a 5MB chunk size:</p>
+<pre><code class="language-sh">BUCKET=some-bucket-name RCLONE_REMOTE=my-remote git annex initremote gcs-ruins type=external externaltype=rclone target=$RCLONE_REMOTE prefix=$BUCKET chunk=5MiB encryption=shared mac=HMACSHA512 rclone_layout=lower
+</code></pre>
+<p>Finally, we symlinked <code>~/.rclone.conf</code> to <code>~/.config/rclone/rclone.conf</code> so that <code>rclone</code> would pick up the config on our Debian-derived system.</p>
+<h1 id="google-cloud-platform-show-size-of-bucket-using-gsutil"><a class="header" href="#google-cloud-platform-show-size-of-bucket-using-gsutil">Google Cloud Platform: Show Size of Bucket Using gsutil</a></h1>
+<pre><code class="language-sh">gsutil du -s gs://BUCKET_NAME
+</code></pre>
+<p>This returns the size of the bucket in bytes.  Don't run this if you have hundreds of thousands of objects in the bucket, as it makes individual requests and can take a long time.</p>
+<p><a href="https://cloud.google.com/storage/docs/getting-bucket-information#gsutil">See the official doc.</a></p>
+<h1 id="denoland"><a class="header" href="#denoland">DenoLand</a></h1>
+<p>Articles on Deno.</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/82162993-328ebe80-9876-11ea-930f-5f5d881f75a1.jpg" alt="ALL ABOARD" /></p>
+<h1 id="all-aboard-the-deno-hype-train-trimming-aws-tedium"><a class="header" href="#all-aboard-the-deno-hype-train-trimming-aws-tedium">All Aboard the Deno Hype Train: Trimming AWS Tedium</a></h1>
+<p>This article explores the use of <a href="https://deno.land/">Deno</a> to automate repetitive AWS clean-up tasks.  We conclude by installing a <code>cron</code> job that wakes up our laptop and disposes of our AWS testing resources every night.</p>
+<p>Please be advised that this article is for educational purposes only.</p>
+<p>If you blindly follow all the instructions, you'll end up deleting all your AMIs and snapshots.  ⚠️</p>
+<h2 id="detail"><a class="header" href="#detail">Detail</a></h2>
+<p>As part of our daily development cycle, we create a couple
+of virtual machine images in AWS, then forget about them
+for a while.  At some point, we boot them up and use them,
+and then throw them away.</p>
+<p>Once the instances are running, we have no more need for
+the AMIs from which they were created, and, crucially,
+we don't want to continue spending on the snapshot volumes
+to which the AMIs are registered. </p>
+<p>💸 Snapshots cost money! 💸</p>
+<p>So, for the last few days we've followed a manual workflow to clean up our newly created machine images and snapshots, and that's a big waste of time.</p>
+<p>Instead of using the AWS command-line interface to manage the clean-up of these snapshots and machine images, we decided to write a small script using Deno!  After all, the documentation claims that it's a good fit for use cases where you would otherwise employ a small bash or python script.</p>
+<p>Follow along and decide for yourself whether it's an improvement.</p>
+<h2 id="tedious-motivating-example"><a class="header" href="#tedious-motivating-example">Tedious, Motivating Example</a></h2>
+<p>So, this is the painfully slow workflow that we used to clean things up by hand.  Sure, it only takes a minute, or maybe two (if we're feeling slow).  But keep in mind that we've been doing this every day for the last week... 🤢</p>
+<p>First, we find the images we control:</p>
+<pre><code class="language-sh">aws ec2 describe-images --owners self|grep ami
+</code></pre>
+<p>▶️ ▶️ ▶️</p>
+<pre><code class="language-text">&quot;ImageId&quot;: &quot;ami-0aaaaaaaaaaaaaaaa&quot;,
+&quot;ImageId&quot;: &quot;ami-0bbbbbbbbbbbbbbbb&quot;,
+</code></pre>
+<p>Deregister (disassociate) their respective volumes:</p>
+<pre><code class="language-sh">aws ec2 deregister-image --image-id ami-0aaaaaaaaaaaaaaaa
+aws ec2 deregister-image --image-id ami-0bbbbbbbbbbbbbbbb
+</code></pre>
+<p>Now that the images are deregistered, find all of our snapshots:</p>
+<pre><code class="language-sh">aws ec2 describe-snapshots --owner self | grep snap-
+</code></pre>
+<p>▶️ ▶️ ▶️</p>
+<pre><code class="language-text">&quot;SnapshotId&quot;: &quot;snap-0cccccccccccccccc&quot;,
+&quot;SnapshotId&quot;: &quot;snap-0dddddddddddddddd&quot;,
+</code></pre>
+<p>Finally, destroy these snapshots </p>
+<pre><code class="language-sh">aws ec2 delete-snapshot --snapshot-id snap-0cccccccccccccccc
+aws ec2 delete-snapshot --snapshot-id snap-0dddddddddddddddd
+</code></pre>
+<p>What colossal a waste of time!</p>
+<h2 id="pleasantly-hyped-automation"><a class="header" href="#pleasantly-hyped-automation">Pleasantly Hyped Automation</a></h2>
+<p>OK, here's the fun part.  Let's rewrite this junk using the shiniest,  newest tech! 🦕 </p>
+<p>Our workflow requires that we look up both Amazon Machine Image (AMI) IDs, as well as Snapshot IDs.  We deregister the AMIs one by one, and we delete the snapshots one by one, as well.</p>
+<p>Executing a command via subprocess is easily accomplished using <code>Deno.run</code>.  Here we use <code>stdout: &quot;piped&quot;</code> because we'll want to capture the output from the command and manipulate it:</p>
+<pre><code class="language-typescript">const p = Deno.run({ cmd: [&quot;/usr/bin/aws&quot;, &quot;ec2&quot;, &quot;describe-images&quot;, &quot;--owners&quot;, &quot;self&quot;], stdout: &quot;piped&quot; });
+
+const { code } = await p.status();
+
+if (code !== 0) {
+    const rawError = await p.stderrOutput();
+    const errorString = new TextDecoder().decode(rawError);
+    console.log(errorString);
+    Deno.exit(code);
+}
+</code></pre>
+<p>If we were to run this command directly in a terminal, we'd see
+something like this:</p>
+<pre><code class="language-json">{
+    &quot;Images&quot;: [
+        {
+            &quot;Architecture&quot;: &quot;x86_64&quot;,
+            &quot;CreationDate&quot;: &quot;1970-01-01T08:25:24.000Z&quot;,
+            &quot;ImageId&quot;: &quot;ami-0aaaaaaaaaaaaaaaa&quot;,
+            // ... SNIP ...
+        },
+        {
+            &quot;Architecture&quot;: &quot;x86_64&quot;,
+            &quot;CreationDate&quot;: &quot;1970-01-01T08:15:13.000Z&quot;,
+            &quot;ImageId&quot;: &quot;ami-0bbbbbbbbbbbbbbbb&quot;,
+            /// ... SNIP ...
+        }
+    ]
+}
+</code></pre>
+<p>Using <code>grep</code> to pull out the <code>ImageId</code> field will leave us with an ugly line of text which we then need to further trim down to the actual ID. And we're too lazy to write a proper regex. 🌝</p>
+<p>Thankfully, Typescript makes this dead simple for us, since it handles JSON very naturally:</p>
+<pre><code class="language-typescript">const { Images } = JSON.parse(new TextDecoder().decode(await p.output()));
+
+for (let { ImageId } of Images) {
+  await Deno.run({ 
+        cmd: [&quot;aws&quot;, &quot;ec2&quot;, &quot;deregister-image&quot;, &quot;--image-id&quot;, ImageId] 
+    });
+}
+</code></pre>
+<p>Fast-forwarding a bit, we can streamline our code by pulling out the <code>JSON.parse</code> call used with every AWS CLI invocation, and declaring it as a function:</p>
+<pre><code class="language-typescript">const parseProcessOutput = async (p: Deno.Process) =&gt;
+  JSON.parse(new TextDecoder().decode(await p.output()));
+</code></pre>
+<p>We also wanted to stop &quot;typing&quot;, &quot;all&quot;, &quot;our&quot;, &quot;arguments&quot;, &quot;to&quot;, &quot;the&quot;, &quot;Deno.run&quot;, &quot;cmd&quot; as comma-separated strings, because we're lazy 👼:</p>
+<pre><code class="language-typescript">const awsEc2Cmd = (argStr: string) =&gt; {
+  let o = [];
+  o.push(&quot;/usr/bin/aws&quot;);
+  o.push(&quot;ec2&quot;);
+  for (let s of argStr.split(&quot; &quot;)) {
+    o.push(s);
+  }
+
+  return o;
+};
+</code></pre>
+<p>With these little helpers declared, cleaning up our expen$ive image snapshots is now easy:</p>
+<pre><code class="language-typescript">const dsp = await runOrExit(
+  {
+    cmd: awsEc2Cmd(&quot;describe-snapshots --owner self&quot;),
+    stdout: &quot;piped&quot;,
+  },
+);
+
+const { Snapshots } = await parseProcessOutput(dsp);
+
+for (let { SnapshotId } of Snapshots) {
+  await runOrExit(
+    {
+      cmd: awsEc2Cmd(`delete-snapshot --snapshot-id ${SnapshotId}`),
+      stdout: undefined,
+    },
+  );
+}
+</code></pre>
+<p>That's fully HALF of our daily dev trash that we generate.  We also tend to run a couple of instances in our AWS dev environment.  We want to terminate both of those instances.  One of the two will usually have an elastic IP associated with it, so we make sure to release that IP and avoid charges.</p>
+<p>Here's the complete script, which depends on our above helpers being defined in a <code>procs.ts</code> file: </p>
+<pre><code class="language-typescript">import { runOrExit, parseProcessOutput, awsEc2Cmd } from &quot;./procs.ts&quot;;
+import { config as loadEnv } from &quot;https://deno.land/x/dotenv@v0.3.0/mod.ts&quot;;
+
+console.log(loadEnv({ safe: true, export: true }));
+
+// This is the instance tag &quot;Name&quot;, used to identify
+// our dev environment instances.
+// It's loaded from a .env file which looks like this:
+//
+// KEY_NAME=my-fancy-dev-instance-tag
+const KEY_NAME = Deno.env.get(&quot;KEY_NAME&quot;);
+
+let instsDescd = runOrExit(
+  { cmd: awsEc2Cmd(&quot;describe-instances&quot;), stdout: &quot;piped&quot; },
+);
+
+let addrsDescd = runOrExit(
+  { cmd: awsEc2Cmd(&quot;describe-addresses&quot;), stdout: &quot;piped&quot; },
+);
+
+const { Reservations } = await parseProcessOutput(await instsDescd);
+
+let instancesToTerminate = [];
+for (let { Instances } of Reservations) {
+  for (let { InstanceId, KeyName } of Instances) {
+    if (KEY_NAME === KeyName) {
+      instancesToTerminate.push(InstanceId);
+    }
+  }
+}
+
+const { Addresses } = await parseProcessOutput(await addrsDescd);
+
+let addressesToRelease = [];
+for (let { InstanceId, AllocationId, AssociationId } of Addresses) {
+  if (instancesToTerminate.includes(InstanceId)) {
+    addressesToRelease.push({ AllocationId, AssociationId });
+  }
+}
+
+if (addressesToRelease.length &gt; 0) {
+  console.log(`Addresses to release  : ${JSON.stringify(addressesToRelease)}`);
+
+  for (let { AssociationId, AllocationId } of addressesToRelease) {
+    await runOrExit({
+      cmd: awsEc2Cmd(`disassociate-address --association-id ${AssociationId}`),
+    });
+
+    await runOrExit({
+      cmd: awsEc2Cmd(`release-address --allocation-id ${AllocationId}`),
+    });
+  }
+}
+
+if (instancesToTerminate.length &gt; 0) {
+  console.log(
+    `Instances to terminate: ${JSON.stringify(instancesToTerminate)}`
+  );
+
+  await runOrExit({
+    cmd: awsEc2Cmd(
+      `terminate-instances --instance-ids ${instancesToTerminate.join(&quot; &quot;)}`
+    ),
+  });
+}
+
+Deno.exit(0);
+</code></pre>
+<p>When I run this script, my credit card sighs in glorious relief. 🤓</p>
+<h2 id="the-triggered-clean-up-nirvana"><a class="header" href="#the-triggered-clean-up-nirvana">The Triggered Clean-Up Nirvana</a></h2>
+<p>Yes, we prefer to watch Stargate SG-1 and Fringe at 9pm.  We do not remember to clean up our precious AWS resources.</p>
+<p>We need a <em>cron job</em>!</p>
+<p>It should wake up this x86_64 laptop from sleep, and use our local AWS credentials to trigger the cleanup scripts.</p>
+<p>Why not just run this on a local raspberry pi, or something?  We have at least one of those running 24/7, so we wouldn't need to mess with forcing a wakeup from sleep.</p>
+<p>Well, it turns out that Deno <strong>can't run on ARM platforms yet</strong>.  Oh well!</p>
+<p>As long as we can wake up our power-hungry laptop reliably, we don't mind a little bit of a hacky solution, here.  It beats waking up our <em>human body</em> to take care of such a tedious task!</p>
+<h3 id="try-out-rtcwake"><a class="header" href="#try-out-rtcwake">Try Out RtcWake</a></h3>
+<p>We'll attempt to <a href="https://www.addictivetips.com/ubuntu-linux-tips/automatically-wake-linux-up-from-sleep/">use RtcWake to jolt our laptop into consciousness</a>.</p>
+<p>🎵 🔈 First, put the music on nice and loud... 🎹 👾</p>
+<pre><code class="language-sh"># install debian &amp; ubuntu
+sudo apt install -y util-linux
+
+# put the laptop to sleep for 10 seconds, then resume
+sudo rtcwake -u -s 10 -m mem
+</code></pre>
+<p>Blackout... 🙈</p>
+<p>...and in 10 seconds, we heard our tunes pop right back into place! 👂 🏁</p>
+<h3 id="scheduled-wake-up"><a class="header" href="#scheduled-wake-up">Scheduled Wake-Up</a></h3>
+<p>We're gonna need to do this by cron, so we need to be able to</p>
+<pre><code class="language-sh">sudo rtcwake -m no -l -t $(date +%s -d 'today 19:15')
+</code></pre>
+<p>⌚️ Try this at 19:14, then wait...</p>
+<p>🌞 No problems!</p>
+<h3 id="add-some-crontab-love-"><a class="header" href="#add-some-crontab-love-">Add some crontab love 💟</a></h3>
+<p>Well, we left a disk sitting around in AWS for a couple of weeks and it cost us a bit of money.  We dithered and didn't bother to release our article.  NOW WE HAVE GREAT RESOLVE!</p>
+<p>We shall run a crontab.</p>
+<p>We shall always clean up our expensive dev trash!</p>
+<p><a href="https://serverfault.com/a/352837">We shall google for how to do this and then tell you about it</a>.</p>
+<p>Entering the local user and editing the crontab file for correctness before committing it</p>
+<pre><code class="language-sh">sudo crontab -u FRIENDLY_USER -e
+</code></pre>
+<p>This was our test run.  We tried a deno script which invoked <code>wall</code>, to make sure we could run our more complex deno logic for the dev environment &amp; AMI/snapshot cleanups.</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/84583409-360a5c80-adc6-11ea-8983-5e4925771d85.png" alt="test drive" /></p>
+<h3 id="final-plan-"><a class="header" href="#final-plan-">Final Plan 📆</a></h3>
+<ul>
+<li>crontab: (as root!) periodically schedule RTC wake at 23:27 </li>
+<li>crontab (as user, three minutes later): destroy all snapshots and AMIs using deno script</li>
+<li>crontab (as user, also three minutes later): destroy any dev environment instances</li>
+</ul>
+<p>That's it.  Our laptop is configured to go back to sleep relatively quickly, so we shouldn't burn too much disgusting coal power (don't hate, we live in Indiana 🤢 🏭) after it kicks on.</p>
+<h4 id="the-rtc-wake-up-spammer-used-by-root-crontab"><a class="header" href="#the-rtc-wake-up-spammer-used-by-root-crontab">The RTC Wake-Up Spammer used by ROOT Crontab</a></h4>
+<p><img src="https://user-images.githubusercontent.com/38859656/84583855-ba131300-adcb-11ea-9525-439d1a4ad5a1.png" alt="rtc spammer as root" /></p>
+<h4 id="the-cleanup-crontab-for-normal-user"><a class="header" href="#the-cleanup-crontab-for-normal-user">The cleanup crontab for Normal User</a></h4>
+<p><img src="https://user-images.githubusercontent.com/38859656/84583924-ca77bd80-adcc-11ea-91c9-a4f98cbca6ff.png" alt="normal user cleanup" /></p>
+<p>We need to make sure the <code>KEY_NAME</code> var is exposed in the environment.  First attempt above, failed.</p>
+<p>Add another pic...</p>
+<h4 id="checking-for-correctness"><a class="header" href="#checking-for-correctness">Checking for Correctness</a></h4>
+<p>We should make sure that the instances are destroyed, their disks destroyed, elastic IP released completely, snapshots destroyed, AMIs destroyed.</p>
+<p>Although our overall approach is a hack, we're willing to accept the disorganization... <em>as long as everything actually works</em>!</p>
+<h2 id="references-and-attributions"><a class="header" href="#references-and-attributions">References and Attributions</a></h2>
+<p><a href="https://ccsearch.creativecommons.org/photos/b66ad5eb-8395-4eaa-a26f-ba680b23f027">train image</a> by fsse8info is licensed under CC BY-SA 2.0.</p>
+<p>The initial nugget of subprocess management originates in the <a href="https://deno.land/manual/examples/subprocess">Deno manual subprocess example</a>.</p>
+<h1 id="upgrading-deno-file-server"><a class="header" href="#upgrading-deno-file-server">upgrading deno file server</a></h1>
+<pre><code class="language-sh">deno install -f --allow-net --allow-read https://deno.land/std/http/file_server.ts
+</code></pre>
+<h1 id="using-deno-in-vscode"><a class="header" href="#using-deno-in-vscode">Using Deno in VsCode</a></h1>
+<p>Have you recently switched from the deprecated VsCode Deno extension, to <a href="https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno">the new one</a>?</p>
+<p>Are you seeing red squigglies? 🔴</p>
+<p>We fixed it by <a href="https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno">reading the instructions</a>:</p>
+<blockquote>
+<p>Opening the VS Code command palette with Ctrl+Shift+P, and run the Deno: Initialize Workspace Configuration command.</p>
+</blockquote>
+<h1 id="everything-else"><a class="header" href="#everything-else">Everything Else</a></h1>
+<p>Everything in this section has so far resisted categorization.</p>
+<p>Maybe we'll find a place for it later.</p>
+<h2 id="stuff-to-tinker-with"><a class="header" href="#stuff-to-tinker-with">Stuff to Tinker With</a></h2>
+<p>I'd like to look further into some of these items.</p>
+<ul>
+<li><a href="https://www.idris-lang.org/">Idris 2</a> and <a href="https://github.com/edwinb/Idris2">its github repo</a></li>
+<li><a href="https://deno.land/x/murmurhash/">JavaScript murmur3 hashing at deno.land</a>, including links to some other vanilla JS impls.</li>
+<li><a href="https://www.redox-os.org/">RedoxOS</a> is a Unix-like Operating System written in Rust, aiming to bring the innovations of Rust to a modern microkernel and full set of applications.</li>
+<li><a href="https://devfonts.gafi.dev/">Dev Fonts preview page</a></li>
+<li><a href="https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/all">Sparkfun: How to Use a Multimeter</a></li>
+</ul>
+<h2 id="articles"><a class="header" href="#articles">Articles</a></h2>
+<ul>
+<li><a href="https://jason-williams.co.uk/a-possible-new-backend-for-rust">Jason Williams: A possible new backend for rust</a>, which provides faster compile times. How buggy would it be to switch back and forth between Cranelift for dev and LLVM for release?</li>
+<li><a href="https://dev.to/adipolak/apache-spark-bitesize-series-1jd2">Adi Polak: Bite-sized intro to Spark</a></li>
+<li><a href="https://dev.to/hcapucho/apache-kafka-101-introduction-567a">João H. Capucho: A nice introduction to Kafka</a></li>
+<li><a href="https://blog.jessfraz.com/post/power-to-the-people/">Jess Frazelle: Power to the People</a>, an analysis of power usage in data centers.</li>
+</ul>
+<h2 id="papers"><a class="header" href="#papers">Papers</a></h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1911.01547">On the Measure of Intelligence</a>. &quot;To make deliberate progress towards more intelligent and more human-like artificial systems, we need to be following an appropriate feedback signal: we need to be able to define and evaluate intelligence in a way that enables comparisons between two systems, as well as comparisons with humans.&quot;</li>
+</ul>
+<h1 id="raspberry-pi--h264-live-camera--web"><a class="header" href="#raspberry-pi--h264-live-camera--web">Raspberry Pi + H264 Live Camera + Web</a></h1>
+<p>We found a <a href="https://github.com/131/h264-live-player">really nice project</a>
+which lets you stream video from a Raspberry Pi (model 3 B+, in our case).
+We connected the <a href="https://www.raspberrypi.org/products/camera-module-v2/">Camera Module v2</a> to ours, and had good results.</p>
+<p>The project uses a reasonable frame rate to deliver nice results, despite
+the Pi's small processing power.</p>
+<p>We <a href="https://github.com/Terkwood/h264-live-player">created a fork of the project</a> which kills the <code>raspivid</code> project on disconnect, and simplifies the UI. It also changes the default port to 80, so that you have a nicer URL available.</p>
+<h1 id="racket"><a class="header" href="#racket">Racket</a></h1>
+<p>It's not super easy to learn Racket. There aren't thousands of marauding programmers running around preaching its virtue, like we do with Rust!</p>
+<p>But that's OK. I'd like to improve my skill with making DSLs, and it's fun revisiting the world of Scheme.</p>
+<h2 id="articles-docs-and-tutorials"><a class="header" href="#articles-docs-and-tutorials">Articles, Docs and Tutorials</a></h2>
+<ul>
+<li><a href="https://wusyong.github.io/resources/racket/2/#/">Essential Racket</a>. Great slides!</li>
+<li><a href="http://rilouw.eu/article/the-programming-language-of-your-dreams-part-1">The PL of your dreams</a></li>
+<li><a href="https://beautifulracket.com/">Beautiful Racket</a></li>
+<li><a href="https://docs.racket-lang.org/guide/languages.html">Lang section in the official docs</a></li>
+</ul>
+<h2 id="example-projects"><a class="header" href="#example-projects">Example Projects</a></h2>
+<ul>
+<li><a href="https://github.com/videolang/video">Video Lang</a></li>
+<li><a href="https://github.com/rfindler/lindenmayer">Lindenmayer Systems</a>, and also a <a href="https://users.cs.northwestern.edu/%7Esfq833/resources/papers/herbarium_racketensis_2017.pdf">paper</a></li>
+<li><a href="https://github.com/mflatt/scratchy">Scratchy: Demo of implementing a language</a>. Here's its <a href="https://github.com/mflatt/scratchy/blob/master/scratchy/reader.rkt">lexer/parser code</a></li>
+</ul>
+<h2 id="other-resources"><a class="header" href="#other-resources">Other Resources</a></h2>
+<p>The <a href="https://groups.google.com/g/racket-users">Google Group</a> has a lot of Q&amp;A available for review.</p>
+<h1 id="lolbots----"><a class="header" href="#lolbots----">lolbots 🙄 🤣 🤖 💩</a></h1>
+<p>Why not just make a bot which responds ironically to our discord server?  It should train itself based on our local subgroup of freaks and weirdos.  <em>Obviously</em>, we would make the source open for the public to scrutinize, because if we don't keep tinkering frenetically with two-star projects on Github, <em>then we won't achieve immortality</em>.</p>
+<p>We could try using the <a href="https://github.com/Terkwood/DeepMoji">DeepMoji</a> project to somehow mix sarcasm into the intellectual brew, but we still need to investigate, and make sure that this isn't going to eat up weeks of time.  I mean, we sort of coasted through that data mining course in grad school without considering the 72 Trillion Dollar AI Hype Machine that would barrel into the world a few short years after we graduated.  Dear Reader, we're not machine learning experts over here.  Just a curious application developer.</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/82142447-62a07800-980a-11ea-8a6f-94ff5c843602.jpg" alt="but really" /></p>
+<p><img src="https://user-images.githubusercontent.com/38859656/82142476-a2fff600-980a-11ea-962e-3c461ca975ae.jpg" alt="so much love" /></p>
+<p><a href="https://deepmoji.mit.edu/">You wanna try?</a></p>
+<p>The test cases are what led us this far down the rabbit hole.  Look at this test case.  <a href="https://github.com/bfelbo/DeepMoji/blob/33a6640bff1aa700eb376a9932c5f35cca986807/tests/test_finetuning.py#L166">JUST LOOK AT IT!</a> 💖 🐇</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/82142168-6e8b3a80-9808-11ea-8f6d-a6b0ea15e743.jpg" alt="deepmoji test cases" /></p>
+<p>OK, you get the idea.  Go ahead and read more about <a href="https://www.media.mit.edu/projects/deepmoji/overview/">the DeepMoji project from MIT</a> if you want to.</p>
+<h2 id="so-what"><a class="header" href="#so-what">So What?</a></h2>
+<p>We already have an NVIDIA Jetson Nano sitting on our desk computing the moves for our <a href="https://github.com/Terkwood/BUGOUT">Goban</a> using <a href="https://github.com/lightvector/KataGo">KataGo - a slick, community-sponsored neural net</a>. Please don't judge us by the level of dust collecting on this lil' guy -- we're working in a <em>very dynamic environment</em>. 🤧</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/82141784-2834dc00-9806-11ea-8591-0c9cbdb53074.jpeg" alt="lilbrain in situ" /></p>
+<p>We even created 1/3 of the <a href="https://github.com/Terkwood/BUGOUT/tree/unstable/botlink">necessary architecture</a> in our recent project: we could just string up a websocket from the local NVIDIA GPU, to a cloud provider, and avoid exposing our blessed domicile's network surface to the world of trolls, bots, and whatever else.  Rather than creating some sort of PULL-based situation, we would prefer to have some cloud-hosted Discord gateway push data down to the NVIDIA Nano GPU, which would then consider our chats in a Machine Learny Way, and then respond with a snarky reaction.</p>
+<p>🙄 🤖 We're gunning for Artificial Irony. 🤖 🙄</p>
+<h2 id="install-tensorflow-on-the-nvidia-jetson-nano"><a class="header" href="#install-tensorflow-on-the-nvidia-jetson-nano">Install tensorflow on the NVIDIA Jetson Nano</a></h2>
+<p>Our Nano is still pretty lightly loaded.  We tried to install several packages, hoping to follow something like the <a href="https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html">NVIDIA instructions</a> to easily run Tensorflow.  Yeah.  Right.</p>
+<h3 id="the-woe"><a class="header" href="#the-woe">The Woe</a></h3>
+<p>After about 38 minutes we've given up on the project entirely, realizing that the model we want to use only supports python 2, while the NVIDIA jetson nano (surprise!) wants us to install TF using python 3.</p>
+<p>🔥 🚒  🔥</p>
+<pre><code class="language-text">Successfully installed absl-py-0.9.0 astor-0.8.1 cachetools-4.1.0 google-auth-1.14.3 google-auth-oauthlib-0.4.1 google-pasta-0.2.0 grpcio-1.29.0 keras-preprocessing-1.1.2 markdown-3.2.2 oauthlib-3.1.0 opt-einsum-3.2.1 pyasn1-0.4.8 pyasn1-modules-0.2.8 requests-oauthlib-1.3.0 rsa-4.0 scipy-1.4.1 tensorboard-2.1.1 tensorflow-2.1.0+nv20.4 tensorflow-estimator-2.1.0 termcolor-1.1.0 werkzeug-1.0.1 wrapt-1.12.1
+
+
+$ python3
+Python 3.6.9 (default, Apr 18 2020, 01:56:04)
+[GCC 8.4.0] on linux
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt; import tensorflow
+2020-05-17 00:03:42.129454: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.2'; dlerror: libcudart.so.10.2: cannot open shared object file: No such file or directory
+2020-05-17 00:03:42.129529: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2020-05-17 00:03:45.107357: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2020-05-17 00:03:45.107613: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2020-05-17 00:03:45.107673: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:30] Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+&gt;&gt;&gt;
+</code></pre>
+<p>BUT WAIT THEY'RE STILL WORKING ON IT! <a href="https://github.com/nklapste/DeepMoji/tree/feature/SimplePython3Migration">Here is a forked repo with active contribution</a>, working toward supporting python 3 and TF 2.0.  Note that it's TF 2.0.  Not TF 2.1.</p>
+<p>Here is the <a href="https://github.com/bfelbo/DeepMoji/pull/53">related PR</a> on the main DeepMoji repo.</p>
+<h3 id="not-so-good"><a class="header" href="#not-so-good">Not So Good</a></h3>
+<p>Sort of fail. <a href="https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html#install_multiple_versions_tensorflow">Try TF 2.0.0</a>.</p>
+<p><a href="https://github.com/tensorflow/tensorflow/issues/34759#issuecomment-629179592">Others are having this same issue</a></p>
+<p>THIS DOES NOT REALLY WORK, VERSIONS INCOMPATIBLE: We probably need to <a href="https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform-release-notes/tf-jetson-rel.html#tf-jetson-rel">line up versions just so</a>...</p>
+<p>THIS DOES NOT REALLY WORK, CRASHES: Or we could potentially <a href="https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/running.html#running">run in a container</a></p>
+<p>Looks like one sure-fire fix is to <a href="https://github.com/tensorflow/tensorflow/issues/34759#issuecomment-570102033">build from source</a>.  In which case we would need golang so that we can install bazel</p>
+<p>And yes, we must build bazel from source, because we're on an ARM64 platform. 🤓</p>
+<p>https://github.com/bazelbuild/bazel/issues/8833#issuecomment-629039759</p>
+<h3 id="finally-pleasing-scroll"><a class="header" href="#finally-pleasing-scroll">FINALLY: PLEASING SCROLL</a></h3>
+<p>We really needed some of this scroll.  After a bit of a struggle, we're compiling Tensorflow 2.1.0 on our NVIDIA Jetson Nano and may yet be able to Hello.</p>
+<pre><code class="language-text">Configuration finished
+userhost:~/git/tensorflow$ bazel build //tensorflow/tools/pip_package:build_pip_package
+Extracting Bazel installation...
+Starting local Bazel server and connecting to it...
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/38859656/82141600-f707dc00-9804-11ea-9fc5-139b7aa374b1.png" alt="yo theres even color" /></p>
+<h3 id="come-back-65536-hours-later"><a class="header" href="#come-back-65536-hours-later">Come Back 65,536 Hours Later...</a></h3>
+<p>...and the Nano is still compiling Tensorflow 2.1.  That's right, 2.1.  We completely forgot that there's likely no support by DeepMoji for this version - we should have compiled 2.0.</p>
+<p>That's fine.  It doesn't matter.  Nothing matters. (OK, PLENTY OF THINGS MATTER, calm down.)  But yeah, we're sticking with the latest version of Tensorflow and we're just going to see how things play out.</p>
+<p>Here's what's up, we've already downloaded half the internet during this compile.</p>
+<p>And finally IT FAILS!</p>
+<h2 id="you-need-a-rest-break"><a class="header" href="#you-need-a-rest-break">You Need a Rest Break</a></h2>
+<p>💤
+💤💤</p>
+<pre><code class="language-text">pdate(highwayhash::HH_U64, const char*, highwayhash::HH_U64, State*)':
+external/highwayhash/highwayhash/compiler_specific.h:52:46: warning: requested alignment 32 is larger than 16 [-Wattributes]
+ #define HH_ALIGNAS(multiple) alignas(multiple)  // C++11
+                                              ^
+external/highwayhash/highwayhash/state_helpers.h:49:41: note: in expansion of macro 'HH_ALIGNAS'
+   char final_packet[State::kPacketSize] HH_ALIGNAS(32) = {0};
+                                         ^~~~~~~~~~
+ERROR: /home/user/.cache/bazel/_bazel_user/9fef75a91d3167b0d0af1e5d464b12c3/external/aws-c-common/BUILD.bazel:12:1: C++ compilation of rule '@aws-c-common//:aws-c-common' failed (Exit 1)
+external/aws-c-common/source/arch/cpuid.c:23:10: fatal error: immintrin.h: No such file or directory
+ #include &lt;immintrin.h&gt;
+          ^~~~~~~~~~~~~
+compilation terminated.
+Target //tensorflow/tools/pip_package:build_pip_package failed to build
+Use --verbose_failures to see the command lines of failed build steps.
+INFO: Elapsed time: 2988.839s, Critical Path: 67.64s
+INFO: 1146 processes: 1146 local.
+FAILED: Build did NOT complete successfully
+</code></pre>
+<p>💤
+💤💤</p>
+<h2 id="cheer-up"><a class="header" href="#cheer-up">Cheer Up</a></h2>
+<p>Look, this isn't our first rodeo.</p>
+<p><a href="https://jkjung-avt.github.io/build-tensorflow-2.0.0/">Let's just try compiling TF for the next 40 hours using this guide</a>.  This individual has even figured out TF 2.0!</p>
+<p>We don't have to sit and watch every step of the process.</p>
+<p>We don't have to even shut down KataGo.  That would be weird.</p>
+<p>If it works, it works.  If it doesn't, <em>FINE!</em></p>
+<h1 id="resolution-1"><a class="header" href="#resolution-1">Resolution</a></h1>
+<p>We failed to succeed in compilation of TF 2.0 on NVIDIA Jetson Nano.  Thank you.</p>
+<h1 id="deepdream"><a class="header" href="#deepdream">Deepdream</a></h1>
+<p>Deepdream is cute.  It's fun to play with yesterday's AI advancements.</p>
+<h2 id="resources-1"><a class="header" href="#resources-1">Resources</a></h2>
+<p><a href="https://research.google.com/seedbank/seed/deepdream">This is the Deepdream Colab Notebook</a>, it its original location on Seedbank.</p>
+<p><a href="https://aihub.cloud.google.com/p/products%2Ff9e8fc11-ad0f-410a-bebe-2482066ce570">The newer version</a> is hosted on AIHub.</p>
+<p>It can transform strange things into even stranger artifacts.</p>
+<p>It's based on TF 1.x, so you need to make sure you use the old version of the lib before starting your notebook.</p>
+<p><code>%tensorflow_version 1.x</code></p>
+<h3 id="experimenting"><a class="header" href="#experimenting">Experimenting</a></h3>
+<p>You can then do some transformations.</p>
+<h4 id="waking-image"><a class="header" href="#waking-image">Waking Image</a></h4>
+<p><img src="https://user-images.githubusercontent.com/38859656/78388122-78d1dc00-75ae-11ea-819b-626d608970ee.jpg" alt="This input" /></p>
+<h4 id="dreamy-image"><a class="header" href="#dreamy-image">Dreamy Image</a></h4>
+<p>This output had all the default settings for step #4, but we boosted strength to ~500.</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/78389969-bf750580-75b1-11ea-8ef4-9b295657588a.jpeg" alt="An output example" /></p>
+<h4 id="dreamier-image"><a class="header" href="#dreamier-image">Dreamier Image</a></h4>
+<p>This output had further-jiggled settings:</p>
+<ul>
+<li>Layer: <code>mixed4d_3x3_bottleneck_pre_relu</code></li>
+<li>Strength: <code>500</code></li>
+<li>iter_n: <code>25</code></li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/38859656/78391770-04e70200-75b5-11ea-8451-06236a9036c2.jpeg" alt="Output" /></p>
+<h1 id="resources-for-setting-up-mdbook"><a class="header" href="#resources-for-setting-up-mdbook">Resources for Setting up mdBook</a></h1>
+<ul>
+<li><a href="https://rust-lang.github.io/mdBook/index.html">mdBook docs</a></li>
+<li><a href="https://rust-lang.github.io/mdBook/continuous-integration.html">mdBook: continuous integration</a></li>
+<li><a href="https://docs.travis-ci.com/user/environment-variables#defining-variables-in-repository-settings">Travis CI: defining vars in repo settings</a></li>
+<li><a href="https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line">Github: personal access tokens</a></li>
+<li><a href="https://raw.githubusercontent.com/rust-lang/mdBook/master/book-example/src/SUMMARY.md">mdBook formatting example(raw)</a></li>
+</ul>
+<h1 id="resources-for-setting-up-github-pages"><a class="header" href="#resources-for-setting-up-github-pages">Resources for Setting up Github Pages</a></h1>
+<ul>
+<li><a href="https://nicolas-van.github.io/easy-markdown-to-github-pages/">Nicolas Van: Easy Markdown to Github Pages</a></li>
+<li><a href="https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site">Github Pages: Managing Custom Domains</a></li>
+<li><a href="https://dev.to/trentyang/how-to-setup-google-domain-for-github-pages-1p58">Trent Yang: Github Pages and Google Domains</a></li>
+<li><a href="https://help.github.com/en/github/working-with-github-pages/troubleshooting-custom-domains-and-github-pages#cname-errors">Github Pages: CNAME errors</a></li>
+<li><a href="https://hackernoon.com/use-custom-domain-with-github-pages-2-straightforward-steps-cf561eee244f">Controlling CNAME in github pages</a></li>
+<li><a href="https://github.community/t5/GitHub-Pages/Github-forgets-about-my-custom-domain-every-time-I-update-the/m-p/478#M47">Solved: Github forgets about custom domain</a></li>
+</ul>
+<h1 id="ffmpeg"><a class="header" href="#ffmpeg">ffmpeg</a></h1>
+<p>🤷‍♂</p>
+<h2 id="crop-video"><a class="header" href="#crop-video">crop video</a></h2>
+<p>You can <a href="https://video.stackexchange.com/questions/4563/how-can-i-crop-a-video-with-ffmpeg">crop video</a> using ffmpeg.</p>
+<pre><code class="language-sh">ffmpeg -i in.mp4 -filter:v &quot;crop=out_w:out_h:x:y&quot; out.mp4
+</code></pre>
+<p>e.g. crop a 1080x800 section starting at 0,1000</p>
+<pre><code class="language-sh">ffmpeg -i in.mp4 -filter:v &quot;crop=1080:600:0:900&quot; out.mp4
+</code></pre>
+<h2 id="shrink-video"><a class="header" href="#shrink-video">Shrink Video</a></h2>
+<p>You can <a href="https://unix.stackexchange.com/questions/28803/how-can-i-reduce-a-videos-size-with-ffmpeg/38380#38380">shrink video</a>.</p>
+<pre><code class="language-sh"> ffmpeg -i in_big.mp4 -vcodec libx265 -crf 24 out_small.mp4
+</code></pre>
+<h1 id="wtf-why-is-firefox-so-slow-on-linux"><a class="header" href="#wtf-why-is-firefox-so-slow-on-linux">WTF WHY IS FIREFOX SO SLOW ON LINUX</a></h1>
+<p>It's because you haven't enabled hardware acceleration.</p>
+<p>Go to <code>about:config</code> and turn <code>layers.acceleration.force-enabled</code> to <code>true</code>.</p>
+<h1 id="oss-commitment-tracking"><a class="header" href="#oss-commitment-tracking">OSS Commitment Tracking</a></h1>
+<p>In an effort to manage time and prioritize our work,
+this page tracks our outstanding commitments made to
+various open source projects.</p>
+<h2 id="outstanding"><a class="header" href="#outstanding">Outstanding</a></h2>
+<p>Nothing right now, <em>thankfully</em>.</p>
+<h2 id="completed"><a class="header" href="#completed">Completed</a></h2>
+<ul>
+<li><a href="tech/./hello_tikv.html#report-these-issues">Raised issue for TiKV client example</a></li>
+<li><a href="https://github.com/keroxp/deno-redis/pull/86">Deno Redis Streams</a></li>
+<li><a href="https://github.com/mitsuhiko/redis-rs/pull/319">Provide merge for redis-streams-rs work into redis-rs</a></li>
+<li><a href="https://github.com/spacejam/sled/pull/1075">Tidy up README for sled</a></li>
+<li><a href="https://github.com/lampewebdev/wasm_deno_example/pull/1/files">Provide a build script for deno example</a></li>
+<li><a href="https://github.com/grippy/redis-streams-rs/pull/13">Upgrade dependencies for redis-streams-rs</a></li>
+</ul>
+<h1 id="fun-stuff"><a class="header" href="#fun-stuff">Fun Stuff</a></h1>
+<p>This chapter contains things that are <em>hopefully fun</em>.</p>
+<h1 id="music-directory"><a class="header" href="#music-directory">Music Directory</a></h1>
+<p>We hope you find these to be easy on the ears, with the notable exception
+of references to <a href="https://en.wikipedia.org/wiki/Merzbow">Merzbow</a>.</p>
+<h2 id="interesting-apps-and-resources"><a class="header" href="#interesting-apps-and-resources">Interesting Apps and Resources</a></h2>
+<p><a href="http://radio.garden/">Radio Garden: Explore Live Music</a></p>
+<h2 id="videos-online"><a class="header" href="#videos-online">Videos Online</a></h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=4cfmEgpOOZk">Erykah Badu: Tiny Desk</a> 🔥🔥🔥</li>
+<li><a href="https://www.youtube.com/watch?v=NO-1Euq2RBk">Bill Frissell: Tiny Desk</a></li>
+<li><a href="https://www.youtube.com/watch?v=D7Ti9DRLZEU">Ari Lennox: Tiny Desk</a></li>
+<li><a href="https://www.youtube.com/watch?v=SjFo6l4c-oc">Gary Clarke Jr: Tiny Desk</a></li>
+<li><a href="https://www.youtube.com/watch?v=WvSVXrkSfr4">Melvins: House of Strombo</a></li>
+</ul>
+<h1 id="fallout-shelter-cheat-9999-lunch-boxes"><a class="header" href="#fallout-shelter-cheat-9999-lunch-boxes">Fallout Shelter Cheat: 9999 Lunch Boxes</a></h1>
+<p>This cheat works for Xbox One and requires Microsoft Windows 10.  It was discovered in the <a href="https://www.youtube.com/watch?v=SjxeQY4eaFs">Genie Fallout Shelter 9999 Lunch Boxes</a> video.</p>
+<ul>
+<li>You must be logged into an XBox account shared by both your Windows 10 and Xbox One.</li>
+<li>You need to download and install Fallout Shelter onto a Windows 10 machine using Microsoft Store.  The account must be linked to your Xbox One.</li>
+<li>Link to <code>%APPDATA%</code> and go up to the local dir (not Roaming), then find e.g. <code>BethesdaSoftworks.FalloutShelter_AAAAkfvn8vvvv\SystemAppData\wgs\000900000CB0BE87_000000000000000000000000DEADBEEF\BEEFBEEFBEEFBEEFBEEFBEEFBEEFBEEF7</code></li>
+<li>Use the vault file listed at <a href="https://www.youtube.com/watch?v=SjxeQY4eaFs">Genie Fallout Shelter 9999 Lunch Boxes</a> video or access the edited <a href="https://gist.githubusercontent.com/Terkwood/74dbc7ee3f79782c1b729b2b3986099d/raw/8fcb192103f386d8f86470c5a6a7f354da262492/Vault.sav">vault file here</a>.</li>
+<li>Replace one of your games with that vault file.</li>
+<li>Load the game on your Windows 10 machine, hit save, and wait for Xbox routines in Windows 10 to sync your data.</li>
+<li>Quit Windows 10 and start Fallout Shelter on your Xbox One.  Your file should sync automatically and you should have lots of available lunch boxes.</li>
+</ul>
+<p>Please <a href="https://www.youtube.com/channel/UCAzUpavFEbFXumZWWaGd-qA">visit Genie's YouTube channel</a> and show some love for their contribution: this is a really fun exploit!</p>
+<h1 id="source-code-for-this-book"><a class="header" href="#source-code-for-this-book">Source Code for this Book</a></h1>
+<p>The source code for this book is available at <a href="https://github.com/Terkwood/book">Github</a>.</p>
+<p>This book is <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">Licensed under GNU GPLv3</a>.</p>
+<h1 id="providing-feedback"><a class="header" href="#providing-feedback">Providing Feedback</a></h1>
+<p>Feedback may be provided by opening an issue <a href="https://github.com/Terkwood/book/issues">on our Github project page</a>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>

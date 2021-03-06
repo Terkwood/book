@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js coal">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Trying Google Cloud Run - Terkwood Farms</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "coal";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('coal')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">Preface</a></li><li class="chapter-item expanded "><a href="../tech/BUGOUT/index.html"><strong aria-hidden="true">1.</strong> BUGOUT: Play Go against AI 💪 and Human Friends 👪</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tech/BUGOUT/emo.html"><strong aria-hidden="true">1.1.</strong> Emotional Backdrop</a></li><li class="chapter-item expanded "><a href="../tech/BUGOUT/building_the_project.html"><strong aria-hidden="true">1.2.</strong> Building the Project</a></li><li class="chapter-item expanded "><a href="../tech/BUGOUT/too_cheap.html"><strong aria-hidden="true">1.3.</strong> Too Cheap for Pro Tier</a></li><li class="chapter-item expanded "><a href="../tech/BUGOUT/welcome_katago.html"><strong aria-hidden="true">1.4.</strong> Welcome KataGo</a></li><li class="chapter-item expanded "><a href="../tech/BUGOUT/a_happy_ending.html"><strong aria-hidden="true">1.5.</strong> A Happy Ending</a></li><li class="chapter-item expanded "><a href="../tech/BUGOUT/further_inspiration.html"><strong aria-hidden="true">1.6.</strong> Further Inspiration</a></li><li class="chapter-item expanded "><a href="../tech/BUGOUT/lab_notes.html"><strong aria-hidden="true">1.7.</strong> Some Lab Notes</a></li><li class="chapter-item expanded "><a href="../tech/BUGOUT/fedora_coreos.html"><strong aria-hidden="true">1.8.</strong> Fedora CoreOS</a></li><li class="chapter-item expanded "><a href="../tech/BUGOUT/more_lab_notes.html"><strong aria-hidden="true">1.9.</strong> More Lab Notes</a></li></ol></li><li class="chapter-item expanded "><a href="../tech/adding_redis_streams_to_rust.html"><strong aria-hidden="true">2.</strong> Adding Redis Streams to Rust</a></li><li class="chapter-item expanded "><a href="../tech/the_midi_light_show.html"><strong aria-hidden="true">3.</strong> The MIDI Light Show</a></li><li class="chapter-item expanded "><a href="../tech/prawnalith/index.html"><strong aria-hidden="true">4.</strong> The Prawnalith: Electronics, Tanks, and Glory</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tech/prawnalith/lab_notes.html"><strong aria-hidden="true">4.1.</strong> Lab Notes</a></li></ol></li><li class="chapter-item expanded "><a href="../tech/object_detection.html"><strong aria-hidden="true">5.</strong> Vision Project, Object Detection Resources</a></li><li class="chapter-item expanded "><a href="../tech/penguin_hell.html"><strong aria-hidden="true">6.</strong> Penguin Hell</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tech/convert_mp4_to_gif_using_ffmpeg.html"><strong aria-hidden="true">6.1.</strong> Convert MP4 to GIF using ffmpeg</a></li><li class="chapter-item expanded "><a href="../tech/ctop_selinux_docker.html"><strong aria-hidden="true">6.2.</strong> Running ctop docker container in privileged mode under SELinux</a></li><li class="chapter-item expanded "><a href="../tech/focus_alacritty_gnome.html"><strong aria-hidden="true">6.3.</strong> Use Keyboard Shortcut to Focus Alacritty in GNOME</a></li><li class="chapter-item expanded "><a href="../tech/tmux_alacritty_scroll.html"><strong aria-hidden="true">6.4.</strong> Easy scrolling with tmux and alacritty</a></li><li class="chapter-item expanded "><a href="../tech/systemd.html"><strong aria-hidden="true">6.5.</strong> Systemd and Systemctl</a></li><li class="chapter-item expanded "><a href="../tech/linux_clipboard_from_command_line.html"><strong aria-hidden="true">6.6.</strong> Using the clipboard in a linux shell</a></li><li class="chapter-item expanded "><a href="../tech/vim.html"><strong aria-hidden="true">6.7.</strong> Vim</a></li></ol></li><li class="chapter-item expanded "><a href="../tech/distributed_wasteland.html"><strong aria-hidden="true">7.</strong> Distributed Wasteland</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tech/trying_out_yugabyte.html"><strong aria-hidden="true">7.1.</strong> Trying out Yugabyte</a></li><li class="chapter-item expanded "><a href="../tech/hello_tikv.html"><strong aria-hidden="true">7.2.</strong> Hello TiKV</a></li></ol></li><li class="chapter-item expanded "><a href="../tech/cloud_crap.html"><strong aria-hidden="true">8.</strong> Cloud Crap</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tech/aws_cli.html"><strong aria-hidden="true">8.1.</strong> AWS CLI</a></li><li class="chapter-item expanded "><a href="../tech/trying_google_cloud_run.html" class="active"><strong aria-hidden="true">8.2.</strong> Trying Google Cloud Run</a></li><li class="chapter-item expanded "><a href="../tech/using_git_annex_with_google_cloud_storage.html"><strong aria-hidden="true">8.3.</strong> Using Git Annex with Google Cloud Storage</a></li><li class="chapter-item expanded "><a href="../tech/gcp_show_size_of_bucket_gsutil.html"><strong aria-hidden="true">8.4.</strong> GCP: Show size of bucket using gsutil</a></li></ol></li><li class="chapter-item expanded "><a href="../tech/denoland.html"><strong aria-hidden="true">9.</strong> DenoLand</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tech/all_aboard_the_deno_hype_train_trimming_aws_tedium.html"><strong aria-hidden="true">9.1.</strong> All Aboard the Deno Hype Train: Trimming AWS Tedium</a></li><li class="chapter-item expanded "><a href="../tech/deno_file_server_upgrade.html"><strong aria-hidden="true">9.2.</strong> deno file_server upgrade</a></li><li class="chapter-item expanded "><a href="../tech/using_deno_in_vscode.html"><strong aria-hidden="true">9.3.</strong> Using Deno in VsCode</a></li></ol></li><li class="chapter-item expanded "><a href="../tech/junk_drawer.html"><strong aria-hidden="true">10.</strong> Else</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tech/h264_live_camera.html"><strong aria-hidden="true">10.1.</strong> H264 Live Camera Fork</a></li><li class="chapter-item expanded "><a href="../tech/racket.html"><strong aria-hidden="true">10.2.</strong> Racket</a></li><li class="chapter-item expanded "><a href="../tech/lolbots.html"><strong aria-hidden="true">10.3.</strong> lolbots</a></li><li class="chapter-item expanded "><a href="../tech/deepdream.html"><strong aria-hidden="true">10.4.</strong> Deepdream</a></li><li class="chapter-item expanded "><a href="../tech/setting_up_mdbook.html"><strong aria-hidden="true">10.5.</strong> Setting up mdBook</a></li><li class="chapter-item expanded "><a href="../tech/github_pages.html"><strong aria-hidden="true">10.6.</strong> Setting up Github Pages</a></li><li class="chapter-item expanded "><a href="../tech/ffmpeg.html"><strong aria-hidden="true">10.7.</strong> ffmpeg</a></li><li class="chapter-item expanded "><a href="../tech/wtf_why_is_firefox_so_slow_on_linux.html"><strong aria-hidden="true">10.8.</strong> WTF WHY IS FIREFOX SO SLOW ON LINUX</a></li></ol></li><li class="chapter-item expanded "><a href="../tech/oss_commitment_tracking.html"><strong aria-hidden="true">11.</strong> OSS Commitment Tracking</a></li><li class="chapter-item expanded "><a href="../fun/index.html"><strong aria-hidden="true">12.</strong> Fun Stuff</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../fun/music_directory.html"><strong aria-hidden="true">12.1.</strong> Music Directory</a></li><li class="chapter-item expanded "><a href="../fun/fallout_shelter_9999_lunch_boxes.html"><strong aria-hidden="true">12.2.</strong> Fallout Shelter: 9999 Lunch Boxes Cheat</a></li></ol></li><li class="chapter-item expanded "><a href="../source.html">Source Code</a></li><li class="chapter-item expanded affix "><a href="../feedback.html">Providing Feedback</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Terkwood Farms</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="trying-google-cloud-run"><a class="header" href="#trying-google-cloud-run">Trying Google Cloud Run</a></h1>
+<p>This is just a quick try-out of Google Cloud Run.</p>
+<p>We will build minimal containers that serve Hello World text over HTTP using both Rust 🦀 and Deno 🦕.</p>
+<p>Google provides <a href="https://cloud.google.com/run/docs/quickstarts/build-and-deploy?_ga=2.252230089.-199990648.1584658988#containerizing">very nice documentation</a> to help get started.</p>
+<h2 id="using-rust-on-google-cloud-run"><a class="header" href="#using-rust-on-google-cloud-run">Using Rust on Google Cloud Run</a></h2>
+<p>We expect to be able to run Hello World in rust using a tiny docker build image.  <a href="https://github.com/emk/rust-musl-builder/blob/master/examples/using-diesel/Dockerfile">The rust musl builder</a> from emk &amp; community is simply wonderful in this regard. You can create a tiny little rust program in a tiny little docker container.  When you're counting your cloud provider's storage quota in terms pennies and cents, that's a very good thing.</p>
+<p>We compared the docker image size of a trivial Hello World built using  <a href="https://hub.docker.com/_/rust">the primary rust docker image</a> to the docker image size of the same program built using the <a href="https://github.com/emk/rust-musl-builder">rust musl builder</a>.  Here are the results:</p>
+<pre><code class="language-sh">docker images |grep traditional
+docker images |grep tiny-musl-guy
+</code></pre>
+<p>▶️ ▶️ ▶️</p>
+<pre><code class="language-text">traditional   ...(trimmed)...     1.6 GB
+tiny-musl-guy ...(trimmed)...    9.22 MB
+</code></pre>
+<h2 id="buddy-have-an-http"><a class="header" href="#buddy-have-an-http">Buddy Have An HTTP</a></h2>
+<p>You need to serve some sort of minimal HTTP request in order for cloud run to do anything with your program.  We arbitrarily picked the Hello World example from <a href="https://github.com/http-rs/tide">tide</a>.</p>
+<pre><code class="language-ignore">#[async_std::main]
+async fn main() -&gt; Result&lt;(), std::io::Error&gt; {
+    let mut app = tide::new();
+    app.at(&quot;/&quot;).get(|_| async { Ok(&quot;Hello, world!&quot;) });
+    app.listen(&quot;127.0.0.1:8080&quot;).await?;
+    Ok(())
+}
+</code></pre>
+<h2 id="actually-have-google-do-the-cloud-things-now"><a class="header" href="#actually-have-google-do-the-cloud-things-now">Actually Have Google Do The Cloud Things Now</a></h2>
+<p>This part is refreshingly straightforward.  First, <a href="https://cloud.google.com/sdk/docs/quickstarts">we installed the gcloud command line utility</a>.  Dead simple.</p>
+<h3 id="building-a-docker-image-in-gcr"><a class="header" href="#building-a-docker-image-in-gcr">Building a Docker Image in GCR</a></h3>
+<p>The remotely-created docker build will just work on the first try, because Google loves you. (Does that sound creepy? 🤔)</p>
+<p>We built it remotely using <code>gcloud</code>, after which it is automatically stored in the Google container registry:</p>
+<pre><code class="language-sh">gcloud builds submit --tag gcr.io/PROJECT_NAME/rust-gcr-demo
+</code></pre>
+<p>We received a very comforting stream of text indicating forward progress while engaging with google's cloud in this way:</p>
+<pre><code class="language-text">Creating temporary tarball archive of 8 file(s) totalling 2.0 KiB before compression.
+Uploading tarball of [.] to [gs://PROJECT_NAME_cloudbuild/source/9999999999.34-aaaaaad7496d917b02d0cdd1b30a.tgz]
+Created \[https://cloudbuild.googleapis.com/v1/projects/PROJECT_NAME/builds/e0e0e0e0-aaaa-ffff-928b-9a9a9a9a9a9a\].
+Logs are available at \[https://console.cloud.google.com/cloud-build/builds/e0e0e0e0-aaaa-ffff-928b-9a9a9a9a9a9a?project=000000000000\].
+--------------------------------- REMOTE BUILD OUTPUT ---------------------------------
+starting build &quot;e0e0e0e0-aaaa-ffff-928b-9a9a9a9a9a9a&quot;
+
+FETCHSOURCE
+Fetching storage object: gs://PROJECT_NAME_cloudbuild/source/9999999999.34-9999999999999999999999.tgz#8888888888888888
+Copying gs://PROJECT_NAME_cloudbuild/source/999999999934-9999999999999999999999.tgz#8888888888888888...
+/ [1 files][  1.5 KiB/  1.5 KiB]
+Operation completed over 1 objects/1.5 KiB.
+BUILD
+Already have image (with digest): gcr.io/cloud-builders/docker
+Sending build context to Docker daemon  9.728kB
+Step 1/6 : FROM hayd/alpine-deno
+f5a1a52ea0cc: Pull complete
+91f70b368d00: Pull complete
+Digest: sha256:68c60a649aadbb7139bd4fd248eb7426d3f829f4574ce78ebc97fc3e22059498
+Status: Downloaded newer image for hayd/alpine-deno:latest
+ ---&gt; 4b8d66a41759
+Step 2/6 : WORKDIR /var/hello
+ ---&gt; Running in 78f3fc613ff3
+
+...SNIP...
+
+Step 6/6 : CMD [&quot;run&quot;,&quot;--allow-env&quot;,&quot;--allow-net&quot;,&quot;index.ts&quot;]
+ ---&gt; Running in 45e58559d684
+Removing intermediate container 45e58559d684
+ ---&gt; 3ecf00d3c661
+Successfully built 3ecf00d3c661
+Successfully tagged gcr.io/PROJECT_NAME/rust-gcr-demo:latest
+PUSH
+Pushing gcr.io/PROJECT_NAME/rust-gcr-demo
+The push refers to repository [gcr.io/PROJECT_NAME/rust-gcr-demo]
+5ca1b5bf7698: Preparing
+
+...SNIP...
+
+f8d7c190aaa1: Pushed
+3b7d1dad260a: Pushed
+5216338b40a7: Layer already exists
+517a217ae4f9: Pushed
+70c4b84bb2a4: Pushed
+latest: digest: sha256:e1563eb2fdcba0a36b23c34050a2145b47833ce607adc912ee750348bc512e9$
+ size: 1573
+DONE
+--------------------------------------------------------------------------------------$
+
+ID                                    CREATE_TIME                DURATION  SOURCE
+                                                                          IMAGES
+                         STATUS
+e0e0e0e0-aaaa-ffff-928b-9e9a9a9a9a9a  2020-05-15T23:18:50+00:00  20S       gs://PROJECT_NAME_cloudbuild/source/6666666666.34-aaaaaaaaaaaaaaaaaaaaaa.tgz  gcr.io/PROJECT_NAME/rust-gcr-demo (+1 more)  SUCCESS
+</code></pre>
+<p>The build output is tiny.  When we finally added <code>tide</code> to the hello world example  pictured below, the artifact was closer to 4.4MB... but you get the idea.</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/82101143-acd60c00-96d9-11ea-9009-06ffaa96d6c1.png" alt="here is a pic of a tiny build, having been uploaded" /></p>
+<h3 id="deploying-to-google-cloud-run"><a class="header" href="#deploying-to-google-cloud-run">Deploying to Google Cloud Run</a></h3>
+<p>Deployment is also painless.  Make sure you bind to the host <code>0.0.0.0</code> in your application, and obey the <code>PORT</code> variable expected by GCR.  We are lazy and just hardcoded port <code>8080</code> in our code, ignoring best practices for the sake of a quick, throwaway learning experience.</p>
+<p><code>gcloud</code> CLI deployment remains simple:</p>
+<pre><code class="language-sh">gcloud run deploy --image gcr.io/PROJECT_NAME/rust-gcr-demo --platform managed
+</code></pre>
+<p>And there is another pleasing interaction waiting for you in your terminal:</p>
+<pre><code class="language-text">Service name (rust-gcr-demo):
+
+Allow unauthenticated invocations to [rust-gcr-demo] (y/N)?
+
+Deploying container to Cloud Run service [rust-gcr-demo] in project [PROJECT_NAME] region [us-east1]
+✓ Deploying new service... Done.
+  ✓ Creating Revision...
+  ✓ Routing traffic...
+Done.
+Service [rust-gcr-demo] revision [rust-gcr-demo-00001-qow] has been deployed and is serving 100 percent of traffic at https://rust-gcr-demo-somenonsense-xx.z.run.app
+</code></pre>
+<h2 id="comparison-to-a-deno-hello-world"><a class="header" href="#comparison-to-a-deno-hello-world">Comparison to a Deno Hello World</a></h2>
+<p>We did the same thing over again</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../tech/aws_cli.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../tech/using_git_annex_with_google_cloud_storage.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../tech/aws_cli.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../tech/using_git_annex_with_google_cloud_storage.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

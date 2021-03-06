@@ -1,0 +1,503 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js coal">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Fedora CoreOS - Terkwood Farms</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../../">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "coal";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('coal')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../preface.html">Preface</a></li><li class="chapter-item expanded "><a href="../../tech/BUGOUT/index.html"><strong aria-hidden="true">1.</strong> BUGOUT: Play Go against AI 💪 and Human Friends 👪</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tech/BUGOUT/emo.html"><strong aria-hidden="true">1.1.</strong> Emotional Backdrop</a></li><li class="chapter-item expanded "><a href="../../tech/BUGOUT/building_the_project.html"><strong aria-hidden="true">1.2.</strong> Building the Project</a></li><li class="chapter-item expanded "><a href="../../tech/BUGOUT/too_cheap.html"><strong aria-hidden="true">1.3.</strong> Too Cheap for Pro Tier</a></li><li class="chapter-item expanded "><a href="../../tech/BUGOUT/welcome_katago.html"><strong aria-hidden="true">1.4.</strong> Welcome KataGo</a></li><li class="chapter-item expanded "><a href="../../tech/BUGOUT/a_happy_ending.html"><strong aria-hidden="true">1.5.</strong> A Happy Ending</a></li><li class="chapter-item expanded "><a href="../../tech/BUGOUT/further_inspiration.html"><strong aria-hidden="true">1.6.</strong> Further Inspiration</a></li><li class="chapter-item expanded "><a href="../../tech/BUGOUT/lab_notes.html"><strong aria-hidden="true">1.7.</strong> Some Lab Notes</a></li><li class="chapter-item expanded "><a href="../../tech/BUGOUT/fedora_coreos.html" class="active"><strong aria-hidden="true">1.8.</strong> Fedora CoreOS</a></li><li class="chapter-item expanded "><a href="../../tech/BUGOUT/more_lab_notes.html"><strong aria-hidden="true">1.9.</strong> More Lab Notes</a></li></ol></li><li class="chapter-item expanded "><a href="../../tech/adding_redis_streams_to_rust.html"><strong aria-hidden="true">2.</strong> Adding Redis Streams to Rust</a></li><li class="chapter-item expanded "><a href="../../tech/the_midi_light_show.html"><strong aria-hidden="true">3.</strong> The MIDI Light Show</a></li><li class="chapter-item expanded "><a href="../../tech/prawnalith/index.html"><strong aria-hidden="true">4.</strong> The Prawnalith: Electronics, Tanks, and Glory</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tech/prawnalith/lab_notes.html"><strong aria-hidden="true">4.1.</strong> Lab Notes</a></li></ol></li><li class="chapter-item expanded "><a href="../../tech/object_detection.html"><strong aria-hidden="true">5.</strong> Vision Project, Object Detection Resources</a></li><li class="chapter-item expanded "><a href="../../tech/penguin_hell.html"><strong aria-hidden="true">6.</strong> Penguin Hell</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tech/convert_mp4_to_gif_using_ffmpeg.html"><strong aria-hidden="true">6.1.</strong> Convert MP4 to GIF using ffmpeg</a></li><li class="chapter-item expanded "><a href="../../tech/ctop_selinux_docker.html"><strong aria-hidden="true">6.2.</strong> Running ctop docker container in privileged mode under SELinux</a></li><li class="chapter-item expanded "><a href="../../tech/focus_alacritty_gnome.html"><strong aria-hidden="true">6.3.</strong> Use Keyboard Shortcut to Focus Alacritty in GNOME</a></li><li class="chapter-item expanded "><a href="../../tech/tmux_alacritty_scroll.html"><strong aria-hidden="true">6.4.</strong> Easy scrolling with tmux and alacritty</a></li><li class="chapter-item expanded "><a href="../../tech/systemd.html"><strong aria-hidden="true">6.5.</strong> Systemd and Systemctl</a></li><li class="chapter-item expanded "><a href="../../tech/linux_clipboard_from_command_line.html"><strong aria-hidden="true">6.6.</strong> Using the clipboard in a linux shell</a></li><li class="chapter-item expanded "><a href="../../tech/vim.html"><strong aria-hidden="true">6.7.</strong> Vim</a></li></ol></li><li class="chapter-item expanded "><a href="../../tech/distributed_wasteland.html"><strong aria-hidden="true">7.</strong> Distributed Wasteland</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tech/trying_out_yugabyte.html"><strong aria-hidden="true">7.1.</strong> Trying out Yugabyte</a></li><li class="chapter-item expanded "><a href="../../tech/hello_tikv.html"><strong aria-hidden="true">7.2.</strong> Hello TiKV</a></li></ol></li><li class="chapter-item expanded "><a href="../../tech/cloud_crap.html"><strong aria-hidden="true">8.</strong> Cloud Crap</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tech/aws_cli.html"><strong aria-hidden="true">8.1.</strong> AWS CLI</a></li><li class="chapter-item expanded "><a href="../../tech/trying_google_cloud_run.html"><strong aria-hidden="true">8.2.</strong> Trying Google Cloud Run</a></li><li class="chapter-item expanded "><a href="../../tech/using_git_annex_with_google_cloud_storage.html"><strong aria-hidden="true">8.3.</strong> Using Git Annex with Google Cloud Storage</a></li><li class="chapter-item expanded "><a href="../../tech/gcp_show_size_of_bucket_gsutil.html"><strong aria-hidden="true">8.4.</strong> GCP: Show size of bucket using gsutil</a></li></ol></li><li class="chapter-item expanded "><a href="../../tech/denoland.html"><strong aria-hidden="true">9.</strong> DenoLand</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tech/all_aboard_the_deno_hype_train_trimming_aws_tedium.html"><strong aria-hidden="true">9.1.</strong> All Aboard the Deno Hype Train: Trimming AWS Tedium</a></li><li class="chapter-item expanded "><a href="../../tech/deno_file_server_upgrade.html"><strong aria-hidden="true">9.2.</strong> deno file_server upgrade</a></li><li class="chapter-item expanded "><a href="../../tech/using_deno_in_vscode.html"><strong aria-hidden="true">9.3.</strong> Using Deno in VsCode</a></li></ol></li><li class="chapter-item expanded "><a href="../../tech/junk_drawer.html"><strong aria-hidden="true">10.</strong> Else</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tech/h264_live_camera.html"><strong aria-hidden="true">10.1.</strong> H264 Live Camera Fork</a></li><li class="chapter-item expanded "><a href="../../tech/racket.html"><strong aria-hidden="true">10.2.</strong> Racket</a></li><li class="chapter-item expanded "><a href="../../tech/lolbots.html"><strong aria-hidden="true">10.3.</strong> lolbots</a></li><li class="chapter-item expanded "><a href="../../tech/deepdream.html"><strong aria-hidden="true">10.4.</strong> Deepdream</a></li><li class="chapter-item expanded "><a href="../../tech/setting_up_mdbook.html"><strong aria-hidden="true">10.5.</strong> Setting up mdBook</a></li><li class="chapter-item expanded "><a href="../../tech/github_pages.html"><strong aria-hidden="true">10.6.</strong> Setting up Github Pages</a></li><li class="chapter-item expanded "><a href="../../tech/ffmpeg.html"><strong aria-hidden="true">10.7.</strong> ffmpeg</a></li><li class="chapter-item expanded "><a href="../../tech/wtf_why_is_firefox_so_slow_on_linux.html"><strong aria-hidden="true">10.8.</strong> WTF WHY IS FIREFOX SO SLOW ON LINUX</a></li></ol></li><li class="chapter-item expanded "><a href="../../tech/oss_commitment_tracking.html"><strong aria-hidden="true">11.</strong> OSS Commitment Tracking</a></li><li class="chapter-item expanded "><a href="../../fun/index.html"><strong aria-hidden="true">12.</strong> Fun Stuff</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../fun/music_directory.html"><strong aria-hidden="true">12.1.</strong> Music Directory</a></li><li class="chapter-item expanded "><a href="../../fun/fallout_shelter_9999_lunch_boxes.html"><strong aria-hidden="true">12.2.</strong> Fallout Shelter: 9999 Lunch Boxes Cheat</a></li></ol></li><li class="chapter-item expanded "><a href="../../source.html">Source Code</a></li><li class="chapter-item expanded affix "><a href="../../feedback.html">Providing Feedback</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Terkwood Farms</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="experimenting-with-fedora-core-os"><a class="header" href="#experimenting-with-fedora-core-os">Experimenting with Fedora Core OS</a></h1>
+<p>As part of <a href="https://github.com/Terkwood/BUGOUT/issues/176">BUGOUT</a>, we want to attempt supporting Fedora CoreOS.  We previously ran our stateful container deployment on CoreOS Container Linux and enjoyed the automatic OS upgrades. It used a relatively small amount of RAM. We were too lazy to move beyond using <code>docker-compose</code>, and that wasn't a problem:  after writing a couple of tiny <code>systemd</code> configs, our system always started up reliably.</p>
+<p>But CoreOS Container Linux is being put to pasture, so we've decided to try the new thing. </p>
+<h2 id="first-steps-with-fcct"><a class="header" href="#first-steps-with-fcct">First Steps with FCCT</a></h2>
+<p>We need to create an ignition file which is intended to be written once, and valid for the life of the image.</p>
+<p>See <a href="https://github.com/coreos/fcct/blob/master/docs/getting-started.md">some docs</a> for getting started with this configuration tool.</p>
+<p>They recommend using <code>podman</code> instead of <code>docker</code>, but there's no <code>snap</code> install available that doesn't warn about potentially stomping on our localdev ❤️ Debian ❤️ system.</p>
+<pre><code class="language-sh">sudo snap install --edge podman
+</code></pre>
+<pre><code class="language-text">error: The publisher of snap &quot;podman&quot; has indicated that they do not consider this revision to be
+       of production quality and that it is only meant for development or testing at this point. As
+       a consequence this snap will not refresh automatically and may perform arbitrary system
+       changes outside of the security sandbox snaps are generally confined to, which may put your
+       system at risk.
+
+       If you understand and want to proceed repeat the command including --devmode; if instead you
+       want to install the snap forcing it into strict confinement repeat the command including
+       --jailmode.
+</code></pre>
+<p>Use <code>docker</code> to produce the ignition file, instead.  First we created an example YAML file that fcct could read.  This was a bit unclear based on the current state of the documentation, as we used <code>.yaml</code> for the file extension instead of <code>.fcc</code>.</p>
+<pre><code class="language-yaml"># local example.yaml
+variant: fcos
+version: 1.0.0
+passwd:
+  users:
+    - name: core
+      ssh_authorized_keys:
+        - ssh-rsa AAAAB3NzaC1yc...
+</code></pre>
+<pre><code class="language-sh">docker pull quay.io/coreos/fcct:release
+docker run  -i --rm quay.io/coreos/fcct:release --pretty --strict &lt;  input.yaml &gt; example.ign
+</code></pre>
+<p>As promised, this command output an ignition file:</p>
+<pre><code class="language-json">{
+  &quot;ignition&quot;: {
+    &quot;config&quot;: {
+      &quot;replace&quot;: {
+        &quot;source&quot;: null,
+        &quot;verification&quot;: {}
+      }
+    },
+    &quot;security&quot;: {
+      &quot;tls&quot;: {}
+    },
+    &quot;timeouts&quot;: {},
+    &quot;version&quot;: &quot;3.0.0&quot;
+  },
+  &quot;passwd&quot;: {
+    &quot;users&quot;: [
+      {
+        &quot;name&quot;: &quot;core&quot;,
+        &quot;sshAuthorizedKeys&quot;: [
+          &quot;ssh-rsa AAAAB3NzaC1yc...&quot;
+        ]
+      }
+    ]
+  },
+  &quot;storage&quot;: {},
+  &quot;systemd&quot;: {}
+}
+</code></pre>
+<h2 id="launching-an-instance-on-aws"><a class="header" href="#launching-an-instance-on-aws">Launching an Instance on AWS</a></h2>
+<p>We can launch an instance on AWS.  <a href="https://docs.fedoraproject.org/en-US/fedora-coreos/getting-started/">See the operating system getting started page</a>.</p>
+<p>The docs currently ask you to use the <code>aws</code> command line interface.  I'm too lazy to do that.  I don't want to (re)learn the options for the <code>ec2 run instances</code> command.  I just want to plug some values in via the web interface.</p>
+<p>To do that, click through the <a href="https://getfedora.org/coreos/download?tab=cloud_launchable&amp;stream=stable">downloads page</a>, look for for your AWS region, click through to the launch instance page within AWS, then look for the &quot;user data&quot; details.</p>
+<p><img src="https://user-images.githubusercontent.com/38859656/80287955-918f6680-8702-11ea-8021-87040838e890.png" alt="user data for your igntion config" /></p>
+<p>You can enter your ignition config here.</p>
+<p>Finally, you launch the instance and connect:</p>
+<pre><code class="language-text">Fedora CoreOS 31.20200407.3.0
+Tracker: https://github.com/coreos/fedora-coreos-tracker
+Discuss: https://discussion.fedoraproject.org/c/server/coreos/
+</code></pre>
+<h2 id="setting-up-the-system"><a class="header" href="#setting-up-the-system">Setting up the system</a></h2>
+<p>Right now we're manually exploring the system to see 
+how things feel.</p>
+<pre><code class="language-sh">git clone https://github.com/Terkwood/BUGOUT.git
+cd BUGOUT
+sudo usermod -aG docker $USER  # we'll fix this in next section
+sudo reboot   # reboot helped
+</code></pre>
+<p>You can use <code>ctop</code>:</p>
+<pre><code class="language-sh">docker run -ti -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest
+</code></pre>
+<p>You <em>cannot</em> use <code>toolbox</code>. It <a href="https://github.com/coreos/fedora-coreos-tracker/issues/458#issuecomment-620582289">isn't really supposed to work</a> due to the permissions structure of FCOS.</p>
+<p>You can use <code>rpm-ostree</code> to install <code>htop</code>:</p>
+<pre><code class="language-sh">sudo rpm-ostree install htop
+sudo systemctl reboot  # you need to reboot to get access to it
+</code></pre>
+<h2 id="exploring-packer"><a class="header" href="#exploring-packer">Exploring Packer</a></h2>
+<p>We are clearly going to need to manage the creation of this image.
+Let's try using Packer.</p>
+<p>Here is their basic guide to <a href="https://www.packer.io/intro/getting-started/build-image.html">build an image</a>.</p>
+<p>We can move on to running something a bit more interesting.</p>
+<p>You first need to write a program.</p>
+<pre><code class="language-sh">cat &gt;hello.ts
+console.log(&quot;Welocem Friend 🦕&quot;);
+</code></pre>
+<p>You need some env vars specified.</p>
+<pre><code class="language-sh"># set_deno_env.sh
+export VPC_ID=&quot;vpc-deadbeef&quot;
+export SUBNET_ID=&quot;subnet-bad1dea5&quot;
+</code></pre>
+<p>...then...</p>
+<pre><code class="language-sh">source set_deno_env.sh
+</code></pre>
+<p>Write some <code>packer-example.json</code></p>
+<pre><code class="language-json">{
+    &quot;variables&quot;: {
+        &quot;aws_access_key&quot;: &quot;{{env `AWS_ACCESS_KEY_ID`}}&quot;,
+        &quot;aws_secret_key&quot;: &quot;{{env `AWS_SECRET_ACCESS_KEY`}}&quot;,
+        &quot;region&quot;:         &quot;us-east-1&quot;,
+        &quot;vpc_id&quot;:         &quot;{{env `VPC_ID`}}&quot;,
+        &quot;subnet_id&quot;:      &quot;{{env `SUBNET_ID`}}&quot;
+    },
+    &quot;builders&quot;: [
+        {
+            &quot;access_key&quot;: &quot;{{user `aws_access_key`}}&quot;,
+            &quot;ami_name&quot;: &quot;packer-linux-aws-demo-{{timestamp}}&quot;,
+            &quot;instance_type&quot;: &quot;t3.micro&quot;,
+            &quot;region&quot;: &quot;{{user `region`}}&quot;,
+            &quot;vpc_id&quot;: &quot;{{user `vpc_id`}}&quot;,
+	          &quot;subnet_id&quot;: &quot;{{user `subnet_id`}}&quot;,
+            &quot;secret_key&quot;: &quot;{{user `aws_secret_key`}}&quot;,
+            &quot;source_ami_filter&quot;: {
+              &quot;filters&quot;: {
+              &quot;virtualization-type&quot;: &quot;hvm&quot;,
+              &quot;name&quot;: &quot;ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*&quot;,
+              &quot;root-device-type&quot;: &quot;ebs&quot;
+              },
+              &quot;owners&quot;: [&quot;099720109477&quot;],
+              &quot;most_recent&quot;: true
+            },
+            &quot;ssh_username&quot;: &quot;ubuntu&quot;,
+            &quot;type&quot;: &quot;amazon-ebs&quot;
+        }
+    ],
+    &quot;provisioners&quot;: [
+        {
+            &quot;type&quot;: &quot;file&quot;,
+            &quot;source&quot;: &quot;./welcome.txt&quot;,
+            &quot;destination&quot;: &quot;/home/ubuntu/&quot;
+        },
+        {
+            &quot;type&quot;: &quot;file&quot;,
+            &quot;source&quot;: &quot;./hello.ts&quot;,
+            &quot;destination&quot;: &quot;/home/ubuntu/&quot;
+        },
+        {
+            &quot;type&quot;: &quot;shell&quot;,
+            &quot;inline&quot;:[
+                &quot;ls -al /home/ubuntu&quot;,
+                &quot;cat /home/ubuntu/welcome.txt&quot;
+            ]
+        },
+        {
+            &quot;type&quot;: &quot;shell&quot;,
+            &quot;inline&quot;: [
+              &quot;sudo apt install -y unzip&quot;,
+              &quot;curl -fsSL https://deno.land/x/install/install.sh | sh&quot;
+              
+            ]
+        },
+        {
+            &quot;type&quot;: &quot;shell&quot;,
+            &quot;inline&quot;:[
+              &quot;export DENO_INSTALL=\&quot;/home/ubuntu/.deno\&quot;&quot;,
+              &quot;export PATH=\&quot;$DENO_INSTALL/bin:$PATH\&quot;&quot;,
+              &quot;deno hello.ts&quot;
+            ]
+        }
+    ]
+}
+</code></pre>
+<p>You'll see a bunch of glorious progress, and finally, an artifact:</p>
+<pre><code class="language-text">==&gt; Builds finished. The artifacts of successful builds are:
+--&gt; amazon-ebs: AMIs were created:
+us-east-1: ami-eeeeeeeeeeeeeeeea
+</code></pre>
+<p>Don't forget to deregister the AMI after you're done!</p>
+<h2 id="putting-it-all-together-with-fcos"><a class="header" href="#putting-it-all-together-with-fcos">Putting It All Together With FCOS</a></h2>
+<p>That's all well and good, and we're happy about <code>packer</code>.</p>
+<p>But we need to usable FCOS image which has a few modifications that <code>packer</code>, rather than <code>ignition</code> is well-suited to handle.</p>
+<p>Create an ignition file which you'll include in the packer config:</p>
+<pre><code class="language-yaml">variant: fcos
+version: 1.0.0
+passwd:
+  users:
+    - name: core
+      groups: [ docker ]
+      ssh_authorized_keys:
+        - ssh-rsa AAAA...
+storage:
+  files:
+    - path: /opt/bin/docker-compose
+      overwrite: true
+      mode: 0755
+      contents:
+        source: https://github.com/docker/compose/releases/download/1.13.0/docker-compose-Linux-x86_64
+        verification:
+          hash: sha512-9d2c4317784999064ba1b71dbcb6830dba38174b63b1b0fa922a94a7ef3479f675f0569b49e0c3361011e222df41be4f1168590f7ea871bcb0f2109f5848b897
+</code></pre>
+<pre><code class="language-sh">docker run  -i --rm quay.io/coreos/fcct:release --pretty --strict &lt;  packed.yaml &gt; packed.ign
+</code></pre>
+<p>Then write your packer config:</p>
+<pre><code class="language-json">{
+    &quot;variables&quot;: {
+        &quot;aws_access_key&quot;: &quot;{{env `AWS_ACCESS_KEY_ID`}}&quot;,
+        &quot;aws_secret_key&quot;: &quot;{{env `AWS_SECRET_ACCESS_KEY`}}&quot;,
+        &quot;region&quot;:         &quot;us-east-1&quot;,
+        &quot;vpc_id&quot;:         &quot;{{env `VPC_ID`}}&quot;,
+        &quot;subnet_id&quot;:      &quot;{{env `SUBNET_ID`}}&quot;
+    },
+    &quot;builders&quot;: [
+        {
+            &quot;access_key&quot;: &quot;{{user `aws_access_key`}}&quot;,
+            &quot;ami_name&quot;: &quot;fcos-linux-aws-demo-{{timestamp}}&quot;,
+            &quot;instance_type&quot;: &quot;t3.medium&quot;,
+            &quot;region&quot;: &quot;{{user `region`}}&quot;,
+            &quot;vpc_id&quot;: &quot;{{user `vpc_id`}}&quot;,
+            &quot;subnet_id&quot;: &quot;{{user `subnet_id`}}&quot;,
+            &quot;secret_key&quot;: &quot;{{user `aws_secret_key`}}&quot;,
+            &quot;user_data_file&quot;: &quot;packed.ign&quot;,
+            &quot;source_ami_filter&quot;: {
+              &quot;filters&quot;: {
+                &quot;virtualization-type&quot;: &quot;hvm&quot;,
+                &quot;name&quot;: &quot;fedora-coreos-31.20200407.3.0&quot;,
+                &quot;root-device-type&quot;: &quot;ebs&quot;
+              },
+              &quot;owners&quot;: [&quot;125523088429&quot;],
+              &quot;most_recent&quot;: true
+            },
+            &quot;ssh_username&quot;: &quot;core&quot;,
+            &quot;type&quot;: &quot;amazon-ebs&quot;
+        }
+    ],
+    &quot;provisioners&quot;: [
+        {
+            &quot;type&quot;: &quot;shell&quot;,
+            &quot;inline&quot;: [
+                &quot;sudo rpm-ostree install htop&quot;
+            ]
+        },
+        {
+            &quot;type&quot;: &quot;shell&quot;,
+            &quot;inline&quot;:[
+                &quot;git clone https://github.com/Terkwood/BUGOUT.git&quot;
+            ]
+        }
+    ]
+}
+</code></pre>
+<p>...and we have a baked image!</p>
+<p>We used docker-compose 1.13 instead of 1.25 because <a href="https://discuss.python.org/t/libcrypt-so-1-removal-in-fedora-30-impacting-manylinux-builds/1961">python3.7 fails to link to libcrypt.so.1 on Fedora 31</a>.  ☹️</p>
+<h2 id="launch-templates-are-helpful"><a class="header" href="#launch-templates-are-helpful">Launch Templates Are Helpful</a></h2>
+<p>Creating a <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#launch-instance-from-launch-template">launch template</a> makes the AWS CLI invocation less annoying.</p>
+<p>You can launch the instance using minimal parameters:</p>
+<pre><code class="language-sh">aws ec2 run-instances --launch-template LaunchTemplateId=lt-0000,Version=2 --image-id ami-0000 --subnet-id subnet-deadbeef
+</code></pre>
+<p>In the example above, we pasted the <code>ignition</code> user data into the web form.  But you can override user data at the command line, if desired.</p>
+<h2 id="completing-the-ignition"><a class="header" href="#completing-the-ignition">Completing the ignition</a></h2>
+<p>Next up, write some <code>systemd</code> data and figure out how
+to seat some <code>dev.env</code> files as <code>.env</code> files.</p>
+<h2 id="using-journalctl-for-monitoring"><a class="header" href="#using-journalctl-for-monitoring">Using journalctl for monitoring</a></h2>
+<p>You can follow logs with <code>journalctl</code>:</p>
+<pre><code class="language-sh">journalctl -u bugout -f
+</code></pre>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs">DigitalOcean has a nice tutorial</a>.</p>
+<h2 id="friendly-memory-footprint"><a class="header" href="#friendly-memory-footprint">Friendly Memory Footprint</a></h2>
+<p>We were pleasantly surprised by amount of memory saved by switching from Container OS to Fedora Core OS.  We haven't done any extensive testing yet, but the <code>/proc/meminfo</code> shown below were for the same workload (kafka box) under the same conditions (1-3 users playing, system online for less than 15 minutes).</p>
+<p>Our old t3.medium Container Linux VM:</p>
+<pre><code class="language-text">MemTotal:        3979308 kB
+MemFree:         1793524 kB
+MemAvailable:    1920252 kB
+Buffers:           67600 kB
+Cached:           449764 kB
+SwapCached:            0 kB
+Active:          1760416 kB
+Inactive:         280408 kB
+</code></pre>
+<p>The new t3.medium Fedora CoreOS VM:</p>
+<pre><code class="language-text">MemTotal:        3962968 kB
+MemFree:         2971716 kB
+MemAvailable:    3439920 kB
+Buffers:            1108 kB
+Cached:           626192 kB
+SwapCached:            0 kB
+Active:           414104 kB
+Inactive:         405596 kB
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../tech/BUGOUT/lab_notes.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../tech/BUGOUT/more_lab_notes.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../tech/BUGOUT/lab_notes.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../tech/BUGOUT/more_lab_notes.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
