@@ -6,7 +6,7 @@ various open source projects.
 
 ## Outstanding
 
-Nothing right now, _thankfully_.
+Lots of work in [BUGOUT](https://github.com/Terkwood/bugout/issues).
 
 ## Completed
 
